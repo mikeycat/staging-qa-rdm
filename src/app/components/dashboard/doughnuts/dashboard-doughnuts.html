@@ -1,0 +1,8 @@
+<mat-grid-list cols="6" rowHeight="100px">
+    <mat-grid-tile [colspan]="3" [rowspan]="4">
+        <chart-doughnut [data]="dayData" style="width: 100%; height:100%;"></chart-doughnut>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="4">
+        <chart-doughnut [data]="weekData" style="width: 100%; height:100%;"></chart-doughnut>
+    </mat-grid-tile>
+</mat-grid-list>

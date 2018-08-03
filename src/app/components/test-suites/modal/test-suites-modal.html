@@ -1,0 +1,58 @@
+<ng-progress></ng-progress>
+<mat-horizontal-stepper #stepper>
+    <mat-step [stepControl]="urlFormGroup" *ngIf="insert">
+        <form [formGroup]="urlFormGroup"  (ngSubmit)="urlComplete()">
+            <ng-template matStepLabel>Api URL</ng-template>
+            <mat-form-field style="width: 100%">
+                <input matInput placeholder="https://endtest.io" formControlName="urlCtrl" autocomplete="off"  required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperNext type="submit">Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="infoFormGroup">
+        <form [formGroup]="infoFormGroup" (ngSubmit)="infoComplete()">
+            <ng-template matStepLabel>Test Suite</ng-template>
+            <mat-form-field style="width: 100%">
+                <input matInput placeholder="Name" formControlName="nameCtrl" autocomplete="off" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-select placeholder="Choose One" formControlName="lineOfServiceCtrl">
+                    <mat-option *ngFor="let service of linesOfService" [value]="service">
+                        {{ service.name }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperPrevious *ngIf="insert">Back</button>
+                <button mat-button matStepperNext type="submit">Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <form [formGroup]="confirmFormGroup">
+            <ng-template matStepLabel>Confirm</ng-template>
+            <mat-form-field style="width: 100%">
+                <input matInput placeholder="Name" formControlName="nameCtrl" required>
+            </mat-form-field>
+            <mat-form-field style="width: 100%">
+                <input matInput placeholder="Line of Service" formControlName="serviceCtrl" required>
+            </mat-form-field>
+            <mat-form-field style="width: 100%">
+                <input matInput placeholder="App Id" formControlName="appIdCtrl" required>
+            </mat-form-field>
+            <mat-form-field style="width: 100%">
+                <input matInput placeholder="App Code" formControlName="appCodeCtrl" required>
+            </mat-form-field>
+            <mat-form-field style="width: 100%">
+                <input matInput placeholder="Test Suite" formControlName="testSuiteCtrl" required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+                <button mat-button (click)="submit()">Submit</button>
+            </div>
+        </form>
+    </mat-step>
+</mat-horizontal-stepper>

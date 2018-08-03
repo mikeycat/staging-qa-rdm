@@ -1,0 +1,43 @@
+<ng-progress></ng-progress>
+<h2 mat-dialog-title>
+    Edit Operating System
+</h2>
+<form [formGroup]="form" (ngSubmit)="submit()">
+<mat-dialog-content>
+    <mat-grid-list cols="6" rowHeight="80px">
+        <mat-grid-tile [colspan]="6" [rowspan]="1">
+            <mat-form-field style="width: 100%">
+                <input matInput type="text" name="name" id="name" placeholder="Name" [formControl]="nameCtrl" autocomplete="off" required>
+                <mat-error *ngIf="nameCtrl.invalid">{{getNameErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="6" [rowspan]="1">
+            <mat-form-field style="width: 100%">
+                <input matInput type="text" name="value" id="value" placeholder="Value" [formControl]="valueCtrl" autocomplete="off" required>
+                <mat-error *ngIf="valueCtrl.invalid">{{getValueErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="6" [rowspan]="1">
+            <mat-form-field style="width: 100%">
+                <mat-select placeholder="Choose One" [formControl]="platformCtrl">
+                    <mat-option *ngFor="let platform of platforms" [value]="platform.id">
+                        {{ platform.name }}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="platformCtrl.invalid">{{getPlatformErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </mat-grid-tile>
+    </mat-grid-list>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>
+        Close
+    </button>
+    <button mat-button (click)="reset()">
+        Reset
+    </button>
+    <button mat-button type="submit" [disabled]="!form.valid">
+        Submit
+    </button>
+</mat-dialog-actions>
+</form>

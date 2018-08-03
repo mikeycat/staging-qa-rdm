@@ -1,0 +1,7 @@
+#cast-button {
+    position: relative;
+    display: block !important;
+    width: 35px;
+    height: 35px;
+    --connected-color: rgb(217, 37, 65);
+}

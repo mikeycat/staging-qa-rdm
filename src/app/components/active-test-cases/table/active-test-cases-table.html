@@ -1,0 +1,51 @@
+<table mat-table [dataSource]="activeTests" matSort>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Test Suite </th>
+            <td mat-cell *matCellDef="let active_test"> {{active_test.test_case.test_suite.name}} </td>
+        </ng-container>
+    
+        <!-- Value Column -->
+        <ng-container matColumnDef="value">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Hash </th>
+            <td mat-cell *matCellDef="let active_test"> {{active_test.hash}} </td>
+        </ng-container>
+    
+        <!-- Operating Systems Column -->
+        <ng-container matColumnDef="operating_systems">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Operating Systems </th>
+            <td mat-cell *matCellDef="let browser"> 
+                <span *ngFor="let os of browser.operating_systems"> {{ os.name }} </span>    
+            </td>
+        </ng-container>
+    
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions" stickyEnd>
+            <th mat-header-cell *matHeaderCellDef>
+                <span class="action-span">
+                    Run
+                </span> 
+                <span class="action-span">
+                    Edit
+                </span> 
+                <span class="action-span">
+                    Delete
+                </span>
+            </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-icon-button (click)="run(element.id)" color="primary">
+                    <mat-icon>launch</mat-icon>
+                </button>
+                <button mat-icon-button (click)="edit(element.id)" color="accent">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button (click)="delete(element.id)" color="warn">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnsToDisplay"></tr>
+    </table>

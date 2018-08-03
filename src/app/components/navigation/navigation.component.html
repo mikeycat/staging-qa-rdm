@@ -1,0 +1,108 @@
+<mat-sidenav-container
+  [hasBackdrop]="false"
+  class="sidenav-container">
+
+    <mat-sidenav
+      #drawer
+      class="sidenav"
+      fixedInViewport="true"
+      [mode]="push"
+      [fixedTopGap]="8"
+      [fixedInViewport]="true"
+      opened
+      style="width:290px;">
+        <mat-toolbar>
+          RDM Automation Framework
+          <cast-sender></cast-sender>
+        </mat-toolbar>
+        <mat-nav-list>
+          <a mat-list-item routerLink="dashboard" routerLinkActive="selected">
+            <mat-icon matListIcon>dashboard</mat-icon>
+            Dashboard
+          </a>
+          <div *ngIf="router.url=='/dashboard'" style="margin: 0 35px 0 10px;">
+            <h4 matLine>
+              Filter
+            </h4>
+            <p matLine>
+              <ng-multiselect-dropdown
+                [placeholder]="'Platforms'"
+                [data]="platforms"
+                [(ngModel)]="selectedPlatforms"
+                [settings]="dropdownSettings"></ng-multiselect-dropdown>
+            </p>
+            <p matLine>
+              <ng-multiselect-dropdown
+                [placeholder]="'Operating Systems'"
+                [data]="operatingSystems"
+                [(ngModel)]="selectedOperatingSystems"
+                [settings]="dropdownSettings"></ng-multiselect-dropdown>
+            </p>
+            <p matLine>
+              <ng-multiselect-dropdown
+                [placeholder]="'Browsers'"
+                [data]="browsers"
+                [(ngModel)]="selectedBrowsers"
+                [settings]="dropdownSettings"></ng-multiselect-dropdown>
+            </p>
+            <p matLine>
+              <ng-multiselect-dropdown
+                [placeholder]="'Lines of Service'"
+                [data]="linesOfService"
+                [(ngModel)]="selectedLinesOfService"
+                [settings]="dropdownSettings"></ng-multiselect-dropdown>
+            </p>
+          </div>
+          <a mat-list-item routerLink="/test-cases" routerLinkActive="selected" *ngIf="isLoggedIn()">
+            <mat-icon matListIcon>assignment</mat-icon>
+            Test Cases
+          </a>
+          <a mat-list-item style="pointer-events: none;"></a>
+          <a mat-list-item routerLink="/login" routerLinkActive="selected" *ngIf="!isLoggedIn()">
+            <mat-icon matListIcon>account_circle</mat-icon>
+            Login
+          </a>
+          <a mat-list-item routerLink="/profile" routerLinkActive="selected" *ngIf="isLoggedIn()">
+            <mat-icon matListIcon>account_circle</mat-icon>
+            Profile
+          </a>
+          <a mat-list-item routerLink="/admin-panel/select" routerLinkActive="selected" *ngIf="isLoggedIn()">
+            <mat-icon matListIcon>settings</mat-icon>
+            Admin Panel
+          </a>
+          <div *ngIf="router.url.split('/')[1]=='admin-panel'" style="margin: 0 0 0 10px;">
+            <a mat-list-item routerLink="/admin-panel/active-test-cases" routerLinkActive="selected">
+              Active Test Case
+            </a>
+            <a mat-list-item routerLink="/admin-panel/browsers" routerLinkActive="selected">
+              Browser
+            </a>
+            <a mat-list-item routerLink="/admin-panel/lines-of-service" routerLinkActive="selected">
+              Line of Service
+            </a>
+            <a mat-list-item routerLink="/admin-panel/operating-systems" routerLinkActive="selected">
+              Operating System
+            </a>
+            <a mat-list-item routerLink="/admin-panel/platforms" routerLinkActive="selected">
+              Platform
+            </a>
+            <a mat-list-item routerLink="/admin-panel/results" routerLinkActive="selected">
+              Result
+            </a>
+            <a mat-list-item routerLink="/admin-panel/sessions" routerLinkActive="selected">
+              Session
+            </a>
+            <a mat-list-item routerLink="/admin-panel/test-cases" routerLinkActive="selected">
+              Test Case
+            </a>
+            <a mat-list-item routerLink="/admin-panel/test-suites" routerLinkActive="selected">
+              Test Suite
+            </a>
+          </div>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content >
+        <!-- Add Content Here -->
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

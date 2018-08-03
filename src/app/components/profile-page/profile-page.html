@@ -1,0 +1,19 @@
+<div class="grid-container">
+        <mat-grid-list cols="3" rowHeight="100px">
+            <mat-grid-tile [colspan]="1"></mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="4">
+                <mat-card class="dashboard-card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            {{ profile.displayName }}
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <button mat-raised-button (click)="logout()">
+                            Logout
+                        </button>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>

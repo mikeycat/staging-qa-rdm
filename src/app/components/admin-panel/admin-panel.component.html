@@ -1,0 +1,11 @@
+<div [ngSwitch]="focus">
+    <active-tests-page *ngSwitchCase="'active-test-cases'"></active-tests-page>
+    <browsers-page *ngSwitchCase="'browsers'"></browsers-page>
+    <lines-of-service-page *ngSwitchCase="'lines-of-service'"></lines-of-service-page>
+    <operating-systems-page *ngSwitchCase="'operating-systems'"></operating-systems-page>
+    <platforms-page *ngSwitchCase="'platforms'"></platforms-page>
+    <results-page *ngSwitchCase="'results'"></results-page>
+    <sessions-page *ngSwitchCase="'sessions'"></sessions-page>
+    <test-cases-page *ngSwitchCase="'test-cases'"></test-cases-page>
+    <test-suites-page *ngSwitchCase="'test-suites'"></test-suites-page>
+</div>

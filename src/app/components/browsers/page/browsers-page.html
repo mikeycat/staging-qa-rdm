@@ -1,0 +1,21 @@
+<div class="grid-container">
+    <mat-grid-list cols="6" rowHeight="100px">
+        <mat-grid-tile [colspan]="6" [rowspan]="6">
+            <mat-card class="dashboard-card" style="position: absolute;">
+                <mat-card-header>
+                    <mat-card-title>
+                        Browsers
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                        <button mat-raised-button (click)="create()" color="primary">
+                            Create
+                        </button>
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <browsers-table [update]="table_update"></browsers-table>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

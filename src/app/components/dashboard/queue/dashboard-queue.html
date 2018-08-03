@@ -1,0 +1,33 @@
+<mat-grid-list cols="6" rowHeight="100px">
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <mat-card class="dashboard-card">
+            <mat-card-header>
+                <mat-card-content>
+                    <h2>
+                        {{ prevTestSuite.name }} - {{ prevTotal }} %
+                    </h2>
+                </mat-card-content>
+            </mat-card-header>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <mat-card class="dashboard-card" style="padding-top: 18px; background: #3f51b5;">
+            <mat-card-content>
+                <h1>
+                    {{ currTestSuite.name }} - {{ currTotal }} %
+                </h1>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <mat-card class="dashboard-card">
+            <mat-card-header>
+                <mat-card-content>
+                    <h2>
+                        {{ nextTestSuite.name }} - {{ nextTotal }} %
+                    </h2>
+                </mat-card-content>
+            </mat-card-header>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
