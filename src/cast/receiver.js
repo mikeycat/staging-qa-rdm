@@ -12,13 +12,13 @@ function loadWait() {
     }
 }
 
-/** 
+/**
  * Load the dashboard and enable this page to act as a Cast API receiver
  */
 window.onload = function () {
     // Load only the live dashboard grid into the receiver app
-    $('#container').load("https://endtest-reporting.firebaseapp.com", function () {
-        $('#container').load("https://endtest-reporting.firebaseapp.com", function () {
+    $('#container').load("https://qa-rdm.herokuapp.com", function () {
+        $('#container').load("https://qa-rdm.herokuapp.com", function () {
             loadWait();
         });
     });
