@@ -66,7 +66,7 @@
             <mat-icon matListIcon>account_circle</mat-icon>
             Profile
           </a>
-          <a mat-list-item routerLink="/admin-panel/select" routerLinkActive="selected" *ngIf="isLoggedIn()">
+          <a mat-list-item routerLink="/admin-panel/select" routerLinkActive="selected" *ngIf="hasAdminRole()">
             <mat-icon matListIcon>settings</mat-icon>
             Admin Panel
           </a>

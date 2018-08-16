@@ -1,3 +1,11 @@
 .dashboard-card {
     position: absolute;
-  }
+}
+
+mat-form-field, mat-grid-tile {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+}

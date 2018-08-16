@@ -385,18 +385,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
 /* harmony import */ var ngx_progressbar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-progressbar */ "./node_modules/ngx-progressbar/modules/ngx-progressbar.es5.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/index.js");
-/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(ng2_charts__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var ng_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ng-multiselect-dropdown */ "./node_modules/ng-multiselect-dropdown/esm5/ng-multiselect-dropdown.js");
-/* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/index.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var ngx_modal_dialog__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ngx-modal-dialog */ "./node_modules/ngx-modal-dialog/index.js");
-/* harmony import */ var _gaurds_user_gaurd__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./gaurds/user.gaurd */ "./src/app/gaurds/user.gaurd.ts");
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components */ "./src/app/components/index.ts");
-/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./services */ "./src/app/services/index.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/index.js");
+/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(ng2_charts__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var ng_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ng-multiselect-dropdown */ "./node_modules/ng-multiselect-dropdown/esm5/ng-multiselect-dropdown.js");
+/* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/index.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var ngx_modal_dialog__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ngx-modal-dialog */ "./node_modules/ngx-modal-dialog/index.js");
+/* harmony import */ var _gaurds_user_gaurd__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./gaurds/user.gaurd */ "./src/app/gaurds/user.gaurd.ts");
+/* harmony import */ var _gaurds_admin_gaurd__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./gaurds/admin.gaurd */ "./src/app/gaurds/admin.gaurd.ts");
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components */ "./src/app/components/index.ts");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./services */ "./src/app/services/index.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -423,14 +425,17 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var appRoutes = [
     { path: '', redirectTo: 'dashboard', pathMatch: 'prefix' },
-    { path: 'dashboard', component: _components__WEBPACK_IMPORTED_MODULE_19__["LandingPageComponent"] },
-    { path: 'login', component: _components__WEBPACK_IMPORTED_MODULE_19__["LoginPageComponent"] },
-    { path: 'profile', component: _components__WEBPACK_IMPORTED_MODULE_19__["ProfilePageComponent"], canActivate: [_gaurds_user_gaurd__WEBPACK_IMPORTED_MODULE_18__["UserGuard"]] },
-    { path: 'test-cases', component: _components__WEBPACK_IMPORTED_MODULE_19__["TestCasesPage"], canActivate: [_gaurds_user_gaurd__WEBPACK_IMPORTED_MODULE_18__["UserGuard"]] },
-    { path: 'admin-panel', redirectTo: 'admin-panel/select', canActivate: [_gaurds_user_gaurd__WEBPACK_IMPORTED_MODULE_18__["UserGuard"]] },
-    { path: 'admin-panel/:focus', component: _components__WEBPACK_IMPORTED_MODULE_19__["AdminPanelComponent"], canActivate: [_gaurds_user_gaurd__WEBPACK_IMPORTED_MODULE_18__["UserGuard"]] },
+    { path: 'dashboard', component: _components__WEBPACK_IMPORTED_MODULE_21__["LandingPageComponent"] },
+    { path: 'login', component: _components__WEBPACK_IMPORTED_MODULE_21__["LoginPageComponent"] },
+    { path: 'register', component: _components__WEBPACK_IMPORTED_MODULE_21__["RegisterPageComponent"] },
+    { path: 'profile', component: _components__WEBPACK_IMPORTED_MODULE_21__["ProfilePageComponent"], canActivate: [_gaurds_user_gaurd__WEBPACK_IMPORTED_MODULE_19__["UserGuard"]] },
+    { path: 'test-cases', component: _components__WEBPACK_IMPORTED_MODULE_21__["TestCasesPage"], canActivate: [_gaurds_user_gaurd__WEBPACK_IMPORTED_MODULE_19__["UserGuard"]] },
+    { path: 'admin-panel', redirectTo: 'admin-panel/select', canActivate: [_gaurds_admin_gaurd__WEBPACK_IMPORTED_MODULE_20__["AdminGuard"]] },
+    { path: 'admin-panel/:focus', component: _components__WEBPACK_IMPORTED_MODULE_21__["AdminPanelComponent"], canActivate: [_gaurds_admin_gaurd__WEBPACK_IMPORTED_MODULE_20__["AdminGuard"]] },
 ];
 
 
@@ -443,85 +448,88 @@ var AppModule = /** @class */ (function () {
                 _angular_core__WEBPACK_IMPORTED_MODULE_9__["CUSTOM_ELEMENTS_SCHEMA"]
             ],
             exports: [
-                _components__WEBPACK_IMPORTED_MODULE_19__["CastSenderComponent"]
+                _components__WEBPACK_IMPORTED_MODULE_21__["CastSenderComponent"]
             ],
             entryComponents: [
-                _components__WEBPACK_IMPORTED_MODULE_19__["ActiveTestCasesModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["BrowsersModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["LinesOfServiceModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["OperatingSystemsModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["PlatformsModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["ResultsModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["SessionsModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["TestCasesModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["TestSuitesModal"]
+                _components__WEBPACK_IMPORTED_MODULE_21__["ActiveTestCasesModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["BrowsersModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["LinesOfServiceModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["OperatingSystemsModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["PlatformsModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["ResultsModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["SessionsModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["TestCasesModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["TestSuitesModal"]
             ],
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_16__["AppComponent"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["ActiveTestsTable"], _components__WEBPACK_IMPORTED_MODULE_19__["ActiveTestsPage"], _components__WEBPACK_IMPORTED_MODULE_19__["ActiveTestCasesModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["AdminPanelComponent"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["BrowsersTable"], _components__WEBPACK_IMPORTED_MODULE_19__["BrowsersPage"], _components__WEBPACK_IMPORTED_MODULE_19__["BrowsersModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["CastSenderComponent"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["DoughnutChart"], _components__WEBPACK_IMPORTED_MODULE_19__["LineChart"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["DashboardComponent"], _components__WEBPACK_IMPORTED_MODULE_19__["DashboardLine"], _components__WEBPACK_IMPORTED_MODULE_19__["DashboardQueueComponent"], _components__WEBPACK_IMPORTED_MODULE_19__["DashboardDoughnuts"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["LandingPageComponent"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["LinesOfServiceTable"], _components__WEBPACK_IMPORTED_MODULE_19__["LinesOfServicePage"], _components__WEBPACK_IMPORTED_MODULE_19__["LinesOfServiceModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["LoginPageComponent"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["NavigationComponent"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["OperatingSystemsTable"], _components__WEBPACK_IMPORTED_MODULE_19__["OperatingSystemsPage"], _components__WEBPACK_IMPORTED_MODULE_19__["OperatingSystemsModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["PlatformsTable"], _components__WEBPACK_IMPORTED_MODULE_19__["PlatformsPage"], _components__WEBPACK_IMPORTED_MODULE_19__["PlatformsModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["ProfilePageComponent"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["ResultsTable"], _components__WEBPACK_IMPORTED_MODULE_19__["ResultsPage"], _components__WEBPACK_IMPORTED_MODULE_19__["ResultsModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["SessionsTable"], _components__WEBPACK_IMPORTED_MODULE_19__["SessionsPage"], _components__WEBPACK_IMPORTED_MODULE_19__["SessionsModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["TestCasesTable"], _components__WEBPACK_IMPORTED_MODULE_19__["TestCasesPage"], _components__WEBPACK_IMPORTED_MODULE_19__["TestCasesModal"],
-                _components__WEBPACK_IMPORTED_MODULE_19__["TestSuitesTable"], _components__WEBPACK_IMPORTED_MODULE_19__["TestSuitesPage"], _components__WEBPACK_IMPORTED_MODULE_19__["TestSuitesModal"]
+                _app_component__WEBPACK_IMPORTED_MODULE_17__["AppComponent"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["ActiveTestsTable"], _components__WEBPACK_IMPORTED_MODULE_21__["ActiveTestsPage"], _components__WEBPACK_IMPORTED_MODULE_21__["ActiveTestCasesModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["AdminPanelComponent"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["BrowsersTable"], _components__WEBPACK_IMPORTED_MODULE_21__["BrowsersPage"], _components__WEBPACK_IMPORTED_MODULE_21__["BrowsersModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["CastSenderComponent"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["DoughnutChart"], _components__WEBPACK_IMPORTED_MODULE_21__["LineChart"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["DashboardComponent"], _components__WEBPACK_IMPORTED_MODULE_21__["DashboardLine"], _components__WEBPACK_IMPORTED_MODULE_21__["DashboardQueueComponent"], _components__WEBPACK_IMPORTED_MODULE_21__["DashboardDoughnuts"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["LandingPageComponent"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["LinesOfServiceTable"], _components__WEBPACK_IMPORTED_MODULE_21__["LinesOfServicePage"], _components__WEBPACK_IMPORTED_MODULE_21__["LinesOfServiceModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["LoginPageComponent"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["NavigationComponent"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["OperatingSystemsTable"], _components__WEBPACK_IMPORTED_MODULE_21__["OperatingSystemsPage"], _components__WEBPACK_IMPORTED_MODULE_21__["OperatingSystemsModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["PlatformsTable"], _components__WEBPACK_IMPORTED_MODULE_21__["PlatformsPage"], _components__WEBPACK_IMPORTED_MODULE_21__["PlatformsModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["ProfilePageComponent"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["RegisterPageComponent"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["ResultsTable"], _components__WEBPACK_IMPORTED_MODULE_21__["ResultsPage"], _components__WEBPACK_IMPORTED_MODULE_21__["ResultsModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["SessionsTable"], _components__WEBPACK_IMPORTED_MODULE_21__["SessionsPage"], _components__WEBPACK_IMPORTED_MODULE_21__["SessionsModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["TestCasesTable"], _components__WEBPACK_IMPORTED_MODULE_21__["TestCasesPage"], _components__WEBPACK_IMPORTED_MODULE_21__["TestCasesModal"],
+                _components__WEBPACK_IMPORTED_MODULE_21__["TestSuitesTable"], _components__WEBPACK_IMPORTED_MODULE_21__["TestSuitesPage"], _components__WEBPACK_IMPORTED_MODULE_21__["TestSuitesModal"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                ngx_modal_dialog__WEBPACK_IMPORTED_MODULE_17__["ModalDialogModule"].forRoot(),
+                ngx_modal_dialog__WEBPACK_IMPORTED_MODULE_18__["ModalDialogModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(appRoutes),
-                ng_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_14__["NgMultiSelectDropDownModule"].forRoot(),
+                ng_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_15__["NgMultiSelectDropDownModule"].forRoot(),
+                ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrModule"].forRoot(),
                 angularfire2__WEBPACK_IMPORTED_MODULE_3__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_6__["environment"].firebase),
                 angularfire2_firestore__WEBPACK_IMPORTED_MODULE_4__["AngularFirestoreModule"],
                 angularfire2_auth__WEBPACK_IMPORTED_MODULE_5__["AngularFireAuthModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ReactiveFormsModule"],
-                ng2_charts__WEBPACK_IMPORTED_MODULE_13__["ChartsModule"],
-                _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_10__["LayoutModule"],
+                ng2_charts__WEBPACK_IMPORTED_MODULE_14__["ChartsModule"],
+                _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_11__["LayoutModule"],
                 ngx_progressbar__WEBPACK_IMPORTED_MODULE_8__["NgProgressModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatToolbarModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatButtonModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatSidenavModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatSelectModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatInputModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatFormFieldModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatIconModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatStepperModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatListModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatGridListModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatCardModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatMenuModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatTableModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatPaginatorModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatSortModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatToolbarModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__["BrowserAnimationsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatSidenavModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatSelectModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatSnackBarModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatIconModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatStepperModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatDialogModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatListModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatGridListModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatMenuModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatPaginatorModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatSortModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_7__["HttpModule"]
             ],
             providers: [
-                ngx_cookie_service__WEBPACK_IMPORTED_MODULE_15__["CookieService"],
-                _services__WEBPACK_IMPORTED_MODULE_20__["BrowsersService"],
-                _services__WEBPACK_IMPORTED_MODULE_20__["OperatingSystemsService"],
-                _services__WEBPACK_IMPORTED_MODULE_20__["PlatformsService"],
-                _services__WEBPACK_IMPORTED_MODULE_20__["ResultsService"],
-                _services__WEBPACK_IMPORTED_MODULE_20__["LinesOfServiceService"],
-                _services__WEBPACK_IMPORTED_MODULE_20__["TestCasesService"],
-                _services__WEBPACK_IMPORTED_MODULE_20__["ActiveTestCasesService"],
-                _services__WEBPACK_IMPORTED_MODULE_20__["TestSuitesService"],
-                _services__WEBPACK_IMPORTED_MODULE_20__["AuthService"],
-                _gaurds_user_gaurd__WEBPACK_IMPORTED_MODULE_18__["UserGuard"]
+                ngx_cookie_service__WEBPACK_IMPORTED_MODULE_16__["CookieService"],
+                _services__WEBPACK_IMPORTED_MODULE_22__["BrowsersService"],
+                _services__WEBPACK_IMPORTED_MODULE_22__["OperatingSystemsService"],
+                _services__WEBPACK_IMPORTED_MODULE_22__["PlatformsService"],
+                _services__WEBPACK_IMPORTED_MODULE_22__["ResultsService"],
+                _services__WEBPACK_IMPORTED_MODULE_22__["LinesOfServiceService"],
+                _services__WEBPACK_IMPORTED_MODULE_22__["TestCasesService"],
+                _services__WEBPACK_IMPORTED_MODULE_22__["ActiveTestCasesService"],
+                _services__WEBPACK_IMPORTED_MODULE_22__["TestSuitesService"],
+                _services__WEBPACK_IMPORTED_MODULE_22__["AuthService"],
+                _gaurds_user_gaurd__WEBPACK_IMPORTED_MODULE_19__["UserGuard"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_16__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_17__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -2039,7 +2047,7 @@ var DashboardQueueComponent = /** @class */ (function () {
 /*!*************************************!*\
   !*** ./src/app/components/index.ts ***!
   \*************************************/
-/*! exports provided: AdminPanelComponent, LandingPageComponent, LoginPageComponent, NavigationComponent, ProfilePageComponent, CastSenderComponent, ActiveTestCasesModal, ActiveTestsPage, ActiveTestsTable, BrowsersModal, BrowsersPage, BrowsersTable, DoughnutChart, LineChart, DashboardComponent, DashboardLine, DashboardQueueComponent, DashboardDoughnuts, LinesOfServiceModal, LinesOfServicePage, LinesOfServiceTable, OperatingSystemsModal, OperatingSystemsPage, OperatingSystemsTable, PlatformsModal, PlatformsPage, PlatformsTable, ResultsModal, ResultsPage, ResultsTable, SessionsModal, SessionsPage, SessionsTable, TestCasesModal, TestCasesPage, TestCasesTable, TestSuitesModal, TestSuitesPage, TestSuitesTable */
+/*! exports provided: AdminPanelComponent, LandingPageComponent, LoginPageComponent, NavigationComponent, ProfilePageComponent, RegisterPageComponent, CastSenderComponent, ActiveTestCasesModal, ActiveTestsPage, ActiveTestsTable, BrowsersModal, BrowsersPage, BrowsersTable, DoughnutChart, LineChart, DashboardComponent, DashboardLine, DashboardQueueComponent, DashboardDoughnuts, LinesOfServiceModal, LinesOfServicePage, LinesOfServiceTable, OperatingSystemsModal, OperatingSystemsPage, OperatingSystemsTable, PlatformsModal, PlatformsPage, PlatformsTable, ResultsModal, ResultsPage, ResultsTable, SessionsModal, SessionsPage, SessionsTable, TestCasesModal, TestCasesPage, TestCasesTable, TestSuitesModal, TestSuitesPage, TestSuitesTable */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2108,36 +2116,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _profile_page_profile_page__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./profile-page/profile-page */ "./src/app/components/profile-page/profile-page.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ProfilePageComponent", function() { return _profile_page_profile_page__WEBPACK_IMPORTED_MODULE_11__["ProfilePageComponent"]; });
 
-/* harmony import */ var _results__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./results */ "./src/app/components/results/index.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ResultsModal", function() { return _results__WEBPACK_IMPORTED_MODULE_12__["ResultsModal"]; });
+/* harmony import */ var _register_page_register_page__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./register-page/register-page */ "./src/app/components/register-page/register-page.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "RegisterPageComponent", function() { return _register_page_register_page__WEBPACK_IMPORTED_MODULE_12__["RegisterPageComponent"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ResultsPage", function() { return _results__WEBPACK_IMPORTED_MODULE_12__["ResultsPage"]; });
+/* harmony import */ var _results__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./results */ "./src/app/components/results/index.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ResultsModal", function() { return _results__WEBPACK_IMPORTED_MODULE_13__["ResultsModal"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ResultsTable", function() { return _results__WEBPACK_IMPORTED_MODULE_12__["ResultsTable"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ResultsPage", function() { return _results__WEBPACK_IMPORTED_MODULE_13__["ResultsPage"]; });
 
-/* harmony import */ var _sessions__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./sessions */ "./src/app/components/sessions/index.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SessionsModal", function() { return _sessions__WEBPACK_IMPORTED_MODULE_13__["SessionsModal"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ResultsTable", function() { return _results__WEBPACK_IMPORTED_MODULE_13__["ResultsTable"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SessionsPage", function() { return _sessions__WEBPACK_IMPORTED_MODULE_13__["SessionsPage"]; });
+/* harmony import */ var _sessions__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./sessions */ "./src/app/components/sessions/index.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SessionsModal", function() { return _sessions__WEBPACK_IMPORTED_MODULE_14__["SessionsModal"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SessionsTable", function() { return _sessions__WEBPACK_IMPORTED_MODULE_13__["SessionsTable"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SessionsPage", function() { return _sessions__WEBPACK_IMPORTED_MODULE_14__["SessionsPage"]; });
 
-/* harmony import */ var _test_cases__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./test-cases */ "./src/app/components/test-cases/index.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestCasesModal", function() { return _test_cases__WEBPACK_IMPORTED_MODULE_14__["TestCasesModal"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SessionsTable", function() { return _sessions__WEBPACK_IMPORTED_MODULE_14__["SessionsTable"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestCasesPage", function() { return _test_cases__WEBPACK_IMPORTED_MODULE_14__["TestCasesPage"]; });
+/* harmony import */ var _test_cases__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./test-cases */ "./src/app/components/test-cases/index.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestCasesModal", function() { return _test_cases__WEBPACK_IMPORTED_MODULE_15__["TestCasesModal"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestCasesTable", function() { return _test_cases__WEBPACK_IMPORTED_MODULE_14__["TestCasesTable"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestCasesPage", function() { return _test_cases__WEBPACK_IMPORTED_MODULE_15__["TestCasesPage"]; });
 
-/* harmony import */ var _test_suites__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./test-suites */ "./src/app/components/test-suites/index.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestSuitesModal", function() { return _test_suites__WEBPACK_IMPORTED_MODULE_15__["TestSuitesModal"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestCasesTable", function() { return _test_cases__WEBPACK_IMPORTED_MODULE_15__["TestCasesTable"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestSuitesPage", function() { return _test_suites__WEBPACK_IMPORTED_MODULE_15__["TestSuitesPage"]; });
+/* harmony import */ var _test_suites__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./test-suites */ "./src/app/components/test-suites/index.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestSuitesModal", function() { return _test_suites__WEBPACK_IMPORTED_MODULE_16__["TestSuitesModal"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestSuitesTable", function() { return _test_suites__WEBPACK_IMPORTED_MODULE_15__["TestSuitesTable"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestSuitesPage", function() { return _test_suites__WEBPACK_IMPORTED_MODULE_16__["TestSuitesPage"]; });
 
-/* harmony import */ var _cast_sender_cast_sender_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./cast-sender/cast-sender.component */ "./src/app/components/cast-sender/cast-sender.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CastSenderComponent", function() { return _cast_sender_cast_sender_component__WEBPACK_IMPORTED_MODULE_16__["CastSenderComponent"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestSuitesTable", function() { return _test_suites__WEBPACK_IMPORTED_MODULE_16__["TestSuitesTable"]; });
+
+/* harmony import */ var _cast_sender_cast_sender_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./cast-sender/cast-sender.component */ "./src/app/components/cast-sender/cast-sender.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CastSenderComponent", function() { return _cast_sender_cast_sender_component__WEBPACK_IMPORTED_MODULE_17__["CastSenderComponent"]; });
+
 
 
 
@@ -2559,7 +2571,7 @@ var LinesOfServiceTable = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".dashboard-card {\n    position: absolute;\n  }"
+module.exports = ".dashboard-card {\n    position: absolute;\n}\n\nmat-form-field, mat-grid-tile {\n  width: 100%;\n}\n\nbutton {\n  width: 100%;\n}"
 
 /***/ }),
 
@@ -2570,7 +2582,7 @@ module.exports = ".dashboard-card {\n    position: absolute;\n  }"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"grid-container\">\n    <mat-grid-list cols=\"3\" rowHeight=\"100px\">\n        <mat-grid-tile [colspan]=\"1\"></mat-grid-tile>\n        <mat-grid-tile [colspan]=\"1\" [rowspan]=\"4\">\n            <mat-card class=\"dashboard-card\">\n                <mat-card-header>\n                    <mat-card-title>\n                        Login\n                    </mat-card-title>\n                </mat-card-header>\n                <mat-card-content>\n                    <button mat-raised-button (click)=\"signInWithGoogle()\">\n                        Login with Google\n                    </button>\n                </mat-card-content>\n            </mat-card>\n        </mat-grid-tile>\n    </mat-grid-list>\n</div>"
+module.exports = "<div class=\"grid-container\">\n    <mat-grid-list cols=\"3\" rowHeight=\"125px\">\n        <mat-grid-tile [colspan]=\"1\"></mat-grid-tile>\n        <mat-grid-tile [colspan]=\"1\" [rowspan]=\"3\">\n            <mat-card class=\"dashboard-card\">\n                <ng-progress></ng-progress>\n                <mat-card-header>\n                    <mat-card-title>\n                        Login\n                    </mat-card-title>\n                </mat-card-header>\n                <mat-card-content>\n                    <form [formGroup]=\"form\">\n                        <mat-grid-list cols=\"1\" rowHeight=\"60px\">\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                <mat-form-field>\n                                    <input\n                                        matInput\n                                        placeholder=\"email\"\n                                        type=\"text\"\n                                        autocomplete=\"off\"\n                                        name=\"email\"\n                                        id=\"email\"\n                                        [formControl]=\"emailCtrl\"\n                                        required >\n                                    <span matSuffix>@rci.rogers.com</span>\n                                    <mat-error *ngIf=\"emailCtrl.invalid\">{{getEmailErrorMessage()}}</mat-error>\n                                </mat-form-field>\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                <mat-form-field>\n                                    <input\n                                        matInput\n                                        placeholder=\"password\"\n                                        type=\"password\"\n                                        autocomplete=\"off\"\n                                        name=\"pass\"\n                                        id=\"pass\"\n                                        [formControl]=\"passCtrl\"\n                                        required >\n                                    <mat-error *ngIf=\"passCtrl.invalid\">{{getPassErrorMessage()}}</mat-error>\n                                </mat-form-field>\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                <button mat-flat-button color=\"primary\" (click)=\"submit()\">Login</button>\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                <button mat-flat-button color=\"accent\" (click)=\"register()\">Register</button>\n                            </mat-grid-tile>\n                        </mat-grid-list>\n                    </form>\n                </mat-card-content>\n            </mat-card>\n        </mat-grid-tile>\n    </mat-grid-list>\n</div>"
 
 /***/ }),
 
@@ -2587,6 +2599,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services */ "./src/app/services/index.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var ngx_progressbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-progressbar */ "./node_modules/ngx-progressbar/modules/ngx-progressbar.es5.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2599,17 +2614,63 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
+
 var LoginPageComponent = /** @class */ (function () {
-    function LoginPageComponent(authService, router) {
+    function LoginPageComponent(formBuilder, authService, ngProgress, toastr, router) {
+        this.formBuilder = formBuilder;
         this.authService = authService;
+        this.ngProgress = ngProgress;
+        this.toastr = toastr;
         this.router = router;
+        this.model = {};
     }
-    LoginPageComponent.prototype.ngOnInit = function () { };
-    LoginPageComponent.prototype.signInWithGoogle = function () {
-        var _this = this;
-        this.authService.googleLogin().then(function () {
-            _this.router.navigate(['/profile']);
+    LoginPageComponent.prototype.ngOnInit = function () {
+        this.emailCtrl = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]);
+        this.passCtrl = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(8)]);
+        this.form = this.formBuilder.group({
+            email: this.emailCtrl,
+            password: this.passCtrl
         });
+    };
+    LoginPageComponent.prototype.submit = function () {
+        var _this = this;
+        this.ngProgress.start();
+        this.model.email = this.form.get('email').value + '@rci.rogers.com';
+        this.model.password = this.form.get('password').value;
+        console.log(this.model);
+        this.authService.login(this.model).then(function () {
+            _this.ngProgress.done();
+            _this.router.navigate(['/profile']);
+        }).catch(function (err) {
+            _this.ngProgress.done();
+            if (err.code) {
+                if (err.code == "auth/user-not-found") {
+                    _this.toastr.error('User not found.', '', {
+                        timeOut: 3000,
+                        positionClass: 'toast-top-center'
+                    });
+                }
+                else if (err.code == "auth/wrong-password") {
+                    _this.toastr.error('Password is incorrect.', '', {
+                        timeOut: 3000,
+                        positionClass: 'toast-top-center'
+                    });
+                }
+            }
+            console.log(err);
+        });
+    };
+    LoginPageComponent.prototype.register = function () {
+        this.router.navigate(['/register']);
+    };
+    LoginPageComponent.prototype.getEmailErrorMessage = function () {
+        return this.emailCtrl.hasError('required') ? 'You must enter a value' : '';
+    };
+    LoginPageComponent.prototype.getPassErrorMessage = function () {
+        return this.passCtrl.hasError('required') ? 'You must enter a value' :
+            this.passCtrl.hasError('minlength') ? 'Password must be atleast 8 characters' : '';
     };
     LoginPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -2617,7 +2678,10 @@ var LoginPageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./login-page.html */ "./src/app/components/login-page/login-page.html"),
             styles: [__webpack_require__(/*! ./login-page.css */ "./src/app/components/login-page/login-page.css")],
         }),
-        __metadata("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_1__["AuthService"],
+        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"],
+            _services__WEBPACK_IMPORTED_MODULE_1__["AuthService"],
+            ngx_progressbar__WEBPACK_IMPORTED_MODULE_4__["NgProgress"],
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], LoginPageComponent);
     return LoginPageComponent;
@@ -2645,7 +2709,7 @@ module.exports = ".sidenav-container {\n  height: 100%;\n}\n\n.sidenav {\n  widt
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container\n  [hasBackdrop]=\"false\"\n  class=\"sidenav-container\">\n\n    <mat-sidenav\n      #drawer\n      class=\"sidenav\"\n      fixedInViewport=\"true\"\n      [mode]=\"push\"\n      [fixedTopGap]=\"8\"\n      [fixedInViewport]=\"true\"\n      opened\n      style=\"width:290px;\">\n        <mat-toolbar>\n          RDM Automation Framework\n          <cast-sender></cast-sender>\n        </mat-toolbar>\n        <mat-nav-list>\n          <a mat-list-item routerLink=\"dashboard\" routerLinkActive=\"selected\">\n            <mat-icon matListIcon>dashboard</mat-icon>\n            Dashboard\n          </a>\n          <div *ngIf=\"router.url=='/dashboard'\" style=\"margin: 0 35px 0 10px;\">\n            <h4 matLine>\n              Filter\n            </h4>\n            <p matLine>\n              <ng-multiselect-dropdown\n                [placeholder]=\"'Platforms'\"\n                [data]=\"platforms\"\n                [(ngModel)]=\"selectedPlatforms\"\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\n            </p>\n            <p matLine>\n              <ng-multiselect-dropdown\n                [placeholder]=\"'Operating Systems'\"\n                [data]=\"operatingSystems\"\n                [(ngModel)]=\"selectedOperatingSystems\"\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\n            </p>\n            <p matLine>\n              <ng-multiselect-dropdown\n                [placeholder]=\"'Browsers'\"\n                [data]=\"browsers\"\n                [(ngModel)]=\"selectedBrowsers\"\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\n            </p>\n            <p matLine>\n              <ng-multiselect-dropdown\n                [placeholder]=\"'Lines of Service'\"\n                [data]=\"linesOfService\"\n                [(ngModel)]=\"selectedLinesOfService\"\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\n            </p>\n          </div>\n          <a mat-list-item routerLink=\"/test-cases\" routerLinkActive=\"selected\" *ngIf=\"isLoggedIn()\">\n            <mat-icon matListIcon>assignment</mat-icon>\n            Test Cases\n          </a>\n          <a mat-list-item style=\"pointer-events: none;\"></a>\n          <a mat-list-item routerLink=\"/login\" routerLinkActive=\"selected\" *ngIf=\"!isLoggedIn()\">\n            <mat-icon matListIcon>account_circle</mat-icon>\n            Login\n          </a>\n          <a mat-list-item routerLink=\"/profile\" routerLinkActive=\"selected\" *ngIf=\"isLoggedIn()\">\n            <mat-icon matListIcon>account_circle</mat-icon>\n            Profile\n          </a>\n          <a mat-list-item routerLink=\"/admin-panel/select\" routerLinkActive=\"selected\" *ngIf=\"isLoggedIn()\">\n            <mat-icon matListIcon>settings</mat-icon>\n            Admin Panel\n          </a>\n          <div *ngIf=\"router.url.split('/')[1]=='admin-panel'\" style=\"margin: 0 0 0 10px;\">\n            <a mat-list-item routerLink=\"/admin-panel/active-test-cases\" routerLinkActive=\"selected\">\n              Active Test Case\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/browsers\" routerLinkActive=\"selected\">\n              Browser\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/lines-of-service\" routerLinkActive=\"selected\">\n              Line of Service\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/operating-systems\" routerLinkActive=\"selected\">\n              Operating System\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/platforms\" routerLinkActive=\"selected\">\n              Platform\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/results\" routerLinkActive=\"selected\">\n              Result\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/sessions\" routerLinkActive=\"selected\">\n              Session\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/test-cases\" routerLinkActive=\"selected\">\n              Test Case\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/test-suites\" routerLinkActive=\"selected\">\n              Test Suite\n            </a>\n          </div>\n        </mat-nav-list>\n    </mat-sidenav>\n    <mat-sidenav-content >\n        <!-- Add Content Here -->\n        <router-outlet></router-outlet>\n    </mat-sidenav-content>\n</mat-sidenav-container>\n"
+module.exports = "<mat-sidenav-container\n  [hasBackdrop]=\"false\"\n  class=\"sidenav-container\">\n\n    <mat-sidenav\n      #drawer\n      class=\"sidenav\"\n      fixedInViewport=\"true\"\n      [mode]=\"push\"\n      [fixedTopGap]=\"8\"\n      [fixedInViewport]=\"true\"\n      opened\n      style=\"width:290px;\">\n        <mat-toolbar>\n          RDM Automation Framework\n          <cast-sender></cast-sender>\n        </mat-toolbar>\n        <mat-nav-list>\n          <a mat-list-item routerLink=\"dashboard\" routerLinkActive=\"selected\">\n            <mat-icon matListIcon>dashboard</mat-icon>\n            Dashboard\n          </a>\n          <div *ngIf=\"router.url=='/dashboard'\" style=\"margin: 0 35px 0 10px;\">\n            <h4 matLine>\n              Filter\n            </h4>\n            <p matLine>\n              <ng-multiselect-dropdown\n                [placeholder]=\"'Platforms'\"\n                [data]=\"platforms\"\n                [(ngModel)]=\"selectedPlatforms\"\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\n            </p>\n            <p matLine>\n              <ng-multiselect-dropdown\n                [placeholder]=\"'Operating Systems'\"\n                [data]=\"operatingSystems\"\n                [(ngModel)]=\"selectedOperatingSystems\"\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\n            </p>\n            <p matLine>\n              <ng-multiselect-dropdown\n                [placeholder]=\"'Browsers'\"\n                [data]=\"browsers\"\n                [(ngModel)]=\"selectedBrowsers\"\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\n            </p>\n            <p matLine>\n              <ng-multiselect-dropdown\n                [placeholder]=\"'Lines of Service'\"\n                [data]=\"linesOfService\"\n                [(ngModel)]=\"selectedLinesOfService\"\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\n            </p>\n          </div>\n          <a mat-list-item routerLink=\"/test-cases\" routerLinkActive=\"selected\" *ngIf=\"isLoggedIn()\">\n            <mat-icon matListIcon>assignment</mat-icon>\n            Test Cases\n          </a>\n          <a mat-list-item style=\"pointer-events: none;\"></a>\n          <a mat-list-item routerLink=\"/login\" routerLinkActive=\"selected\" *ngIf=\"!isLoggedIn()\">\n            <mat-icon matListIcon>account_circle</mat-icon>\n            Login\n          </a>\n          <a mat-list-item routerLink=\"/profile\" routerLinkActive=\"selected\" *ngIf=\"isLoggedIn()\">\n            <mat-icon matListIcon>account_circle</mat-icon>\n            Profile\n          </a>\n          <a mat-list-item routerLink=\"/admin-panel/select\" routerLinkActive=\"selected\" *ngIf=\"hasAdminRole()\">\n            <mat-icon matListIcon>settings</mat-icon>\n            Admin Panel\n          </a>\n          <div *ngIf=\"router.url.split('/')[1]=='admin-panel'\" style=\"margin: 0 0 0 10px;\">\n            <a mat-list-item routerLink=\"/admin-panel/active-test-cases\" routerLinkActive=\"selected\">\n              Active Test Case\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/browsers\" routerLinkActive=\"selected\">\n              Browser\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/lines-of-service\" routerLinkActive=\"selected\">\n              Line of Service\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/operating-systems\" routerLinkActive=\"selected\">\n              Operating System\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/platforms\" routerLinkActive=\"selected\">\n              Platform\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/results\" routerLinkActive=\"selected\">\n              Result\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/sessions\" routerLinkActive=\"selected\">\n              Session\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/test-cases\" routerLinkActive=\"selected\">\n              Test Case\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/test-suites\" routerLinkActive=\"selected\">\n              Test Suite\n            </a>\n          </div>\n        </mat-nav-list>\n    </mat-sidenav>\n    <mat-sidenav-content >\n        <!-- Add Content Here -->\n        <router-outlet></router-outlet>\n    </mat-sidenav-content>\n</mat-sidenav-container>\n"
 
 /***/ }),
 
@@ -2771,6 +2835,9 @@ var NavigationComponent = /** @class */ (function () {
     };
     NavigationComponent.prototype.isLoggedIn = function () {
         return this.authService.isLoggedIn();
+    };
+    NavigationComponent.prototype.hasAdminRole = function () {
+        return this.authService.hasAdminRole();
     };
     NavigationComponent.prototype.logout = function () {
         return this.authService.signout();
@@ -3548,6 +3615,122 @@ var ProfilePageComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_1__["AuthService"]])
     ], ProfilePageComponent);
     return ProfilePageComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/register-page/register-page.css":
+/*!************************************************************!*\
+  !*** ./src/app/components/register-page/register-page.css ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".dashboard-card {\n    position: absolute;\n}\n\nmat-form-field, mat-grid-tile {\n  width: 100%;\n}\n\nbutton {\n  width: 100%;\n}"
+
+/***/ }),
+
+/***/ "./src/app/components/register-page/register-page.html":
+/*!*************************************************************!*\
+  !*** ./src/app/components/register-page/register-page.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"grid-container\">\n        <mat-grid-list cols=\"3\" rowHeight=\"125px\">\n            <mat-grid-tile [colspan]=\"1\"></mat-grid-tile>\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"3\">\n                <mat-card class=\"dashboard-card\">\n                    <ng-progress></ng-progress>\n                    <mat-card-header>\n                        <mat-card-title>\n                            Register\n                        </mat-card-title>\n                    </mat-card-header>\n                    <mat-card-content>\n                        <form [formGroup]=\"form\">\n                            <mat-grid-list cols=\"1\" rowHeight=\"60px\">\n                                <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                    <mat-form-field>\n                                        <input\n                                            matInput\n                                            placeholder=\"email\"\n                                            type=\"text\"\n                                            autocomplete=\"off\"\n                                            name=\"email\"\n                                            id=\"email\"\n                                            [formControl]=\"emailCtrl\"\n                                            required >\n                                        <span matSuffix>@rci.rogers.com</span>\n                                        <mat-error *ngIf=\"emailCtrl.invalid\">{{getEmailErrorMessage()}}</mat-error>\n                                    </mat-form-field>\n                                </mat-grid-tile>\n                                <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                    <mat-form-field>\n                                        <input\n                                            matInput\n                                            placeholder=\"password\"\n                                            type=\"password\"\n                                            autocomplete=\"off\"\n                                            name=\"pass\"\n                                            id=\"pass\"\n                                            [formControl]=\"passCtrl\"\n                                            required >\n                                        <mat-error *ngIf=\"passCtrl.invalid\">{{getPassErrorMessage()}}</mat-error>\n                                    </mat-form-field>\n                                </mat-grid-tile>\n                                <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                    <button mat-flat-button color=\"primary\" (click)=\"submit()\">Register</button>\n                                </mat-grid-tile>\n                                <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                    <button mat-flat-button color=\"accent\" (click)=\"login()\">Login</button>\n                                </mat-grid-tile>\n                            </mat-grid-list>\n                        </form>\n                    </mat-card-content>\n                </mat-card>\n            </mat-grid-tile>\n        </mat-grid-list>\n    </div>"
+
+/***/ }),
+
+/***/ "./src/app/components/register-page/register-page.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/components/register-page/register-page.ts ***!
+  \***********************************************************/
+/*! exports provided: RegisterPageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterPageComponent", function() { return RegisterPageComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services */ "./src/app/services/index.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var ngx_progressbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-progressbar */ "./node_modules/ngx-progressbar/modules/ngx-progressbar.es5.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var RegisterPageComponent = /** @class */ (function () {
+    function RegisterPageComponent(formBuilder, authService, ngProgress, toastr, router) {
+        this.formBuilder = formBuilder;
+        this.authService = authService;
+        this.ngProgress = ngProgress;
+        this.toastr = toastr;
+        this.router = router;
+        this.model = {};
+    }
+    RegisterPageComponent.prototype.ngOnInit = function () {
+        this.emailCtrl = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]);
+        this.passCtrl = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(8)]);
+        this.form = this.formBuilder.group({
+            email: this.emailCtrl,
+            password: this.passCtrl
+        });
+    };
+    RegisterPageComponent.prototype.submit = function () {
+        var _this = this;
+        this.ngProgress.start();
+        this.model.email = this.form.get('email').value + '@rci.rogers.com';
+        this.model.password = this.form.get('password').value;
+        console.log(this.model);
+        this.authService.register(this.model).then(function () {
+            _this.ngProgress.done();
+            _this.toastr.success('Please verify your email.', '', {
+                timeOut: 3000,
+                positionClass: 'toast-top-center'
+            });
+            _this.router.navigate(['/profile']);
+        }).catch(function (err) {
+            console.log(err);
+        });
+    };
+    RegisterPageComponent.prototype.login = function () {
+        this.router.navigate(['/login']);
+    };
+    RegisterPageComponent.prototype.getEmailErrorMessage = function () {
+        return this.emailCtrl.hasError('required') ? 'You must enter a value' : '';
+    };
+    RegisterPageComponent.prototype.getPassErrorMessage = function () {
+        return this.passCtrl.hasError('required') ? 'You must enter a value' :
+            this.passCtrl.hasError('minlength') ? 'Password must be atleast 8 characters' : '';
+    };
+    RegisterPageComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-register',
+            template: __webpack_require__(/*! ./register-page.html */ "./src/app/components/register-page/register-page.html"),
+            styles: [__webpack_require__(/*! ./register-page.css */ "./src/app/components/register-page/register-page.css")],
+        }),
+        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"],
+            _services__WEBPACK_IMPORTED_MODULE_1__["AuthService"],
+            ngx_progressbar__WEBPACK_IMPORTED_MODULE_4__["NgProgress"],
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    ], RegisterPageComponent);
+    return RegisterPageComponent;
 }());
 
 
@@ -4673,6 +4856,55 @@ var TestSuitesTable = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/gaurds/admin.gaurd.ts":
+/*!***************************************!*\
+  !*** ./src/app/gaurds/admin.gaurd.ts ***!
+  \***************************************/
+/*! exports provided: AdminGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminGuard", function() { return AdminGuard; });
+/* harmony import */ var _node_modules_angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/@angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _node_modules_angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/@angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services */ "./src/app/services/index.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AdminGuard = /** @class */ (function () {
+    function AdminGuard(router, authService) {
+        this.router = router;
+        this.authService = authService;
+    }
+    AdminGuard.prototype.canActivate = function () {
+        if (this.authService.isLoggedIn() && this.authService.hasAdminRole()) {
+            return true;
+        }
+        this.router.navigate(['/']);
+        return false;
+    };
+    AdminGuard = __decorate([
+        Object(_node_modules_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_node_modules_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
+            _services__WEBPACK_IMPORTED_MODULE_2__["AuthService"]])
+    ], AdminGuard);
+    return AdminGuard;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/gaurds/user.gaurd.ts":
 /*!**************************************!*\
   !*** ./src/app/gaurds/user.gaurd.ts ***!
@@ -4877,6 +5109,19 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.googleLogin = function () {
         return this.afAuth.auth.signInWithPopup(new firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"].GoogleAuthProvider());
     };
+    AuthService.prototype.login = function (user) {
+        return this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
+    };
+    AuthService.prototype.register = function (user) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password).then(function (userAuth) {
+                resolve(userAuth.user.sendEmailVerification());
+            }).catch(function (err) {
+                reject(err);
+            });
+        });
+    };
     AuthService.prototype.observeUser = function () {
         return this.user;
     };
@@ -4893,6 +5138,9 @@ var AuthService = /** @class */ (function () {
         else {
             return true;
         }
+    };
+    AuthService.prototype.hasAdminRole = function () {
+        return false;
     };
     AuthService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -5957,7 +6205,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/rdmtest/Desktop/rdm/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/rdmtest/Desktop/project/qa-rdm/src/main.ts */"./src/main.ts");
 
 
 /***/ })

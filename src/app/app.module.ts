@@ -9,8 +9,9 @@ import { HttpModule } from '@angular/http';
 import { NgProgressModule } from 'ngx-progressbar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { ToastrModule } from 'ngx-toastr';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatSelectModule, MatStepperModule, MatDialogModule, MatButtonModule, MatInputModule, MatSidenavModule, MatIconModule, MatFormFieldModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { MatToolbarModule, MatSelectModule, MatStepperModule, MatSnackBarModule, MatDialogModule, MatButtonModule, MatInputModule, MatSidenavModule, MatIconModule, MatFormFieldModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChartsModule } from 'ng2-charts';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
@@ -19,15 +20,17 @@ import { AppComponent } from './app.component';
 import { ModalDialogModule } from 'ngx-modal-dialog';
 
 import { UserGuard } from './gaurds/user.gaurd';
+import { AdminGuard } from './gaurds/admin.gaurd';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'prefix' },
   { path: 'dashboard', component: LandingPageComponent },
   { path: 'login', component: LoginPageComponent },
+  { path: 'register', component: RegisterPageComponent },
   { path: 'profile', component: ProfilePageComponent, canActivate: [UserGuard] },
   { path: 'test-cases', component: TestCasesPage, canActivate: [UserGuard] },
-  { path: 'admin-panel', redirectTo: 'admin-panel/select', canActivate: [UserGuard] },
-  { path: 'admin-panel/:focus', component: AdminPanelComponent, canActivate: [UserGuard] },
+  { path: 'admin-panel', redirectTo: 'admin-panel/select', canActivate: [AdminGuard] },
+  { path: 'admin-panel/:focus', component: AdminPanelComponent, canActivate: [AdminGuard] },
 ];
 
 import {
@@ -47,7 +50,7 @@ import {
   ResultsModal,ResultsTable,ResultsPage,
   SessionsModal,SessionsTable,SessionsPage,
   TestCasesModal,TestCasesTable,TestCasesPage,
-  TestSuitesModal,TestSuitesTable,TestSuitesPage, DashboardLine, LineChart,
+  TestSuitesModal,TestSuitesTable,TestSuitesPage, DashboardLine, LineChart, RegisterPageComponent,
 } from './components';
 
 import {
@@ -95,6 +98,7 @@ import {
     OperatingSystemsTable,OperatingSystemsPage,OperatingSystemsModal,
     PlatformsTable,PlatformsPage,PlatformsModal,
     ProfilePageComponent,
+    RegisterPageComponent,
     ResultsTable,ResultsPage,ResultsModal,
     SessionsTable,SessionsPage,SessionsModal,
     TestCasesTable,TestCasesPage,TestCasesModal,
@@ -105,6 +109,7 @@ import {
     ModalDialogModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     NgMultiSelectDropDownModule.forRoot(),
+    ToastrModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
@@ -118,6 +123,7 @@ import {
     MatButtonModule,
     MatSidenavModule,
     MatSelectModule,
+    MatSnackBarModule,
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,

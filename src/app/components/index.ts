@@ -10,6 +10,7 @@ export * from './navigation/navigation.component';
 export * from './operating-systems';
 export * from './platforms';
 export * from './profile-page/profile-page';
+export * from './register-page/register-page';
 export * from './results';
 export * from './sessions';
 export * from './test-cases';

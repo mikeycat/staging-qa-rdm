@@ -1,0 +1,18 @@
+[2018-08-16T04:55:00.893] [ERROR] [logger] - { Error: getaddrinfo ENOTFOUND endtest.io endtest.io:443
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+  code: 'ENOTFOUND',
+  errno: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'endtest.io',
+  host: 'endtest.io',
+  port: 443 }
+[2018-08-16T04:55:00.903] [ERROR] [logger] - { Error: getaddrinfo ENOTFOUND endtest.io endtest.io:443
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+  code: 'ENOTFOUND',
+  errno: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'endtest.io',
+  host: 'endtest.io',
+  port: 443 }

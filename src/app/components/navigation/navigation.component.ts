@@ -111,6 +111,10 @@ export class NavigationComponent implements OnInit {
     return this.authService.isLoggedIn();
   }
 
+  hasAdminRole() {
+    return this.authService.hasAdminRole();
+  }
+
   logout() {
     return this.authService.signout();
   }

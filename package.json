@@ -47,6 +47,7 @@
     "ngx-modal-dialog": "^3.0.0",
     "ngx-progressbar": "^2.1.1",
     "ngx-socket-io": "^1.1.1",
+    "ngx-toastr": "^9.0.2",
     "node-cron": "^1.2.1",
     "pg": "^7.4.3",
     "pg-hstore": "^2.3.2",

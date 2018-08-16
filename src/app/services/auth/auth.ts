@@ -4,6 +4,11 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from "rxjs/Observable";
 
+export interface IUser {
+    email?: string;
+    password?: string;
+}
+
 
 @Injectable()
 export class AuthService {
@@ -32,6 +37,20 @@ export class AuthService {
         )
     }
 
+    login(user: IUser) {
+        return this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
+    }
+
+    register(user: IUser): Promise<any> {
+        return new Promise((resolve, reject) => {
+            this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password).then((userAuth) => {
+                resolve(userAuth.user.sendEmailVerification())
+            }).catch(err => {
+                reject(err);
+            });
+        });
+    }
+
     observeUser() {
         return this.user;
     }
@@ -48,5 +67,9 @@ export class AuthService {
         } else {
             return true;
         }
+    }
+
+    hasAdminRole() {
+        return false;
     }
 }
