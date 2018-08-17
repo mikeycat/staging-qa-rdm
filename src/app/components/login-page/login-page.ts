@@ -41,7 +41,6 @@ export class LoginPageComponent implements OnInit {
         this.ngProgress.start();
         this.model.email = this.form.get('email').value + '@rci.rogers.com';
         this.model.password = this.form.get('password').value;
-        console.log(this.model);
         this.authService.login(this.model).then(() => {
             this.ngProgress.done();
             this.router.navigate(['/profile']);
@@ -61,7 +60,6 @@ export class LoginPageComponent implements OnInit {
                 }
 
             }
-            console.log(err);
         });
     }
 

@@ -1,4 +1,75 @@
 <div [ngSwitch]="focus">
+    <ng-container *ngSwitchCase="'select'">
+
+        <mat-grid-list cols="4" rowHeight="80px">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-card routerLink="/admin-panel/active-test-cases" class="dashboard-card">
+                    <mat-card-header>
+                        Active Tests
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-card routerLink="/admin-panel/browsers" class="dashboard-card">
+                    <mat-card-header>
+                        Browser
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-card routerLink="/admin-panel/lines-of-service" class="dashboard-card">
+                    <mat-card-header>
+                        Line of Service
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-card routerLink="/admin-panel/operating-systems" class="dashboard-card">
+                    <mat-card-header>
+                        Operating System
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-card routerLink="/admin-panel/platforms" class="dashboard-card">
+                    <mat-card-header>
+                        Platform
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-card routerLink="/admin-panel/results" class="dashboard-card">
+                    <mat-card-header>
+                        Result
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-card routerLink="/admin-panel/sessions" class="dashboard-card">
+                    <mat-card-header>
+                        Session
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-card routerLink="/admin-panel/test-cases" class="dashboard-card">
+                    <mat-card-header>
+                        Test Case
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-card routerLink="/admin-panel/test-suites" class="dashboard-card">
+                    <mat-card-header>
+                        Test Suite
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </ng-container>
+
+
+
     <active-tests-page *ngSwitchCase="'active-test-cases'"></active-tests-page>
     <browsers-page *ngSwitchCase="'browsers'"></browsers-page>
     <lines-of-service-page *ngSwitchCase="'lines-of-service'"></lines-of-service-page>

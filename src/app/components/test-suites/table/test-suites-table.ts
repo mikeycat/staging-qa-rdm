@@ -25,7 +25,6 @@ export class TestSuitesTable implements OnInit {
 
     reset() {
         this.testSuitesService.getAll().then(testSuites => {
-            console.log(testSuites);
             this.testSuites = testSuites;
         }).catch(err => {
             console.log(err);

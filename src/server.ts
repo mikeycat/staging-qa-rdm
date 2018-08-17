@@ -4,7 +4,10 @@ import {createConnection} from "typeorm";
 import * as express from 'express';
 const path = require('path');
 const bodyParser = require('body-parser');
-import { 
+const session = require('express-session');
+const uuidv1 = require('uuid/v1');
+
+import {
     ActiveTestsRouter,
     TestSuitesRouter,
     TestCasesRouter,
@@ -13,7 +16,9 @@ import {
     OperatingSystemsRouter,
     PlatformsRouter,
     ResultsRouter,
-    SessionsRouter
+    SessionsRouter,
+    AuthRouter,
+    UsersRouter
 } from './routes';
 
 import {
@@ -27,6 +32,24 @@ createConnection().then(async connection => {
     const app: express.Application = express();
     // The port the express app will listen on
     const port: string = process.env.PORT || "3000";
+    // Set session default values
+    const sess = {
+        genid: function(req) {
+            return uuidv1()
+        },
+        secret: 'Session',
+        cookie: {
+            maxAge: 600000,
+            secure: false
+        }
+    }
+
+    if (app.get('env') === 'production') {
+        app.set('trust proxy', 1); // Trust first proxy
+        sess.cookie.secure = true; // Serve secure cookies
+    }
+
+    app.use(session(sess));
 
     // Parsers for POST data
     app.use(bodyParser.json());
@@ -37,6 +60,8 @@ createConnection().then(async connection => {
 
     // Mount the ActiveTestsController at the /api/active-tests route
     app.use('/api/active-tests', ActiveTestsRouter);
+    // Mount the Auth at the /api/auth route
+    app.use('/api/auth', AuthRouter);
     // Mount the BrowserController at the /api/browsers route
     app.use('/api/browsers', BrowsersRouter);
     // Mount the OperatingSystemsController at the /api/operating-systems route
@@ -53,6 +78,8 @@ createConnection().then(async connection => {
     app.use('/api/test-cases', TestCasesRouter);
     // Mount the TestSuitesController at the /api/test-suites route
     app.use('/api/test-suites', TestSuitesRouter);
+    // Mount the UsersController at the /api/users route
+    app.use('/api/users', UsersRouter);
 
     // Catch all other routes and return the index file
     app.get('*', (req, res) => {
@@ -66,5 +93,5 @@ createConnection().then(async connection => {
         queueJob.start();
         nightlyJob.start();
     });
-    
+
 }).catch(error => console.log(error));

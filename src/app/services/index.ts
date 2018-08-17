@@ -8,3 +8,4 @@ export * from './results/results';
 export * from './sessions/sessions';
 export * from './test-cases/test-cases';
 export * from './test-suites/test-suites';
+export * from './users/users';

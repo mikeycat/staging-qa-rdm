@@ -47,7 +47,6 @@ export class LineChart implements OnInit {
 
     @Input() set data(value: any) {
         if (typeof value != "undefined") {
-            console.log(value);
             this.chartData = value;
         }
     }

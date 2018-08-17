@@ -16,3 +16,25 @@
   hostname: 'endtest.io',
   host: 'endtest.io',
   port: 443 }
+[2018-08-16T16:02:31.340] [ERROR] [logger] - TypeError: relatedEntities.forEach is not a function
+    at OneToManySubjectBuilder.buildForSubjectRelation (/Users/rdmtest/Desktop/project/qa-rdm/src/persistence/subject-builder/OneToManySubjectBuilder.ts:78:25)
+    at /Users/rdmtest/Desktop/project/qa-rdm/src/persistence/subject-builder/OneToManySubjectBuilder.ts:42:22
+    at Array.forEach (<anonymous>)
+    at /Users/rdmtest/Desktop/project/qa-rdm/src/persistence/subject-builder/OneToManySubjectBuilder.ts:36:49
+    at Array.forEach (<anonymous>)
+    at OneToManySubjectBuilder.build (/Users/rdmtest/Desktop/project/qa-rdm/src/persistence/subject-builder/OneToManySubjectBuilder.ts:35:23)
+    at EntityPersistExecutor.<anonymous> (/Users/rdmtest/Desktop/project/qa-rdm/src/persistence/EntityPersistExecutor.ts:104:63)
+    at step (/Users/rdmtest/Desktop/project/qa-rdm/node_modules/typeorm/persistence/EntityPersistExecutor.js:32:23)
+    at Object.next (/Users/rdmtest/Desktop/project/qa-rdm/node_modules/typeorm/persistence/EntityPersistExecutor.js:13:53)
+    at fulfilled (/Users/rdmtest/Desktop/project/qa-rdm/node_modules/typeorm/persistence/EntityPersistExecutor.js:4:58)
+[2018-08-16T16:02:31.440] [ERROR] [logger] - TypeError: relatedEntities.forEach is not a function
+    at OneToManySubjectBuilder.buildForSubjectRelation (/Users/rdmtest/Desktop/project/qa-rdm/src/persistence/subject-builder/OneToManySubjectBuilder.ts:78:25)
+    at /Users/rdmtest/Desktop/project/qa-rdm/src/persistence/subject-builder/OneToManySubjectBuilder.ts:42:22
+    at Array.forEach (<anonymous>)
+    at /Users/rdmtest/Desktop/project/qa-rdm/src/persistence/subject-builder/OneToManySubjectBuilder.ts:36:49
+    at Array.forEach (<anonymous>)
+    at OneToManySubjectBuilder.build (/Users/rdmtest/Desktop/project/qa-rdm/src/persistence/subject-builder/OneToManySubjectBuilder.ts:35:23)
+    at EntityPersistExecutor.<anonymous> (/Users/rdmtest/Desktop/project/qa-rdm/src/persistence/EntityPersistExecutor.ts:104:63)
+    at step (/Users/rdmtest/Desktop/project/qa-rdm/node_modules/typeorm/persistence/EntityPersistExecutor.js:32:23)
+    at Object.next (/Users/rdmtest/Desktop/project/qa-rdm/node_modules/typeorm/persistence/EntityPersistExecutor.js:13:53)
+    at fulfilled (/Users/rdmtest/Desktop/project/qa-rdm/node_modules/typeorm/persistence/EntityPersistExecutor.js:4:58)

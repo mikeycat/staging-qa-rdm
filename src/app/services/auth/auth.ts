@@ -1,12 +1,30 @@
 import { Injectable } from "@angular/core";
 import { Router } from '@angular/router';
+import { Http } from '@angular/http';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from "rxjs/Observable";
+import { SessionsService } from "../sessions/sessions";
+import { Session } from "../../../entity";
 
 export interface IUser {
     email?: string;
     password?: string;
+}
+
+export interface IRoles {
+    user: boolean;
+    admin?: boolean;
+}
+
+export class User {
+    email: string;
+    roles: IRoles;
+
+    constructor(authData) {
+        this.email = authData.email;
+        this.roles = { user: true }
+    }
 }
 
 
@@ -15,16 +33,30 @@ export class AuthService {
 
     private user: Observable<firebase.User>;
     private userDetails: firebase.User = null;
+    private session: Session;
 
     constructor(
         private afAuth: AngularFireAuth,
-        private router: Router
+        private router: Router,
+        private http: Http,
+        private sessionsService: SessionsService
     ) {
         this.user = afAuth.authState;
 
         this.user.subscribe(user => {
             if (user) {
                 this.userDetails = user;
+                this.sessionsService.getCurrent().then(session => {
+                    if (!session.user) {
+                        this.syncWithServerSession(this.userDetails.uid).then(() => {
+                            this.sessionsService.getCurrent().then(session => {
+                                this.session = session;
+                            });
+                        });
+                    } else {
+                        this.session = session;
+                    }
+                });
             } else {
                 this.userDetails = null;
             }
@@ -37,16 +69,36 @@ export class AuthService {
         )
     }
 
-    login(user: IUser) {
-        return this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
+    login(user: IUser):Promise<any> {
+        return new Promise((resolve, reject) => {
+            this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password).then(userAuth => {
+                this.syncWithServerSession(userAuth.user.uid).then(() => {
+                    resolve(true);
+                }).catch(err=> {
+                    reject(err);
+                });
+            }).catch(err => {
+                reject(err);
+            });
+        });
     }
 
     register(user: IUser): Promise<any> {
         return new Promise((resolve, reject) => {
             this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password).then((userAuth) => {
-                resolve(userAuth.user.sendEmailVerification())
+                this.syncWithServerSession(userAuth.user.uid).then(() => {
+                    resolve(userAuth.user.sendEmailVerification())
+                });
             }).catch(err => {
                 reject(err);
+            });
+        });
+    }
+
+    syncWithServerSession(uid: string): Promise<any> {
+        return new Promise((resolve, reject) => {
+            this.http.post('/api/auth/login', {uid: uid}).subscribe(data => {
+                resolve();
             });
         });
     }
@@ -69,7 +121,33 @@ export class AuthService {
         }
     }
 
-    hasAdminRole() {
-        return false;
+    hasAdminRole():Promise<boolean> {
+        return new Promise((resolve, reject) => {
+            try {
+                if (typeof this.session == "undefined") {
+                    resolve(false);
+                }
+                if (typeof this.session.user == "undefined") {
+                    resolve(false);
+                }
+                if (typeof this.session.user.roles == "undefined") {
+                    resolve(false);
+                }
+                this.session.user.roles.forEach((element, index) => {
+                    if (typeof element.name == "undefined") {
+                        resolve(false);
+                    }
+                    if (element.name == "admin") {
+                        resolve(true);
+                    }
+                    if (index == (this.session.user.roles.length-1)) {
+                        resolve(false);
+                    }
+                });
+            } catch (e) {
+                resolve(false);
+            }
+        })
+
     }
 }

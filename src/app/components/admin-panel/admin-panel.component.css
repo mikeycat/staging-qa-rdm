@@ -1,0 +1,5 @@
+.dashboard-card {
+    position: absolute;
+    padding: 16px;
+    cursor: pointer;
+}

@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinTable } from "typeorm";
+import { User } from './';
 
 @Entity()
 export class Session {
@@ -8,6 +9,7 @@ export class Session {
     @Column({ type: "varchar", length: 50, unique: true })
     session?: string;
 
-    @Column({ type: "varchar", length: 100, unique: true })
-    token?: string;
+    @ManyToOne( type => User, user => user.sessions )
+    @JoinTable()
+    user?: User;
 }

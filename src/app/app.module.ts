@@ -59,6 +59,7 @@ import {
   OperatingSystemsService,
   PlatformsService,
   TestCasesService,
+  SessionsService,
   ResultsService,
   ActiveTestCasesService,
   LinesOfServiceService,
@@ -146,10 +147,12 @@ import {
     ResultsService,
     LinesOfServiceService,
     TestCasesService,
+    SessionsService,
     ActiveTestCasesService,
     TestSuitesService,
     AuthService,
-    UserGuard
+    UserGuard,
+    AdminGuard
   ],
   bootstrap: [AppComponent]
 })

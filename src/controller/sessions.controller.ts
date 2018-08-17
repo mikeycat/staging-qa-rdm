@@ -2,13 +2,15 @@
 
 import { getManager } from "typeorm";
 import { logger } from "../logger";
+var secureRandom = require("secure-random");
 
 import { Session } from '../entity';
+import { resolve } from "path";
 
 export class SessionsController {
     /**
      * Get All Sessions.
-     * 
+     *
      * @returns Array of Sessions.
      */
     static getAll():Promise<Session[]> {
@@ -24,7 +26,7 @@ export class SessionsController {
     }
     /**
      * Get Session with given id value.
-     * 
+     *
      * @param id id value for Session wanted.
      * @returns Session
      */
@@ -40,17 +42,38 @@ export class SessionsController {
         });
     }
     /**
-     * Insert a Session
-     * 
-     * @param result Session values to insert
-     * @return id value of newly created session   
+     * Get Session by given session value
+     *
+     * @param session session value for session wanted
+     * @returns Session
      */
-    static insert(session: Session):Promise<number> {
+    static getBySession(session: string):Promise<Session> {
+        return new Promise((resolve, reject) => {
+            const repository = getManager().getRepository(Session);
+            repository.findOne({session: session}, { relations: ["user", "user.roles"] }).then(session => {
+                resolve(session);
+            }).catch(err => {
+                logger.error(err);
+                reject(err);
+            });
+        });
+    }
+    /**
+     * Insert a Session
+     *
+     * @param result Session values to insert
+     * @return id value of newly created session
+     */
+    static insert(session: Session):Promise<Session> {
         return new Promise((resolve, reject) => {
             const sessionsRepository = getManager().getRepository(Session);
+            if (!session.session) {
+                let arr: Array<any> = secureRandom.randomArray(10);
+                session.session = arr.join('');
+            }
             const newSession = sessionsRepository.create(session);
             sessionsRepository.save(newSession).then(session => {
-                resolve(session[0].id);
+                resolve(session);
             }).catch(err => {
                 logger.error(err);
                 reject(err);
@@ -59,9 +82,9 @@ export class SessionsController {
     }
     /**
      * Update a Session
-     * 
+     *
      * @param session Session values to update
-     * @return boolean of successful update of a session    
+     * @return boolean of successful update of a session
      */
     static update(session: Session):Promise<boolean> {
         return new Promise((resolve, reject) => {
@@ -70,8 +93,8 @@ export class SessionsController {
                 if (session.session != null) {
                     selectedSession.session = session.session;
                 }
-                if (session.token != null) {
-                    selectedSession.token = session.token;
+                if (session.user != null) {
+                    selectedSession.user = session.user;
                 }
                 sessionsRepository.save(selectedSession).then(() => {
                     resolve(true);
@@ -87,9 +110,9 @@ export class SessionsController {
     }
     /**
      * Delete a Session
-     * 
+     *
      * @param session Session to delete
-     * @return boolean of successful delete of a session    
+     * @return boolean of successful delete of a session
      */
     static delete(session: Session):Promise<boolean> {
         return new Promise((resolve, reject) => {
@@ -105,6 +128,31 @@ export class SessionsController {
                 logger.error(err);
                 reject(err);
             });
+        });
+    }
+    /**
+     * Get Current Session or Generate a Session
+     *
+     * @param session Session Cookie from a request
+     * @return session value
+     */
+    static getOrGenerateSession(sessionCookie: any):Promise<Session> {
+        return new Promise((resolve, reject) => {
+            if (!sessionCookie.session) {       // If there is no current session value stored in cookies
+                this.insert({}).then(session => {
+                    resolve(session);
+                }).catch(err => {
+                    logger.error(err);
+                    reject(err);
+                });
+            } else {                            // If there is a current session value stored
+                this.getBySession(sessionCookie.session).then(session => {
+                    resolve(session);
+                }).catch(err => {
+                    logger.error(err);
+                    reject(err);
+                });
+            }
         });
     }
 }

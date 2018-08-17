@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild } from "@angular/core";
-import { TestCasesService } from './../../../services';
+import { TestCasesService, AuthService } from './../../../services';
 import { TestCase, TestSuite } from './../../../../entity';
 import { MatDialog, MatTableDataSource, MatPaginator, MatPaginatorIntl, MatSort } from "@angular/material";
 import { TestCasesModal } from "../modal/test-cases-modal";
@@ -23,7 +23,15 @@ export class TestCasesTable implements OnInit {
         this.reset();
     }
 
-    constructor(private testCasesService: TestCasesService, private dialog: MatDialog) {}
+    constructor(
+        private testCasesService: TestCasesService,
+        private authService: AuthService,
+        private dialog: MatDialog
+    ) {
+        if (!authService.isLoggedIn() || !authService.hasAdminRole()) {
+            this.columnsToDisplay.splice(-1, 1);
+        }
+    }
 
     ngOnInit() {
         this.reset();

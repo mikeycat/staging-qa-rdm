@@ -1,5 +1,40 @@
 # RDM Automation Framework
 
-Here lies the projects documentation.
+Rogers Digital Media Automation Framework is a web application designed to make test automation easier. This is achieved by a nightly scheduler, dashboard, and other features.
 
-[Link](./Models/README.md) to data models documentation.
+## Getting Started
+
+#### Git
+
+The version control system is [Git](https://git-scm.com/). Which will need to be installed to get the source code of the project. Following this [link](https://git-scm.com/downloads) to git download page you can download and install git.
+
+#### Heroku
+
+This project is hosted on [Heroku](https://www.heroku.com/). This project also uses Heroku Git for deployment of the application. You will need to install Heroku Cli, following this [link](https://devcenter.heroku.com/articles/heroku-cli).
+
+#### Package Manager / Server
+
+You will need [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) to run this project locally. These both are installed with npm. Following this [link](https://www.npmjs.com/get-npm) will bring you to the npm download page. Download and install npm. Once completed you can run `npm -f i` in the root directory of the project to download all application dependecies.
+
+#### Database
+
+The database management system used in this project is [PostgreSQL](https://www.postgresql.org/). For this project to work locally you will need to have a working and running version of PostgreSQL. This can be accomplished by downloading and installing PostgreSQL. Following this [link](https://www.postgresql.org/download/) will bring you to the download page.
+
+## Deployment
+
+#### Local
+
+To deploy to a local instance, ideal for testing and development, you will need Node.js, npm, and PostgreSQL. To verify all of these you can run the following commands: `npm -v`, `node  -v`
+
+```bash
+$ npm -v
+6.1.0
+$ node -v
+v8.11.3
+```
+
+Those two commands will print the version of npm and node that you are using locally.
+
+#### Heroku
+
+To deploy to the Heroku instance follow this [documentation](https://devcenter.heroku.com/articles/heroku-cli) provided by Heroku.

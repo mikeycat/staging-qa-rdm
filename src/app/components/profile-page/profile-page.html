@@ -5,10 +5,44 @@
                 <mat-card class="dashboard-card">
                     <mat-card-header>
                         <mat-card-title>
-                            {{ profile.displayName }}
+                            Profile
                         </mat-card-title>
                     </mat-card-header>
                     <mat-card-content>
+                        <mat-grid-list cols="3" rowHeight="50px">
+                            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                Email:
+                            </mat-grid-tile>
+                            <mat-grid-tile [colspan]="2" [rowspan]="1">
+                                {{ profile.email }}
+                            </mat-grid-tile>
+                            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                Verified Email:
+                            </mat-grid-tile>
+                            <mat-grid-tile [colspan]="2" [rowspan]="1">
+                                {{ profile.emailVerified }}
+                            </mat-grid-tile>
+                            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                UID:
+                            </mat-grid-tile>
+                            <mat-grid-tile [colspan]="2" [rowspan]="1">
+                                {{ profile.uid }}
+                            </mat-grid-tile>
+                            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                Session:
+                            </mat-grid-tile>
+                            <mat-grid-tile [colspan]="2" [rowspan]="1">
+                                {{ session.session }}
+                            </mat-grid-tile>
+                            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                Roles:
+                            </mat-grid-tile>
+                            <mat-grid-tile [colspan]="2" [rowspan]="1">
+                                <span *ngFor="let role of roles" style="padding-right: 5px;">
+                                    {{ role.name }}
+                                </span>
+                            </mat-grid-tile>
+                        </mat-grid-list>
                         <button mat-raised-button (click)="logout()">
                             Logout
                         </button>

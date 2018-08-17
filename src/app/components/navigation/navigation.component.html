@@ -20,6 +20,7 @@
             <mat-icon matListIcon>dashboard</mat-icon>
             Dashboard
           </a>
+          <!--
           <div *ngIf="router.url=='/dashboard'" style="margin: 0 35px 0 10px;">
             <h4 matLine>
               Filter
@@ -53,6 +54,7 @@
                 [settings]="dropdownSettings"></ng-multiselect-dropdown>
             </p>
           </div>
+          -->
           <a mat-list-item routerLink="/test-cases" routerLinkActive="selected" *ngIf="isLoggedIn()">
             <mat-icon matListIcon>assignment</mat-icon>
             Test Cases
@@ -66,7 +68,7 @@
             <mat-icon matListIcon>account_circle</mat-icon>
             Profile
           </a>
-          <a mat-list-item routerLink="/admin-panel/select" routerLinkActive="selected" *ngIf="hasAdminRole()">
+          <a mat-list-item routerLink="/admin-panel/select" routerLinkActive="selected" *ngIf="isLoggedIn()">
             <mat-icon matListIcon>settings</mat-icon>
             Admin Panel
           </a>

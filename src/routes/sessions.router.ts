@@ -39,9 +39,9 @@ router.get('/:id', (req: Request, res: Response) => {
 /* POST /api/sessions/insert */
 /* Insert Session */
 router.post('/insert', (req: Request, res: Response) => {
-    SessionsController.insert(req.body).then((id: number) => {
+    SessionsController.insert(req.body).then((session: Session) => {
         // resond with id of new session
-        res.status(200).json({id: id});
+        res.status(200).json({id: session.id});
     }).catch(err => {
         // log error and return with status 500 to the client
         logger.error(err);

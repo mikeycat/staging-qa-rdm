@@ -31,6 +31,13 @@ export class SessionsService {
             }
           });
       }
+      getCurrent(): Promise<Session> {
+        return new Promise((resolve, reject) => {
+          this.http.get('/api/auth').subscribe(data => {
+            resolve(<Session>data.json());
+          });
+        })
+      }
       insert(session: Session): Promise<number> {
           return new Promise((resolve, reject) => {
             try {

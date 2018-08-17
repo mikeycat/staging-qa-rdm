@@ -22,6 +22,8 @@ export class NavigationComponent implements OnInit {
   linesOfService: LineOfService[] = [];
   selectedLinesOfService: LineOfService[] = [];
 
+  private isAdmin: boolean = false;
+
   dropdownSettings = {};
 
   constructor(
@@ -46,16 +48,29 @@ export class NavigationComponent implements OnInit {
       itemsShowLimit: 1,
       allowSearchFilter: true
     }
-    this.load().then();
+    this.load();
+    this.validateSession();
   }
 
   load() {
     return new Promise((resolve, reject) => {
+      /*
       this.loadPlatforms();
       this.loadOperatingSystems();
       this.loadBrowsers();
       this.loadLinesOfServices();
+      */
       resolve();
+    });
+  }
+
+  validateSession() {
+    return new Promise((resolve, reject) => {
+      if (this.authService.isLoggedIn()) {
+        this.authService.observeUser().subscribe(user => {
+          this.authService.syncWithServerSession(user.uid);
+        });
+      }
     });
   }
 
@@ -109,10 +124,6 @@ export class NavigationComponent implements OnInit {
 
   isLoggedIn() {
     return this.authService.isLoggedIn();
-  }
-
-  hasAdminRole() {
-    return this.authService.hasAdminRole();
   }
 
   logout() {
