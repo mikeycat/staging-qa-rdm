@@ -27,7 +27,7 @@ export class NavigationComponent implements OnInit {
   dropdownSettings = {};
 
   constructor(
-    private router: Router,
+    public router: Router,
     private route: ActivatedRoute,
     private platformsService: PlatformsService,
     private operatingSystemsService: OperatingSystemsService,

@@ -16,3 +16,4 @@ export * from './sessions';
 export * from './test-cases';
 export * from './test-suites';
 export * from './cast-sender/cast-sender.component';
+export * from './users';

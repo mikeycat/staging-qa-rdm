@@ -51,6 +51,7 @@ import {
   SessionsModal,SessionsTable,SessionsPage,
   TestCasesModal,TestCasesTable,TestCasesPage,
   TestSuitesModal,TestSuitesTable,TestSuitesPage, DashboardLine, LineChart, RegisterPageComponent,
+  UsersPage, UsersTable, UsersModal
 } from './components';
 
 import {
@@ -103,7 +104,8 @@ import {
     ResultsTable,ResultsPage,ResultsModal,
     SessionsTable,SessionsPage,SessionsModal,
     TestCasesTable,TestCasesPage,TestCasesModal,
-    TestSuitesTable,TestSuitesPage,TestSuitesModal
+    TestSuitesTable,TestSuitesPage,TestSuitesModal,
+    UsersPage, UsersTable, UsersModal
   ],
   imports: [
     BrowserModule,
