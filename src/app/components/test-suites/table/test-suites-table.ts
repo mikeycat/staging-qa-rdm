@@ -30,6 +30,9 @@ export class TestSuitesTable implements OnInit {
     reset() {
         this.testSuitesService.getAll().then(testSuites => {
             this.testSuites = testSuites;
+            this.dataSource = new MatTableDataSource(testSuites);
+            this.dataSource.paginator = this.paginator;
+            this.dataSource.sort = this.sort;
         }).catch(err => {
             console.log(err);
         });
