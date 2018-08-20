@@ -295,6 +295,10 @@ export class TestCasesController {
 
             testCasesRepository.findOne(testCase.id).then(selectedTestCase => {
                 if (testCase.date != null) {
+                    if (!Date.parse(testCase.date)) {
+                        let tmp = new Date(Date.now());
+                        testCase.date = tmp.toISOString();
+                    }
                     selectedTestCase.date = testCase.date;
                 }
                 if (testCase.passed != null) {
