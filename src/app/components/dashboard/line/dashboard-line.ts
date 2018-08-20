@@ -40,7 +40,11 @@ export class DashboardLine implements OnInit {
     load(testSuite) {
       this.testCasesService.getTotalsByTestSuiteGroupByDate({id: testSuite.test_suite_id}).then((testCases:any) => {
         testCases.forEach((element, index) => {
-          let i = new Date(Date.parse(element.date)).getDay();
+          let i = new Date(
+            Date.parse(
+              (element.date).replace(new RegExp("-", "g"), "/")
+            )
+          ).getDay();
           this.passedWeek[i] = parseInt(element.passed);
           this.failedWeek[i] = parseInt(element.failed);
           this.errorWeek[i] = parseInt(element.error);

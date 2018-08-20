@@ -59,7 +59,7 @@ module.exports = "@import url(\"https://fonts.googleapis.com/css?family=Roboto:3
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n    background-color: rgb(48, 48, 48);\n}\nmat-sidenav-content {\n    margin-left: 300px;\n}\n.mat-icon {\n    font-family: 'Material Icons';\n    font-weight: normal;\n    font-style: normal;\n    font-size: 24px;  /* Preferred icon size */\n    display: inline-block;\n    line-height: 1;\n    text-transform: none;\n    letter-spacing: normal;\n    word-wrap: normal;\n    white-space: nowrap;\n    direction: ltr;\n  \n    /* Support for all WebKit browsers. */\n    -webkit-font-smoothing: antialiased;\n    /* Support for Safari and Chrome. */\n    text-rendering: optimizeLegibility;\n  \n    /* Support for Firefox. */\n    -moz-osx-font-smoothing: grayscale;\n  \n    /* Support for IE. */\n    -webkit-font-feature-settings: 'liga';\n            font-feature-settings: 'liga';\n}\n.dashboard-card {\n    position: absolute;\n    top: 15px;\n    left: 15px;\n    right: 15px;\n    bottom: 15px;\n}\n.mat-table{\n    width: 100%;\n    height: 100%;\n}\n.action-span {\n    padding: 0 7px;\n}\n"
+module.exports = "/* You can add global styles to this file, and also import other style files */\r\nbody {\r\n    background-color: rgb(48, 48, 48);\r\n}\r\nmat-sidenav-content {\r\n    margin-left: 300px;\r\n}\r\n.mat-icon {\r\n    font-family: 'Material Icons';\r\n    font-weight: normal;\r\n    font-style: normal;\r\n    font-size: 24px;  /* Preferred icon size */\r\n    display: inline-block;\r\n    line-height: 1;\r\n    text-transform: none;\r\n    letter-spacing: normal;\r\n    word-wrap: normal;\r\n    white-space: nowrap;\r\n    direction: ltr;\r\n  \r\n    /* Support for all WebKit browsers. */\r\n    -webkit-font-smoothing: antialiased;\r\n    /* Support for Safari and Chrome. */\r\n    text-rendering: optimizeLegibility;\r\n  \r\n    /* Support for Firefox. */\r\n    -moz-osx-font-smoothing: grayscale;\r\n  \r\n    /* Support for IE. */\r\n    -webkit-font-feature-settings: 'liga';\r\n            font-feature-settings: 'liga';\r\n}\r\n.dashboard-card {\r\n    position: absolute;\r\n    top: 15px;\r\n    left: 15px;\r\n    right: 15px;\r\n    bottom: 15px;\r\n}\r\n.mat-table{\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n.action-span {\r\n    padding: 0 7px;\r\n}\r\n"
 
 /***/ }),
 
@@ -621,9 +621,9 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/rdmtest/Desktop/project/qa-rdm/src/theme.scss */"./src/theme.scss");
-__webpack_require__(/*! /Users/rdmtest/Desktop/project/qa-rdm/node_modules/ngx-toastr/toastr.css */"./node_modules/ngx-toastr/toastr.css");
-module.exports = __webpack_require__(/*! /Users/rdmtest/Desktop/project/qa-rdm/src/styles.css */"./src/styles.css");
+__webpack_require__(/*! C:\Users\kirby\Desktop\tmp\qa-rdm\src\theme.scss */"./src/theme.scss");
+__webpack_require__(/*! C:\Users\kirby\Desktop\tmp\qa-rdm\node_modules\ngx-toastr\toastr.css */"./node_modules/ngx-toastr/toastr.css");
+module.exports = __webpack_require__(/*! C:\Users\kirby\Desktop\tmp\qa-rdm\src\styles.css */"./src/styles.css");
 
 
 /***/ })

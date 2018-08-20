@@ -3,7 +3,6 @@ import { TestCasesService, AuthService } from './../../../services';
 import { TestCase, TestSuite } from './../../../../entity';
 import { MatDialog, MatTableDataSource, MatPaginator, MatPaginatorIntl, MatSort } from "@angular/material";
 import { TestCasesModal } from "../modal/test-cases-modal";
-import { element } from "../../../../../node_modules/protractor";
 
 @Component({
     selector: 'test-cases-table',
