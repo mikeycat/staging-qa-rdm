@@ -1892,8 +1892,7 @@ var DashboardLine = /** @class */ (function () {
         var _this = this;
         this.testCasesService.getTotalsByTestSuiteGroupByDate({ id: testSuite.test_suite_id }).then(function (testCases) {
             testCases.forEach(function (element, index) {
-                console.log((element.date).replace(new RegExp("-", "g"), "/"));
-                var i = new Date(Date.parse((element.date).replace(new RegExp("-", "g"), "/"))).getDay();
+                var i = new Date(Date.parse(element.date)).getUTCDay();
                 _this.passedWeek[i] = parseInt(element.passed);
                 _this.failedWeek[i] = parseInt(element.failed);
                 _this.errorWeek[i] = parseInt(element.error);
