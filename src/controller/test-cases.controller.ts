@@ -321,7 +321,10 @@ export class TestCasesController {
                 testCasesRepository.save(selectedTestCase).then(() => {
                     resolve(true);
                 }).catch(err => {
-                    console.log("1", err);
+                    if (err.code == '23505') {
+                        resolve();
+                        return;
+                    }
                     logger.error(err);
                     reject(err);
                 });
