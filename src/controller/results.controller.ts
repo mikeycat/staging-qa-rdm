@@ -55,7 +55,7 @@ export class ResultsController {
                         resolve(result);
                     }).catch(err => {
                         logger.error(err);
-                        resolve();
+                        reject(err);
                     });
                 } else {
                     resolve(result);

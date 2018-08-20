@@ -321,6 +321,7 @@ export class TestCasesController {
                 testCasesRepository.save(selectedTestCase).then(() => {
                     resolve(true);
                 }).catch(err => {
+                    console.log("1", err);
                     logger.error(err);
                     reject(err);
                 });
