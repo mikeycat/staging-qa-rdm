@@ -40,6 +40,7 @@ export class DashboardLine implements OnInit {
     load(testSuite) {
       this.testCasesService.getTotalsByTestSuiteGroupByDate({id: testSuite.test_suite_id}).then((testCases:any) => {
         testCases.forEach((element, index) => {
+          console.log((element.date).replace(new RegExp("-", "g"), "/"));
           let i = new Date(
             Date.parse(
               (element.date).replace(new RegExp("-", "g"), "/")
