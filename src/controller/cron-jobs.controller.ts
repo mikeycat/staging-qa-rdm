@@ -21,7 +21,7 @@ export class CronJobsController {
                     console.log("Max - " + (this.MAX_QUEUE - hashNum));
     
                     if (hashNum < this.MAX_QUEUE) {
-                        ActiveTestsController.getAllNullHashLimit(this.MAX_QUEUE - num).then(activeTests => {
+                        ActiveTestsController.getAllNullHashLimit(this.MAX_QUEUE - hashNum).then(activeTests => {
                             activeTests.forEach((activeTest, index) => {
                                 EndTestController.executeActiveTest(activeTest).then(result => {
                                     if (index == activeTests.length) {
