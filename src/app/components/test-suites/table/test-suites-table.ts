@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, ViewChild } from "@angular/core";
 import { TestSuitesService } from './../../../services';
 import { TestSuite } from './../../../../entity';
-import { MatDialog } from "@angular/material";
+import { MatDialog, MatTableDataSource, MatPaginator, MatSort } from "@angular/material";
 import { TestSuitesModal } from "../modal/test-suites-modal";
 
 @Component({
@@ -12,6 +12,10 @@ export class TestSuitesTable implements OnInit {
 
     testSuites: TestSuite[];
     columnsToDisplay = ['name', 'app_id', 'app_code', 'test_suite', 'line_of_service', 'actions'];
+    dataSource: MatTableDataSource<TestSuite>;
+
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort) sort: MatSort;
 
     @Input() set update(value: boolean) {
         this.reset();
