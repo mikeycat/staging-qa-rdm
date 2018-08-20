@@ -2,7 +2,7 @@
 
 import { logger } from '../logger';
 import { TestCase, ActiveTest, Result } from '../entity';
-import { ActiveTestsController } from './active-tests.controller';
+import { ActiveTestsController, CronJobsController } from './';
 import { ResultsController } from '.';
 const request = require('request');
 
@@ -68,17 +68,23 @@ export class EndTestController {
      */
     static executeActiveTest(activeTest: ActiveTest):Promise<boolean> {
         return new Promise((resolve, reject) => {
-            this.executeTestCase(activeTest.test_case).then(hash => {
-                activeTest.hash = hash;
-                ActiveTestsController.update(activeTest).then(result => {
-                    resolve(result);
-                }).catch(err => {
-                    logger.error(err);
-                    reject(err);
-                });
-            }).catch(err => {
-                logger.error(err);
-                resolve();
+            ActiveTestsController.countHash().then(num => {
+                if (num < CronJobsController.MAX_QUEUE) {
+                    this.executeTestCase(activeTest.test_case).then(hash => {
+                        activeTest.hash = hash;
+                        ActiveTestsController.update(activeTest).then(result => {
+                            resolve(result);
+                        }).catch(err => {
+                            logger.error(err);
+                            reject(err);
+                        });
+                    }).catch(err => {
+                        logger.error(err);
+                        resolve();
+                    });
+                } else { 
+                    resolve();
+                }
             });
         });
     }
