@@ -3,6 +3,8 @@
 import { getManager, IsNull, Not } from "typeorm";
 import { logger } from "../logger";
 import { ActiveTest } from '../entity';
+import { TestCasesController } from "./test-cases.controller";
+import { NotificationsController } from "./notifications.controller";
 
 export class ActiveTestsController {
     static getAll():Promise<ActiveTest[]> {
@@ -174,13 +176,34 @@ export class ActiveTestsController {
     static delete(activeTest: ActiveTest):Promise<boolean> {
         return new Promise((resolve, reject) => {
             const repository = getManager().getRepository(ActiveTest);
-            repository.findOne(activeTest.id).then(selectedActiveTest => {
-                repository.remove(selectedActiveTest).then(() => {
-                    resolve(true);
-                }).catch(err => {
-                    logger.error(err);
-                    reject(err);
-                });
+            repository.findOne(activeTest.id, {
+                relations: [
+                    "test_case",
+                    "test_case.test_suite",
+                    "test_case.notifications",
+                    "test_case.notifications.user"
+                ]
+            }).then(selectedActiveTest => {
+                if (selectedActiveTest.test_case.notifications.length > 0) {
+                    NotificationsController.send(selectedActiveTest.test_case).then(() => {
+                        repository.remove(selectedActiveTest).then(() => {
+                            resolve(true);
+                        }).catch(err => {
+                            logger.error(err);
+                            reject(err);
+                        });
+                    }).catch(err => {
+                        logger.error(err);
+                        reject(err);
+                    })
+                } else {
+                    repository.remove(selectedActiveTest).then(() => {
+                        resolve(true);
+                    }).catch(err => {
+                        logger.error(err);
+                        reject(err);
+                    });
+                }
             }).catch(err => {
                 logger.error(err);
                 reject(err);

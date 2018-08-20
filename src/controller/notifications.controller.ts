@@ -4,6 +4,7 @@ import { getManager } from "typeorm";
 import { logger } from "../logger";
 
 import { Notification, User, TestCase } from '../entity';
+import { EmailController } from "./email.controller";
 
 export class NotificationsController {
     static getAll():Promise<Notification[]> {
@@ -107,6 +108,25 @@ export class NotificationsController {
             }).catch(err => {
                 logger.error(err);
                 reject(err);
+            });
+        });
+    }
+    static send(testCase: TestCase):Promise<boolean> {
+        return new Promise((resolve, reject) => {
+            testCase.notifications.forEach((element, index) => {
+                EmailController.sendCompletedTestCase(testCase, element.user).then(() => {
+                    this.delete(element).then(() => {
+                        if (index == (testCase.notifications.length-1)) {
+                            resolve(true);
+                        }
+                    }).catch(err => {
+                        logger.error(err);
+                        reject(err);
+                    });
+                }).catch(err => {
+                    logger.error(err);
+                    reject(err);
+                });
             });
         });
     }
