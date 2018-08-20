@@ -321,7 +321,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navigation></app-navigation>\r\n\r\n"
+module.exports = "<app-navigation></app-navigation>\n\n"
 
 /***/ }),
 
@@ -502,6 +502,7 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatButtonModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatSidenavModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatSelectModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatCheckboxModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatSnackBarModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatInputModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatFormFieldModule"],
@@ -526,6 +527,7 @@ var AppModule = /** @class */ (function () {
                 _services__WEBPACK_IMPORTED_MODULE_22__["LinesOfServiceService"],
                 _services__WEBPACK_IMPORTED_MODULE_22__["TestCasesService"],
                 _services__WEBPACK_IMPORTED_MODULE_22__["SessionsService"],
+                _services__WEBPACK_IMPORTED_MODULE_22__["NotificationsService"],
                 _services__WEBPACK_IMPORTED_MODULE_22__["ActiveTestCasesService"],
                 _services__WEBPACK_IMPORTED_MODULE_22__["TestSuitesService"],
                 _services__WEBPACK_IMPORTED_MODULE_22__["AuthService"],
@@ -574,7 +576,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n    Active Test Cases Modal works!\r\n</p>"
+module.exports = "<p>\n    Active Test Cases Modal works!\n</p>"
 
 /***/ }),
 
@@ -675,7 +677,7 @@ var ActiveTestCasesModal = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h3>\r\n    Sorry, this feature is not implemented yet.\r\n</h3>\r\n<!--\r\n<div class=\"grid-container\">\r\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\r\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\r\n                <mat-card-header>\r\n                    <mat-card-title>\r\n                        Active Test Cases\r\n                    </mat-card-title>\r\n                    <mat-card-subtitle>\r\n                        <button mat-raised-button color=\"primary\" disabled>\r\n                            Create\r\n                        </button>\r\n                    </mat-card-subtitle>\r\n                </mat-card-header>\r\n                <mat-card-content>\r\n                    <active-tests-table [update]=\"table_update\"></active-tests-table>\r\n                </mat-card-content>\r\n            </mat-card>\r\n        </mat-grid-tile>\r\n    </mat-grid-list>\r\n</div>\r\n-->"
+module.exports = "<h3>\n    Sorry, this feature is not implemented yet.\n</h3>\n<!--\n<div class=\"grid-container\">\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\n                <mat-card-header>\n                    <mat-card-title>\n                        Active Test Cases\n                    </mat-card-title>\n                    <mat-card-subtitle>\n                        <button mat-raised-button color=\"primary\" disabled>\n                            Create\n                        </button>\n                    </mat-card-subtitle>\n                </mat-card-header>\n                <mat-card-content>\n                    <active-tests-table [update]=\"table_update\"></active-tests-table>\n                </mat-card-content>\n            </mat-card>\n        </mat-grid-tile>\n    </mat-grid-list>\n</div>\n-->"
 
 /***/ }),
 
@@ -726,7 +728,7 @@ var ActiveTestsPage = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mat-table [dataSource]=\"activeTests\" matSort>\r\n\r\n        <!-- Name Column -->\r\n        <ng-container matColumnDef=\"name\">\r\n            <th mat-header-cell *matHeaderCellDef mat-sort-header> Test Suite </th>\r\n            <td mat-cell *matCellDef=\"let active_test\"> {{active_test.test_case.test_suite.name}} </td>\r\n        </ng-container>\r\n    \r\n        <!-- Value Column -->\r\n        <ng-container matColumnDef=\"value\">\r\n            <th mat-header-cell *matHeaderCellDef mat-sort-header> Hash </th>\r\n            <td mat-cell *matCellDef=\"let active_test\"> {{active_test.hash}} </td>\r\n        </ng-container>\r\n    \r\n        <!-- Operating Systems Column -->\r\n        <ng-container matColumnDef=\"operating_systems\">\r\n            <th mat-header-cell *matHeaderCellDef mat-sort-header> Operating Systems </th>\r\n            <td mat-cell *matCellDef=\"let browser\"> \r\n                <span *ngFor=\"let os of browser.operating_systems\"> {{ os.name }} </span>    \r\n            </td>\r\n        </ng-container>\r\n    \r\n        <!-- Actions Column -->\r\n        <ng-container matColumnDef=\"actions\" stickyEnd>\r\n            <th mat-header-cell *matHeaderCellDef>\r\n                <span class=\"action-span\">\r\n                    Run\r\n                </span> \r\n                <span class=\"action-span\">\r\n                    Edit\r\n                </span> \r\n                <span class=\"action-span\">\r\n                    Delete\r\n                </span>\r\n            </th>\r\n            <td mat-cell *matCellDef=\"let element\">\r\n                <button mat-icon-button (click)=\"run(element.id)\" color=\"primary\">\r\n                    <mat-icon>launch</mat-icon>\r\n                </button>\r\n                <button mat-icon-button (click)=\"edit(element.id)\" color=\"accent\">\r\n                    <mat-icon>edit</mat-icon>\r\n                </button>\r\n                <button mat-icon-button (click)=\"delete(element.id)\" color=\"warn\">\r\n                    <mat-icon>delete</mat-icon>\r\n                </button>\r\n            </td>\r\n        </ng-container>\r\n    \r\n        <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\r\n        <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay\"></tr>\r\n    </table>"
+module.exports = "<table mat-table [dataSource]=\"activeTests\" matSort>\n\n        <!-- Name Column -->\n        <ng-container matColumnDef=\"name\">\n            <th mat-header-cell *matHeaderCellDef mat-sort-header> Test Suite </th>\n            <td mat-cell *matCellDef=\"let active_test\"> {{active_test.test_case.test_suite.name}} </td>\n        </ng-container>\n    \n        <!-- Value Column -->\n        <ng-container matColumnDef=\"value\">\n            <th mat-header-cell *matHeaderCellDef mat-sort-header> Hash </th>\n            <td mat-cell *matCellDef=\"let active_test\"> {{active_test.hash}} </td>\n        </ng-container>\n    \n        <!-- Operating Systems Column -->\n        <ng-container matColumnDef=\"operating_systems\">\n            <th mat-header-cell *matHeaderCellDef mat-sort-header> Operating Systems </th>\n            <td mat-cell *matCellDef=\"let browser\"> \n                <span *ngFor=\"let os of browser.operating_systems\"> {{ os.name }} </span>    \n            </td>\n        </ng-container>\n    \n        <!-- Actions Column -->\n        <ng-container matColumnDef=\"actions\" stickyEnd>\n            <th mat-header-cell *matHeaderCellDef>\n                <span class=\"action-span\">\n                    Run\n                </span> \n                <span class=\"action-span\">\n                    Edit\n                </span> \n                <span class=\"action-span\">\n                    Delete\n                </span>\n            </th>\n            <td mat-cell *matCellDef=\"let element\">\n                <button mat-icon-button (click)=\"run(element.id)\" color=\"primary\">\n                    <mat-icon>launch</mat-icon>\n                </button>\n                <button mat-icon-button (click)=\"edit(element.id)\" color=\"accent\">\n                    <mat-icon>edit</mat-icon>\n                </button>\n                <button mat-icon-button (click)=\"delete(element.id)\" color=\"warn\">\n                    <mat-icon>delete</mat-icon>\n                </button>\n            </td>\n        </ng-container>\n    \n        <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\n        <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay\"></tr>\n    </table>"
 
 /***/ }),
 
@@ -815,7 +817,7 @@ var ActiveTestsTable = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".dashboard-card {\r\n    position: absolute;\r\n    padding: 16px;\r\n    cursor: pointer;\r\n}"
+module.exports = ".dashboard-card {\n    position: absolute;\n    padding: 16px;\n    cursor: pointer;\n}"
 
 /***/ }),
 
@@ -826,7 +828,7 @@ module.exports = ".dashboard-card {\r\n    position: absolute;\r\n    padding: 1
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div [ngSwitch]=\"focus\">\r\n    <ng-container *ngSwitchCase=\"'select'\">\r\n\r\n        <mat-grid-list cols=\"4\" rowHeight=\"80px\">\r\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                <mat-card routerLink=\"/admin-panel/active-test-cases\" class=\"dashboard-card\">\r\n                    <mat-card-header>\r\n                        Active Tests\r\n                    </mat-card-header>\r\n                </mat-card>\r\n            </mat-grid-tile>\r\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                <mat-card routerLink=\"/admin-panel/browsers\" class=\"dashboard-card\">\r\n                    <mat-card-header>\r\n                        Browser\r\n                    </mat-card-header>\r\n                </mat-card>\r\n            </mat-grid-tile>\r\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                <mat-card routerLink=\"/admin-panel/lines-of-service\" class=\"dashboard-card\">\r\n                    <mat-card-header>\r\n                        Line of Service\r\n                    </mat-card-header>\r\n                </mat-card>\r\n            </mat-grid-tile>\r\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                <mat-card routerLink=\"/admin-panel/operating-systems\" class=\"dashboard-card\">\r\n                    <mat-card-header>\r\n                        Operating System\r\n                    </mat-card-header>\r\n                </mat-card>\r\n            </mat-grid-tile>\r\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                <mat-card routerLink=\"/admin-panel/platforms\" class=\"dashboard-card\">\r\n                    <mat-card-header>\r\n                        Platform\r\n                    </mat-card-header>\r\n                </mat-card>\r\n            </mat-grid-tile>\r\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                <mat-card routerLink=\"/admin-panel/results\" class=\"dashboard-card\">\r\n                    <mat-card-header>\r\n                        Result\r\n                    </mat-card-header>\r\n                </mat-card>\r\n            </mat-grid-tile>\r\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                <mat-card routerLink=\"/admin-panel/sessions\" class=\"dashboard-card\">\r\n                    <mat-card-header>\r\n                        Session\r\n                    </mat-card-header>\r\n                </mat-card>\r\n            </mat-grid-tile>\r\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                <mat-card routerLink=\"/admin-panel/test-cases\" class=\"dashboard-card\">\r\n                    <mat-card-header>\r\n                        Test Case\r\n                    </mat-card-header>\r\n                </mat-card>\r\n            </mat-grid-tile>\r\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                <mat-card routerLink=\"/admin-panel/test-suites\" class=\"dashboard-card\">\r\n                    <mat-card-header>\r\n                        Test Suite\r\n                    </mat-card-header>\r\n                </mat-card>\r\n            </mat-grid-tile>\r\n        </mat-grid-list>\r\n    </ng-container>\r\n\r\n\r\n\r\n    <active-tests-page *ngSwitchCase=\"'active-test-cases'\"></active-tests-page>\r\n    <browsers-page *ngSwitchCase=\"'browsers'\"></browsers-page>\r\n    <lines-of-service-page *ngSwitchCase=\"'lines-of-service'\"></lines-of-service-page>\r\n    <operating-systems-page *ngSwitchCase=\"'operating-systems'\"></operating-systems-page>\r\n    <platforms-page *ngSwitchCase=\"'platforms'\"></platforms-page>\r\n    <results-page *ngSwitchCase=\"'results'\"></results-page>\r\n    <sessions-page *ngSwitchCase=\"'sessions'\"></sessions-page>\r\n    <test-cases-page *ngSwitchCase=\"'test-cases'\"></test-cases-page>\r\n    <test-suites-page *ngSwitchCase=\"'test-suites'\"></test-suites-page>\r\n</div>"
+module.exports = "<div [ngSwitch]=\"focus\">\n    <ng-container *ngSwitchCase=\"'select'\">\n\n        <mat-grid-list cols=\"4\" rowHeight=\"80px\">\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                <mat-card routerLink=\"/admin-panel/active-test-cases\" class=\"dashboard-card\">\n                    <mat-card-header>\n                        Active Tests\n                    </mat-card-header>\n                </mat-card>\n            </mat-grid-tile>\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                <mat-card routerLink=\"/admin-panel/browsers\" class=\"dashboard-card\">\n                    <mat-card-header>\n                        Browser\n                    </mat-card-header>\n                </mat-card>\n            </mat-grid-tile>\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                <mat-card routerLink=\"/admin-panel/lines-of-service\" class=\"dashboard-card\">\n                    <mat-card-header>\n                        Line of Service\n                    </mat-card-header>\n                </mat-card>\n            </mat-grid-tile>\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                <mat-card routerLink=\"/admin-panel/operating-systems\" class=\"dashboard-card\">\n                    <mat-card-header>\n                        Operating System\n                    </mat-card-header>\n                </mat-card>\n            </mat-grid-tile>\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                <mat-card routerLink=\"/admin-panel/platforms\" class=\"dashboard-card\">\n                    <mat-card-header>\n                        Platform\n                    </mat-card-header>\n                </mat-card>\n            </mat-grid-tile>\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                <mat-card routerLink=\"/admin-panel/results\" class=\"dashboard-card\">\n                    <mat-card-header>\n                        Result\n                    </mat-card-header>\n                </mat-card>\n            </mat-grid-tile>\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                <mat-card routerLink=\"/admin-panel/sessions\" class=\"dashboard-card\">\n                    <mat-card-header>\n                        Session\n                    </mat-card-header>\n                </mat-card>\n            </mat-grid-tile>\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                <mat-card routerLink=\"/admin-panel/test-cases\" class=\"dashboard-card\">\n                    <mat-card-header>\n                        Test Case\n                    </mat-card-header>\n                </mat-card>\n            </mat-grid-tile>\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                <mat-card routerLink=\"/admin-panel/test-suites\" class=\"dashboard-card\">\n                    <mat-card-header>\n                        Test Suite\n                    </mat-card-header>\n                </mat-card>\n            </mat-grid-tile>\n        </mat-grid-list>\n    </ng-container>\n\n\n\n    <active-tests-page *ngSwitchCase=\"'active-test-cases'\"></active-tests-page>\n    <browsers-page *ngSwitchCase=\"'browsers'\"></browsers-page>\n    <lines-of-service-page *ngSwitchCase=\"'lines-of-service'\"></lines-of-service-page>\n    <operating-systems-page *ngSwitchCase=\"'operating-systems'\"></operating-systems-page>\n    <platforms-page *ngSwitchCase=\"'platforms'\"></platforms-page>\n    <results-page *ngSwitchCase=\"'results'\"></results-page>\n    <sessions-page *ngSwitchCase=\"'sessions'\"></sessions-page>\n    <test-cases-page *ngSwitchCase=\"'test-cases'\"></test-cases-page>\n    <test-suites-page *ngSwitchCase=\"'test-suites'\"></test-suites-page>\n</div>"
 
 /***/ }),
 
@@ -913,7 +915,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-progress></ng-progress>\r\n<h2 mat-dialog-title>\r\n    Edit Browser\r\n</h2>\r\n<form [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n<mat-dialog-content>\r\n    <mat-grid-list cols=\"6\" rowHeight=\"80px\">\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\r\n            <mat-form-field style=\"width: 100%\">\r\n                <input matInput type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\" [formControl]=\"nameCtrl\" autocomplete=\"off\" required>\r\n                <mat-error *ngIf=\"nameCtrl.invalid\">{{getNameErrorMessage()}}</mat-error>\r\n            </mat-form-field>\r\n        </mat-grid-tile>\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\r\n            <mat-form-field style=\"width: 100%\">\r\n                <input matInput type=\"text\" name=\"value\" id=\"value\" placeholder=\"Value\" [formControl]=\"valueCtrl\" autocomplete=\"off\" required>\r\n                <mat-error *ngIf=\"valueCtrl.invalid\">{{getValueErrorMessage()}}</mat-error>\r\n            </mat-form-field>\r\n        </mat-grid-tile>\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\r\n            <mat-form-field style=\"width: 100%\">\r\n                <mat-select placeholder=\"Choose One\" [formControl]=\"operatingSystemsCtrl\" multiple>\r\n                    <mat-option *ngFor=\"let os of operatingSystems\" [value]=\"os\">\r\n                        {{ os.name }}\r\n                    </mat-option>\r\n                </mat-select>\r\n                <mat-error *ngIf=\"operatingSystemsCtrl.invalid\">{{getOperatingSystemsErrorMessage()}}</mat-error>\r\n            </mat-form-field>\r\n        </mat-grid-tile>\r\n    </mat-grid-list>\r\n</mat-dialog-content>\r\n<mat-dialog-actions>\r\n    <button mat-button mat-dialog-close>\r\n        Close\r\n    </button>\r\n    <button mat-button (click)=\"reset()\">\r\n        Reset\r\n    </button>\r\n    <button mat-button type=\"submit\" [disabled]=\"!form.valid\">\r\n        Submit\r\n    </button>\r\n</mat-dialog-actions>\r\n</form>"
+module.exports = "<ng-progress></ng-progress>\n<h2 mat-dialog-title>\n    Edit Browser\n</h2>\n<form [formGroup]=\"form\" (ngSubmit)=\"submit()\">\n<mat-dialog-content>\n    <mat-grid-list cols=\"6\" rowHeight=\"80px\">\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\n            <mat-form-field style=\"width: 100%\">\n                <input matInput type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\" [formControl]=\"nameCtrl\" autocomplete=\"off\" required>\n                <mat-error *ngIf=\"nameCtrl.invalid\">{{getNameErrorMessage()}}</mat-error>\n            </mat-form-field>\n        </mat-grid-tile>\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\n            <mat-form-field style=\"width: 100%\">\n                <input matInput type=\"text\" name=\"value\" id=\"value\" placeholder=\"Value\" [formControl]=\"valueCtrl\" autocomplete=\"off\" required>\n                <mat-error *ngIf=\"valueCtrl.invalid\">{{getValueErrorMessage()}}</mat-error>\n            </mat-form-field>\n        </mat-grid-tile>\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\n            <mat-form-field style=\"width: 100%\">\n                <mat-select placeholder=\"Choose One\" [formControl]=\"operatingSystemsCtrl\" multiple>\n                    <mat-option *ngFor=\"let os of operatingSystems\" [value]=\"os\">\n                        {{ os.name }}\n                    </mat-option>\n                </mat-select>\n                <mat-error *ngIf=\"operatingSystemsCtrl.invalid\">{{getOperatingSystemsErrorMessage()}}</mat-error>\n            </mat-form-field>\n        </mat-grid-tile>\n    </mat-grid-list>\n</mat-dialog-content>\n<mat-dialog-actions>\n    <button mat-button mat-dialog-close>\n        Close\n    </button>\n    <button mat-button (click)=\"reset()\">\n        Reset\n    </button>\n    <button mat-button type=\"submit\" [disabled]=\"!form.valid\">\n        Submit\n    </button>\n</mat-dialog-actions>\n</form>"
 
 /***/ }),
 
@@ -1076,7 +1078,7 @@ var BrowsersModal = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"grid-container\">\r\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\r\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\r\n                <mat-card-header>\r\n                    <mat-card-title>\r\n                        Browsers\r\n                    </mat-card-title>\r\n                    <mat-card-subtitle>\r\n                        <button mat-raised-button (click)=\"create()\" color=\"primary\">\r\n                            Create\r\n                        </button>\r\n                    </mat-card-subtitle>\r\n                </mat-card-header>\r\n                <mat-card-content>\r\n                    <browsers-table [update]=\"table_update\"></browsers-table>\r\n                </mat-card-content>\r\n            </mat-card>\r\n        </mat-grid-tile>\r\n    </mat-grid-list>\r\n</div>"
+module.exports = "<div class=\"grid-container\">\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\n                <mat-card-header>\n                    <mat-card-title>\n                        Browsers\n                    </mat-card-title>\n                    <mat-card-subtitle>\n                        <button mat-raised-button (click)=\"create()\" color=\"primary\">\n                            Create\n                        </button>\n                    </mat-card-subtitle>\n                </mat-card-header>\n                <mat-card-content>\n                    <browsers-table [update]=\"table_update\"></browsers-table>\n                </mat-card-content>\n            </mat-card>\n        </mat-grid-tile>\n    </mat-grid-list>\n</div>"
 
 /***/ }),
 
@@ -1139,7 +1141,7 @@ var BrowsersPage = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mat-table [dataSource]=\"browsers\" matSort>\r\n\r\n    <!-- Name Column -->\r\n    <ng-container matColumnDef=\"name\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\r\n        <td mat-cell *matCellDef=\"let browser\"> {{browser.name}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Value Column -->\r\n    <ng-container matColumnDef=\"value\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Value </th>\r\n        <td mat-cell *matCellDef=\"let browser\"> {{browser.value}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Operating Systems Column -->\r\n    <ng-container matColumnDef=\"operating_systems\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Operating Systems </th>\r\n        <td mat-cell *matCellDef=\"let browser\"> \r\n            <span *ngFor=\"let os of browser.operating_systems\"> {{ os.name }} </span>    \r\n        </td>\r\n    </ng-container>\r\n\r\n    <!-- Actions Column -->\r\n    <ng-container matColumnDef=\"actions\" stickyEnd>\r\n        <th mat-header-cell *matHeaderCellDef>\r\n            <span class=\"action-span\">\r\n                Run\r\n            </span> \r\n            <span class=\"action-span\">\r\n                Edit\r\n            </span> \r\n            <span class=\"action-span\">\r\n                Delete\r\n            </span>\r\n        </th>\r\n        <td mat-cell *matCellDef=\"let element\">\r\n            <button mat-icon-button (click)=\"run(element.id)\" color=\"primary\">\r\n                <mat-icon>launch</mat-icon>\r\n            </button>\r\n            <button mat-icon-button (click)=\"edit(element.id)\" color=\"accent\">\r\n                <mat-icon>edit</mat-icon>\r\n            </button>\r\n            <button mat-icon-button (click)=\"delete(element.id)\" color=\"warn\">\r\n                <mat-icon>delete</mat-icon>\r\n            </button>\r\n        </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay\"></tr>\r\n</table>"
+module.exports = "<table mat-table [dataSource]=\"browsers\" matSort>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n        <td mat-cell *matCellDef=\"let browser\"> {{browser.name}} </td>\n    </ng-container>\n\n    <!-- Value Column -->\n    <ng-container matColumnDef=\"value\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Value </th>\n        <td mat-cell *matCellDef=\"let browser\"> {{browser.value}} </td>\n    </ng-container>\n\n    <!-- Operating Systems Column -->\n    <ng-container matColumnDef=\"operating_systems\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Operating Systems </th>\n        <td mat-cell *matCellDef=\"let browser\"> \n            <span *ngFor=\"let os of browser.operating_systems\"> {{ os.name }} </span>    \n        </td>\n    </ng-container>\n\n    <!-- Actions Column -->\n    <ng-container matColumnDef=\"actions\" stickyEnd>\n        <th mat-header-cell *matHeaderCellDef>\n            <span class=\"action-span\">\n                Run\n            </span> \n            <span class=\"action-span\">\n                Edit\n            </span> \n            <span class=\"action-span\">\n                Delete\n            </span>\n        </th>\n        <td mat-cell *matCellDef=\"let element\">\n            <button mat-icon-button (click)=\"run(element.id)\" color=\"primary\">\n                <mat-icon>launch</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"edit(element.id)\" color=\"accent\">\n                <mat-icon>edit</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"delete(element.id)\" color=\"warn\">\n                <mat-icon>delete</mat-icon>\n            </button>\n        </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay\"></tr>\n</table>"
 
 /***/ }),
 
@@ -1241,7 +1243,7 @@ var BrowsersTable = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#cast-button {\r\n    position: relative;\r\n    display: block !important;\r\n    width: 35px;\r\n    height: 35px;\r\n    --connected-color: rgb(217, 37, 65);\r\n}"
+module.exports = "#cast-button {\n    position: relative;\n    display: block !important;\n    width: 35px;\n    height: 35px;\n    --connected-color: rgb(217, 37, 65);\n}"
 
 /***/ }),
 
@@ -1400,7 +1402,7 @@ var CastSenderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"display: block; width: 100%; height: 100%;\">\r\n    <canvas baseChart\r\n        [data]=\"data\"\r\n        [labels]=\"labels\"\r\n        [chartType]=\"doughnutChartType\"\r\n        [colors]=\"chartColors\"\r\n        [options]=\"chartOptions\"></canvas>\r\n</div>\r\n"
+module.exports = "<div style=\"display: block; width: 100%; height: 100%;\">\n    <canvas baseChart\n        [data]=\"data\"\n        [labels]=\"labels\"\n        [chartType]=\"doughnutChartType\"\n        [colors]=\"chartColors\"\n        [options]=\"chartOptions\"></canvas>\n</div>\n"
 
 /***/ }),
 
@@ -1431,7 +1433,14 @@ var DoughnutChart = /** @class */ (function () {
         this.labels = ['Passed', 'Failed', 'Error'];
         this.doughnutChartType = 'doughnut';
         this.chartOptions = {
-            maintainAspectRatio: false
+            maintainAspectRatio: false,
+            title: {
+                display: true,
+                text: '',
+                fontSize: 18,
+                fontColor: "#FFF",
+                fontStyle: "normal"
+            }
         };
         this.chartColors = [{
                 backgroundColor: [
@@ -1463,12 +1472,26 @@ var DoughnutChart = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(DoughnutChart.prototype, "title", {
+        set: function (value) {
+            if (typeof value != "undefined") {
+                this.chartOptions.title.text = value;
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
     DoughnutChart.prototype.ngOnInit = function () { };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object),
         __metadata("design:paramtypes", [Object])
     ], DoughnutChart.prototype, "data", null);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String),
+        __metadata("design:paramtypes", [String])
+    ], DoughnutChart.prototype, "title", null);
     DoughnutChart = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'chart-doughnut',
@@ -1511,7 +1534,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"display: block; width: 100%; height: 100%;\">\r\n    <canvas baseChart\r\n        [datasets]=\"chartData\"\r\n        [labels]=\"labels\"\r\n        [colors]=\"chartColors\"\r\n        [chartType]=\"lineChartType\"\r\n        [options]=\"chartOptions\"\r\n        ></canvas>\r\n</div>"
+module.exports = "<div style=\"display: block; width: 100%; height: 100%;\">\n    <canvas baseChart\n        [datasets]=\"chartData\"\n        [labels]=\"labels\"\n        [colors]=\"chartColors\"\n        [chartType]=\"lineChartType\"\n        [options]=\"chartOptions\"\n        ></canvas>\n</div>"
 
 /***/ }),
 
@@ -1548,7 +1571,14 @@ var LineChart = /** @class */ (function () {
         this.lineChartType = 'line';
         this.chartOptions = {
             maintainAspectRatio: false,
-            responsive: true
+            responsive: true,
+            title: {
+                display: true,
+                text: '',
+                fontSize: 18,
+                fontColor: "#FFF",
+                fontStyle: "normal"
+            }
         };
         this.chartColors = [
             {
@@ -1583,12 +1613,26 @@ var LineChart = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(LineChart.prototype, "title", {
+        set: function (value) {
+            if (typeof value != "undefined") {
+                this.chartOptions.title.text = value;
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
     LineChart.prototype.ngOnInit = function () { };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object),
         __metadata("design:paramtypes", [Object])
     ], LineChart.prototype, "data", null);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String),
+        __metadata("design:paramtypes", [String])
+    ], LineChart.prototype, "title", null);
     LineChart = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'chart-line',
@@ -1610,7 +1654,7 @@ var LineChart = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".more-button {\r\n  position: absolute;\r\n  top: 5px;\r\n  right: 10px;\r\n}\r\n\r\n.dashboard-card {\r\n  position: absolute;\r\n}\r\n\r\n.dashboard-card-content {\r\n  text-align: center;\r\n}"
+module.exports = ".more-button {\n  position: absolute;\n  top: 5px;\n  right: 10px;\n}\n\n.dashboard-card {\n  position: absolute;\n}\n\n.dashboard-card-content {\n  text-align: center;\n}"
 
 /***/ }),
 
@@ -1621,7 +1665,7 @@ module.exports = ".more-button {\r\n  position: absolute;\r\n  top: 5px;\r\n  ri
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"grid-container\">\r\n    <app-dashboard-queue [testSuites]=\"testCases\" [testSuite]=\"selectedTestSuite\"></app-dashboard-queue>\r\n    <app-dashboard-doughnuts [testSuites]=\"testCases\" [testSuite]=\"selectedTestSuite\"></app-dashboard-doughnuts>\r\n    <app-dashboard-line [testSuites]=\"testCases\" [testSuite]=\"selectedTestSuite\"></app-dashboard-line>\r\n</div>"
+module.exports = "<div class=\"grid-container\">\n    <app-dashboard-queue [testSuites]=\"testCases\" [testSuite]=\"selectedTestSuite\"></app-dashboard-queue>\n    <app-dashboard-doughnuts [testSuites]=\"testCases\" [testSuite]=\"selectedTestSuite\"></app-dashboard-doughnuts>\n    <app-dashboard-line [testSuites]=\"testCases\" [testSuite]=\"selectedTestSuite\"></app-dashboard-line>\n</div>"
 
 /***/ }),
 
@@ -1653,6 +1697,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var DashboardComponent = /** @class */ (function () {
     function DashboardComponent(testCasesService) {
         this.testCasesService = testCasesService;
+        this.testCases = [];
         this._index = 0;
     }
     Object.defineProperty(DashboardComponent.prototype, "index", {
@@ -1670,16 +1715,25 @@ var DashboardComponent = /** @class */ (function () {
     DashboardComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
         this.testCasesService.getAllTotals().then(function (testCases) {
-            testCases.forEach(function (element) {
+            testCases.forEach(function (element, index) {
                 element.passed = parseInt(element.passed);
                 element.failed = parseInt(element.failed);
                 element.error = parseInt(element.error);
-            });
-            _this.testCases = testCases;
-            _this.index = 0;
-            var source = Object(_node_modules_rxjs__WEBPACK_IMPORTED_MODULE_2__["interval"])(5000);
-            _this.subscribe = source.subscribe(function () {
-                _this.index = _this.index + 1;
+                _this.testCasesService.getTotalsByTestSuiteGroupByDate({
+                    id: element.test_suite_id
+                }).then(function (data) {
+                    element.week = data;
+                    if (index == (testCases.length - 1)) {
+                        _this.testCases = testCases;
+                        _this.index = 0;
+                        var source = Object(_node_modules_rxjs__WEBPACK_IMPORTED_MODULE_2__["interval"])(5000);
+                        _this.subscribe = source.subscribe(function () {
+                            _this.index = _this.index + 1;
+                        });
+                    }
+                }).catch(function (err) {
+                    console.log(err);
+                });
             });
         });
     };
@@ -1707,7 +1761,7 @@ var DashboardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".dashboard-card {\r\n    position: absolute;\r\n  }"
+module.exports = ".dashboard-card {\n    position: absolute;\n  }"
 
 /***/ }),
 
@@ -1718,7 +1772,7 @@ module.exports = ".dashboard-card {\r\n    position: absolute;\r\n  }"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-grid-list cols=\"6\" rowHeight=\"100px\">\r\n    <mat-grid-tile [colspan]=\"3\" [rowspan]=\"4\">\r\n        <chart-doughnut [data]=\"dayData\" style=\"width: 100%; height:100%;\"></chart-doughnut>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile [colspan]=\"3\" [rowspan]=\"4\">\r\n        <chart-doughnut [data]=\"weekData\" style=\"width: 100%; height:100%;\"></chart-doughnut>\r\n    </mat-grid-tile>\r\n</mat-grid-list>"
+module.exports = "<mat-grid-list cols=\"6\" rowHeight=\"100px\">\n    <mat-grid-tile [colspan]=\"3\" [rowspan]=\"4\">\n        <chart-doughnut [data]=\"dayData\" [title]=\"'Todays Runs'\" style=\"width: 100%; height:100%;\"></chart-doughnut>\n    </mat-grid-tile>\n    <mat-grid-tile [colspan]=\"3\" [rowspan]=\"4\">\n        <chart-doughnut [data]=\"weekData\" [title]=\"'This Weeks Runs'\" style=\"width: 100%; height:100%;\"></chart-doughnut>\n    </mat-grid-tile>\n</mat-grid-list>"
 
 /***/ }),
 
@@ -1751,12 +1805,20 @@ var DashboardDoughnuts = /** @class */ (function () {
     }
     Object.defineProperty(DashboardDoughnuts.prototype, "testSuite", {
         set: function (value) {
+            var _this = this;
             if (typeof value != "undefined") {
-                this.dayData = [
-                    value.passed,
-                    value.failed,
-                    value.error,
-                ];
+                this.dayData = [0, 0, 0];
+                var today_1 = new Date(Date.now());
+                value.week.forEach(function (testCase) {
+                    var tmpDate = new Date(testCase.date);
+                    if (today_1.getDay() == tmpDate.getUTCDay()) {
+                        _this.dayData = [
+                            testCase.passed,
+                            testCase.failed,
+                            testCase.error
+                        ];
+                    }
+                });
                 this.weekData = [
                     value.passed,
                     value.failed,
@@ -1829,7 +1891,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".dashboard-card {\r\n    position: absolute;\r\n  }"
+module.exports = ".dashboard-card {\n    position: absolute;\n  }"
 
 /***/ }),
 
@@ -1840,7 +1902,7 @@ module.exports = ".dashboard-card {\r\n    position: absolute;\r\n  }"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-grid-list cols=\"6\" rowHeight=\"100px\">\r\n    <mat-grid-tile [colspan]=\"6\" [rowspan]=\"4\">\r\n        <chart-line [data]=\"weekData\" style=\"width:100%;height:100%;:\"></chart-line>\r\n    </mat-grid-tile>\r\n</mat-grid-list>"
+module.exports = "<mat-grid-list cols=\"6\" rowHeight=\"100px\">\n    <mat-grid-tile [colspan]=\"6\" [rowspan]=\"4\">\n        <chart-line [data]=\"weekData\" [title]=\"'This Weeks Tests'\" style=\"width:100%;height:100%;:\"></chart-line>\n    </mat-grid-tile>\n</mat-grid-list>"
 
 /***/ }),
 
@@ -1890,22 +1952,18 @@ var DashboardLine = /** @class */ (function () {
     };
     DashboardLine.prototype.load = function (testSuite) {
         var _this = this;
-        this.testCasesService.getTotalsByTestSuiteGroupByDate({ id: testSuite.test_suite_id }).then(function (testCases) {
-            testCases.forEach(function (element, index) {
-                var i = new Date(Date.parse(element.date)).getUTCDay();
-                _this.passedWeek[i] = parseInt(element.passed);
-                _this.failedWeek[i] = parseInt(element.failed);
-                _this.errorWeek[i] = parseInt(element.error);
-                if (index == (testCases.length - 1)) {
-                    _this.weekData = [
-                        { data: _this.passedWeek, label: 'Passed' },
-                        { data: _this.failedWeek, label: 'Failed' },
-                        { data: _this.errorWeek, label: 'Error' }
-                    ];
-                }
-            });
-        }).catch(function (err) {
-            console.log(err);
+        testSuite.week.forEach(function (testCase, index) {
+            var tmpDate = new Date(testCase.date);
+            _this.passedWeek[tmpDate.getUTCDay()] = testCase.passed;
+            _this.failedWeek[tmpDate.getUTCDay()] = testCase.failed;
+            _this.errorWeek[tmpDate.getUTCDay()] = testCase.error;
+            if (index == (testSuite.week.length - 1)) {
+                _this.weekData = [
+                    { data: _this.passedWeek, label: 'Passed' },
+                    { data: _this.failedWeek, label: 'Failed' },
+                    { data: _this.errorWeek, label: 'Error' }
+                ];
+            }
         });
     };
     __decorate([
@@ -1939,7 +1997,7 @@ var DashboardLine = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".dashboard-card {\r\n    position: absolute;\r\n  }"
+module.exports = ".dashboard-card {\n    position: absolute;\n  }"
 
 /***/ }),
 
@@ -1950,7 +2008,7 @@ module.exports = ".dashboard-card {\r\n    position: absolute;\r\n  }"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-grid-list cols=\"6\" rowHeight=\"100px\">\r\n    <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\r\n        <mat-card class=\"dashboard-card\">\r\n            <mat-card-header>\r\n                <mat-card-content>\r\n                    <h2>\r\n                        {{ prevTestSuite.name }} - {{ prevTotal }} %\r\n                    </h2>\r\n                </mat-card-content>\r\n            </mat-card-header>\r\n        </mat-card>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\r\n        <mat-card class=\"dashboard-card\" style=\"padding-top: 18px; background: #3f51b5;\">\r\n            <mat-card-content>\r\n                <h1>\r\n                    {{ currTestSuite.name }} - {{ currTotal }} %\r\n                </h1>\r\n            </mat-card-content>\r\n        </mat-card>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\r\n        <mat-card class=\"dashboard-card\">\r\n            <mat-card-header>\r\n                <mat-card-content>\r\n                    <h2>\r\n                        {{ nextTestSuite.name }} - {{ nextTotal }} %\r\n                    </h2>\r\n                </mat-card-content>\r\n            </mat-card-header>\r\n        </mat-card>\r\n    </mat-grid-tile>\r\n</mat-grid-list>"
+module.exports = "<mat-grid-list cols=\"6\" rowHeight=\"100px\">\n    <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\n        <mat-card class=\"dashboard-card\">\n            <mat-card-header>\n                <mat-card-content>\n                    <h2>\n                        {{ prevTestSuite.name }} - {{ prevTotal }} %\n                    </h2>\n                </mat-card-content>\n            </mat-card-header>\n        </mat-card>\n    </mat-grid-tile>\n    <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\n        <mat-card class=\"dashboard-card\" style=\"padding-top: 18px; background: #3f51b5;\">\n            <mat-card-content>\n                <h1>\n                    {{ currTestSuite.name }} - {{ currTotal }} %\n                </h1>\n            </mat-card-content>\n        </mat-card>\n    </mat-grid-tile>\n    <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\n        <mat-card class=\"dashboard-card\">\n            <mat-card-header>\n                <mat-card-content>\n                    <h2>\n                        {{ nextTestSuite.name }} - {{ nextTotal }} %\n                    </h2>\n                </mat-card-content>\n            </mat-card-header>\n        </mat-card>\n    </mat-grid-tile>\n</mat-grid-list>"
 
 /***/ }),
 
@@ -2200,7 +2258,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-dashboard></app-dashboard>\r\n"
+module.exports = "<app-dashboard></app-dashboard>\n"
 
 /***/ }),
 
@@ -2277,7 +2335,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-progress></ng-progress>\r\n<h2 mat-dialog-title>\r\n    Edit Line of Service\r\n</h2>\r\n<form [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n<mat-dialog-content>\r\n    <mat-grid-list cols=\"6\" rowHeight=\"80px\">\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\r\n            <mat-form-field style=\"width: 100%\">\r\n                <input matInput type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\" [formControl]=\"nameCtrl\" autocomplete=\"off\" required>\r\n                <mat-error *ngIf=\"nameCtrl.invalid\">{{getNameErrorMessage()}}</mat-error>\r\n            </mat-form-field>\r\n        </mat-grid-tile>\r\n    </mat-grid-list>\r\n</mat-dialog-content>\r\n<mat-dialog-actions>\r\n    <button mat-button mat-dialog-close>\r\n        Close\r\n    </button>\r\n    <button mat-button (click)=\"reset()\">\r\n        Reset\r\n    </button>\r\n    <button mat-button type=\"submit\" [disabled]=\"!form.valid\">\r\n        Submit\r\n    </button>\r\n</mat-dialog-actions>\r\n</form>"
+module.exports = "<ng-progress></ng-progress>\n<h2 mat-dialog-title>\n    Edit Line of Service\n</h2>\n<form [formGroup]=\"form\" (ngSubmit)=\"submit()\">\n<mat-dialog-content>\n    <mat-grid-list cols=\"6\" rowHeight=\"80px\">\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\n            <mat-form-field style=\"width: 100%\">\n                <input matInput type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\" [formControl]=\"nameCtrl\" autocomplete=\"off\" required>\n                <mat-error *ngIf=\"nameCtrl.invalid\">{{getNameErrorMessage()}}</mat-error>\n            </mat-form-field>\n        </mat-grid-tile>\n    </mat-grid-list>\n</mat-dialog-content>\n<mat-dialog-actions>\n    <button mat-button mat-dialog-close>\n        Close\n    </button>\n    <button mat-button (click)=\"reset()\">\n        Reset\n    </button>\n    <button mat-button type=\"submit\" [disabled]=\"!form.valid\">\n        Submit\n    </button>\n</mat-dialog-actions>\n</form>"
 
 /***/ }),
 
@@ -2416,7 +2474,7 @@ var LinesOfServiceModal = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"grid-container\">\r\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\r\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\r\n                <mat-card-header>\r\n                    <mat-card-title>\r\n                        Lines of Service\r\n                    </mat-card-title>\r\n                    <mat-card-subtitle>\r\n                        <button mat-raised-button (click)=\"create()\" color=\"primary\">\r\n                            Create\r\n                        </button>\r\n                    </mat-card-subtitle>\r\n                </mat-card-header>\r\n                <mat-card-content>\r\n                    <lines-of-service-table [update]=\"table_update\"></lines-of-service-table>\r\n                </mat-card-content>\r\n            </mat-card>\r\n        </mat-grid-tile>\r\n    </mat-grid-list>\r\n</div>"
+module.exports = "<div class=\"grid-container\">\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\n                <mat-card-header>\n                    <mat-card-title>\n                        Lines of Service\n                    </mat-card-title>\n                    <mat-card-subtitle>\n                        <button mat-raised-button (click)=\"create()\" color=\"primary\">\n                            Create\n                        </button>\n                    </mat-card-subtitle>\n                </mat-card-header>\n                <mat-card-content>\n                    <lines-of-service-table [update]=\"table_update\"></lines-of-service-table>\n                </mat-card-content>\n            </mat-card>\n        </mat-grid-tile>\n    </mat-grid-list>\n</div>"
 
 /***/ }),
 
@@ -2479,7 +2537,7 @@ var LinesOfServicePage = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mat-table [dataSource]=\"linesOfService\" matSort>\r\n\r\n        <!-- Name Column -->\r\n        <ng-container matColumnDef=\"name\">\r\n            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\r\n            <td mat-cell *matCellDef=\"let browser\"> {{browser.name}} </td>\r\n        </ng-container>\r\n    \r\n        <!-- Actions Column -->\r\n        <ng-container matColumnDef=\"actions\" stickyEnd>\r\n            <th mat-header-cell *matHeaderCellDef>\r\n                <span class=\"action-span\">\r\n                    Run\r\n                </span> \r\n                <span class=\"action-span\">\r\n                    Edit\r\n                </span> \r\n                <span class=\"action-span\">\r\n                    Delete\r\n                </span>\r\n            </th>\r\n            <td mat-cell *matCellDef=\"let element\">\r\n                <button mat-icon-button (click)=\"run(element.id)\" color=\"primary\">\r\n                    <mat-icon>launch</mat-icon>\r\n                </button>\r\n                <button mat-icon-button (click)=\"edit(element.id)\" color=\"accent\">\r\n                    <mat-icon>edit</mat-icon>\r\n                </button>\r\n                <button mat-icon-button (click)=\"delete(element.id)\" color=\"warn\">\r\n                    <mat-icon>delete</mat-icon>\r\n                </button>\r\n            </td>\r\n        </ng-container>\r\n    \r\n        <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\r\n        <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay\"></tr>\r\n    </table>"
+module.exports = "<table mat-table [dataSource]=\"linesOfService\" matSort>\n\n        <!-- Name Column -->\n        <ng-container matColumnDef=\"name\">\n            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n            <td mat-cell *matCellDef=\"let browser\"> {{browser.name}} </td>\n        </ng-container>\n    \n        <!-- Actions Column -->\n        <ng-container matColumnDef=\"actions\" stickyEnd>\n            <th mat-header-cell *matHeaderCellDef>\n                <span class=\"action-span\">\n                    Run\n                </span> \n                <span class=\"action-span\">\n                    Edit\n                </span> \n                <span class=\"action-span\">\n                    Delete\n                </span>\n            </th>\n            <td mat-cell *matCellDef=\"let element\">\n                <button mat-icon-button (click)=\"run(element.id)\" color=\"primary\">\n                    <mat-icon>launch</mat-icon>\n                </button>\n                <button mat-icon-button (click)=\"edit(element.id)\" color=\"accent\">\n                    <mat-icon>edit</mat-icon>\n                </button>\n                <button mat-icon-button (click)=\"delete(element.id)\" color=\"warn\">\n                    <mat-icon>delete</mat-icon>\n                </button>\n            </td>\n        </ng-container>\n    \n        <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\n        <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay\"></tr>\n    </table>"
 
 /***/ }),
 
@@ -2581,7 +2639,7 @@ var LinesOfServiceTable = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".dashboard-card {\r\n    position: absolute;\r\n}\r\n\r\nmat-form-field, mat-grid-tile {\r\n  width: 100%;\r\n}\r\n\r\nbutton {\r\n  width: 100%;\r\n}"
+module.exports = ".dashboard-card {\n    position: absolute;\n}\n\nmat-form-field, mat-grid-tile {\n  width: 100%;\n}\n\nbutton {\n  width: 100%;\n}"
 
 /***/ }),
 
@@ -2592,7 +2650,7 @@ module.exports = ".dashboard-card {\r\n    position: absolute;\r\n}\r\n\r\nmat-f
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"grid-container\">\r\n    <mat-grid-list cols=\"3\" rowHeight=\"125px\">\r\n        <mat-grid-tile [colspan]=\"1\"></mat-grid-tile>\r\n        <mat-grid-tile [colspan]=\"1\" [rowspan]=\"3\">\r\n            <mat-card class=\"dashboard-card\">\r\n                <ng-progress></ng-progress>\r\n                <mat-card-header>\r\n                    <mat-card-title>\r\n                        Login\r\n                    </mat-card-title>\r\n                </mat-card-header>\r\n                <mat-card-content>\r\n                    <form [formGroup]=\"form\">\r\n                        <mat-grid-list cols=\"1\" rowHeight=\"60px\">\r\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                                <mat-form-field>\r\n                                    <input\r\n                                        matInput\r\n                                        placeholder=\"email\"\r\n                                        type=\"text\"\r\n                                        autocomplete=\"off\"\r\n                                        name=\"email\"\r\n                                        id=\"email\"\r\n                                        [formControl]=\"emailCtrl\"\r\n                                        required >\r\n                                    <span matSuffix>@rci.rogers.com</span>\r\n                                    <mat-error *ngIf=\"emailCtrl.invalid\">{{getEmailErrorMessage()}}</mat-error>\r\n                                </mat-form-field>\r\n                            </mat-grid-tile>\r\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                                <mat-form-field>\r\n                                    <input\r\n                                        matInput\r\n                                        placeholder=\"password\"\r\n                                        type=\"password\"\r\n                                        autocomplete=\"off\"\r\n                                        name=\"pass\"\r\n                                        id=\"pass\"\r\n                                        [formControl]=\"passCtrl\"\r\n                                        required >\r\n                                    <mat-error *ngIf=\"passCtrl.invalid\">{{getPassErrorMessage()}}</mat-error>\r\n                                </mat-form-field>\r\n                            </mat-grid-tile>\r\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                                <button mat-flat-button color=\"primary\" (click)=\"submit()\">Login</button>\r\n                            </mat-grid-tile>\r\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                                <button mat-flat-button color=\"accent\" (click)=\"register()\">Register</button>\r\n                            </mat-grid-tile>\r\n                        </mat-grid-list>\r\n                    </form>\r\n                </mat-card-content>\r\n            </mat-card>\r\n        </mat-grid-tile>\r\n    </mat-grid-list>\r\n</div>"
+module.exports = "<div class=\"grid-container\">\n    <mat-grid-list cols=\"3\" rowHeight=\"125px\">\n        <mat-grid-tile [colspan]=\"1\"></mat-grid-tile>\n        <mat-grid-tile [colspan]=\"1\" [rowspan]=\"3\">\n            <mat-card class=\"dashboard-card\">\n                <ng-progress></ng-progress>\n                <mat-card-header>\n                    <mat-card-title>\n                        Login\n                    </mat-card-title>\n                </mat-card-header>\n                <mat-card-content>\n                    <form [formGroup]=\"form\">\n                        <mat-grid-list cols=\"1\" rowHeight=\"60px\">\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                <mat-form-field>\n                                    <input\n                                        matInput\n                                        placeholder=\"email\"\n                                        type=\"text\"\n                                        autocomplete=\"off\"\n                                        name=\"email\"\n                                        id=\"email\"\n                                        [formControl]=\"emailCtrl\"\n                                        required >\n                                    <span matSuffix>@rci.rogers.com</span>\n                                    <mat-error *ngIf=\"emailCtrl.invalid\">{{getEmailErrorMessage()}}</mat-error>\n                                </mat-form-field>\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                <mat-form-field>\n                                    <input\n                                        matInput\n                                        placeholder=\"password\"\n                                        type=\"password\"\n                                        autocomplete=\"off\"\n                                        name=\"pass\"\n                                        id=\"pass\"\n                                        [formControl]=\"passCtrl\"\n                                        required >\n                                    <mat-error *ngIf=\"passCtrl.invalid\">{{getPassErrorMessage()}}</mat-error>\n                                </mat-form-field>\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                <button mat-flat-button color=\"primary\" (click)=\"submit()\">Login</button>\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                <button mat-flat-button color=\"accent\" (click)=\"register()\">Register</button>\n                            </mat-grid-tile>\n                        </mat-grid-list>\n                    </form>\n                </mat-card-content>\n            </mat-card>\n        </mat-grid-tile>\n    </mat-grid-list>\n</div>"
 
 /***/ }),
 
@@ -2706,7 +2764,7 @@ var LoginPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".sidenav-container {\r\n  height: 100%;\r\n}\r\n\r\n.sidenav {\r\n  width: 210px;\r\n  overflow: hidden;\r\n}\r\n\r\n.mat-toolbar.mat-primary {\r\n  position: -webkit-sticky;\r\n  position: sticky;\r\n  top: 0;\r\n}\r\n\r\n.mat-toolbar-single-row{\r\n  white-space: normal;\r\n  line-height: 100%;\r\n}\r\n\r\na {\r\n  border-left-width: 5px;\r\n  border-left-style: solid;\r\n  border-left-color: transparent;\r\n}\r\n\r\na.selected {\r\n  border-left-color: #3f51b5;\r\n  background-color: rgba(0,0,0,0.1);\r\n}\r\n\r\n.multiselect-dropdown {\r\n  width: 90%;\r\n}\r\n\r\n"
+module.exports = ".sidenav-container {\n  height: 100%;\n}\n\n.sidenav {\n  width: 210px;\n  overflow: hidden;\n}\n\n.mat-toolbar.mat-primary {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n\n.mat-toolbar-single-row{\n  white-space: normal;\n  line-height: 100%;\n}\n\na {\n  border-left-width: 5px;\n  border-left-style: solid;\n  border-left-color: transparent;\n}\n\na.selected {\n  border-left-color: #3f51b5;\n  background-color: rgba(0,0,0,0.1);\n}\n\n.multiselect-dropdown {\n  width: 90%;\n}\n\n"
 
 /***/ }),
 
@@ -2717,7 +2775,7 @@ module.exports = ".sidenav-container {\r\n  height: 100%;\r\n}\r\n\r\n.sidenav {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container\r\n  [hasBackdrop]=\"false\"\r\n  class=\"sidenav-container\">\r\n\r\n    <mat-sidenav\r\n      #drawer\r\n      class=\"sidenav\"\r\n      fixedInViewport=\"true\"\r\n      [fixedTopGap]=\"8\"\r\n      [fixedInViewport]=\"true\"\r\n      opened\r\n      style=\"width:290px;\">\r\n        <mat-toolbar>\r\n          RDM Automation Framework\r\n          <cast-sender></cast-sender>\r\n        </mat-toolbar>\r\n        <mat-nav-list>\r\n          <a mat-list-item routerLink=\"dashboard\" routerLinkActive=\"selected\">\r\n            <mat-icon matListIcon>dashboard</mat-icon>\r\n            Dashboard\r\n          </a>\r\n          <!--\r\n          <div *ngIf=\"router.url=='/dashboard'\" style=\"margin: 0 35px 0 10px;\">\r\n            <h4 matLine>\r\n              Filter\r\n            </h4>\r\n            <p matLine>\r\n              <ng-multiselect-dropdown\r\n                [placeholder]=\"'Platforms'\"\r\n                [data]=\"platforms\"\r\n                [(ngModel)]=\"selectedPlatforms\"\r\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\r\n            </p>\r\n            <p matLine>\r\n              <ng-multiselect-dropdown\r\n                [placeholder]=\"'Operating Systems'\"\r\n                [data]=\"operatingSystems\"\r\n                [(ngModel)]=\"selectedOperatingSystems\"\r\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\r\n            </p>\r\n            <p matLine>\r\n              <ng-multiselect-dropdown\r\n                [placeholder]=\"'Browsers'\"\r\n                [data]=\"browsers\"\r\n                [(ngModel)]=\"selectedBrowsers\"\r\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\r\n            </p>\r\n            <p matLine>\r\n              <ng-multiselect-dropdown\r\n                [placeholder]=\"'Lines of Service'\"\r\n                [data]=\"linesOfService\"\r\n                [(ngModel)]=\"selectedLinesOfService\"\r\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\r\n            </p>\r\n          </div>\r\n          -->\r\n          <a mat-list-item routerLink=\"/test-cases\" routerLinkActive=\"selected\" *ngIf=\"isLoggedIn()\">\r\n            <mat-icon matListIcon>assignment</mat-icon>\r\n            Test Cases\r\n          </a>\r\n          <a mat-list-item style=\"pointer-events: none;\"></a>\r\n          <a mat-list-item routerLink=\"/login\" routerLinkActive=\"selected\" *ngIf=\"!isLoggedIn()\">\r\n            <mat-icon matListIcon>account_circle</mat-icon>\r\n            Login\r\n          </a>\r\n          <a mat-list-item routerLink=\"/profile\" routerLinkActive=\"selected\" *ngIf=\"isLoggedIn()\">\r\n            <mat-icon matListIcon>account_circle</mat-icon>\r\n            Profile\r\n          </a>\r\n          <a mat-list-item routerLink=\"/admin-panel/select\" routerLinkActive=\"selected\" *ngIf=\"isLoggedIn()\">\r\n            <mat-icon matListIcon>settings</mat-icon>\r\n            Admin Panel\r\n          </a>\r\n          <div *ngIf=\"router.url.split('/')[1]=='admin-panel'\" style=\"margin: 0 0 0 10px;\">\r\n            <a mat-list-item routerLink=\"/admin-panel/active-test-cases\" routerLinkActive=\"selected\">\r\n              Active Test Case\r\n            </a>\r\n            <a mat-list-item routerLink=\"/admin-panel/browsers\" routerLinkActive=\"selected\">\r\n              Browser\r\n            </a>\r\n            <a mat-list-item routerLink=\"/admin-panel/lines-of-service\" routerLinkActive=\"selected\">\r\n              Line of Service\r\n            </a>\r\n            <a mat-list-item routerLink=\"/admin-panel/operating-systems\" routerLinkActive=\"selected\">\r\n              Operating System\r\n            </a>\r\n            <a mat-list-item routerLink=\"/admin-panel/platforms\" routerLinkActive=\"selected\">\r\n              Platform\r\n            </a>\r\n            <a mat-list-item routerLink=\"/admin-panel/results\" routerLinkActive=\"selected\">\r\n              Result\r\n            </a>\r\n            <a mat-list-item routerLink=\"/admin-panel/sessions\" routerLinkActive=\"selected\">\r\n              Session\r\n            </a>\r\n            <a mat-list-item routerLink=\"/admin-panel/test-cases\" routerLinkActive=\"selected\">\r\n              Test Case\r\n            </a>\r\n            <a mat-list-item routerLink=\"/admin-panel/test-suites\" routerLinkActive=\"selected\">\r\n              Test Suite\r\n            </a>\r\n          </div>\r\n        </mat-nav-list>\r\n    </mat-sidenav>\r\n    <mat-sidenav-content >\r\n        <!-- Add Content Here -->\r\n        <router-outlet></router-outlet>\r\n    </mat-sidenav-content>\r\n</mat-sidenav-container>\r\n"
+module.exports = "<mat-sidenav-container\n  [hasBackdrop]=\"false\"\n  class=\"sidenav-container\">\n\n    <mat-sidenav\n      #drawer\n      class=\"sidenav\"\n      fixedInViewport=\"true\"\n      [fixedTopGap]=\"8\"\n      [fixedInViewport]=\"true\"\n      opened\n      style=\"width:290px;\">\n        <mat-toolbar>\n          RDM Automation Framework\n          <cast-sender></cast-sender>\n        </mat-toolbar>\n        <mat-nav-list>\n          <a mat-list-item routerLink=\"dashboard\" routerLinkActive=\"selected\">\n            <mat-icon matListIcon>dashboard</mat-icon>\n            Dashboard\n          </a>\n          <!--\n          <div *ngIf=\"router.url=='/dashboard'\" style=\"margin: 0 35px 0 10px;\">\n            <h4 matLine>\n              Filter\n            </h4>\n            <p matLine>\n              <ng-multiselect-dropdown\n                [placeholder]=\"'Platforms'\"\n                [data]=\"platforms\"\n                [(ngModel)]=\"selectedPlatforms\"\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\n            </p>\n            <p matLine>\n              <ng-multiselect-dropdown\n                [placeholder]=\"'Operating Systems'\"\n                [data]=\"operatingSystems\"\n                [(ngModel)]=\"selectedOperatingSystems\"\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\n            </p>\n            <p matLine>\n              <ng-multiselect-dropdown\n                [placeholder]=\"'Browsers'\"\n                [data]=\"browsers\"\n                [(ngModel)]=\"selectedBrowsers\"\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\n            </p>\n            <p matLine>\n              <ng-multiselect-dropdown\n                [placeholder]=\"'Lines of Service'\"\n                [data]=\"linesOfService\"\n                [(ngModel)]=\"selectedLinesOfService\"\n                [settings]=\"dropdownSettings\"></ng-multiselect-dropdown>\n            </p>\n          </div>\n          -->\n          <a mat-list-item routerLink=\"/test-cases\" routerLinkActive=\"selected\" *ngIf=\"isLoggedIn()\">\n            <mat-icon matListIcon>assignment</mat-icon>\n            Test Cases\n          </a>\n          <a mat-list-item style=\"pointer-events: none;\"></a>\n          <a mat-list-item routerLink=\"/login\" routerLinkActive=\"selected\" *ngIf=\"!isLoggedIn()\">\n            <mat-icon matListIcon>account_circle</mat-icon>\n            Login\n          </a>\n          <a mat-list-item routerLink=\"/profile\" routerLinkActive=\"selected\" *ngIf=\"isLoggedIn()\">\n            <mat-icon matListIcon>account_circle</mat-icon>\n            Profile\n          </a>\n          <a mat-list-item routerLink=\"/admin-panel/select\" routerLinkActive=\"selected\" *ngIf=\"isLoggedIn()\">\n            <mat-icon matListIcon>settings</mat-icon>\n            Admin Panel\n          </a>\n          <div *ngIf=\"router.url.split('/')[1]=='admin-panel'\" style=\"margin: 0 0 0 10px;\">\n            <a mat-list-item routerLink=\"/admin-panel/active-test-cases\" routerLinkActive=\"selected\">\n              Active Test Case\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/browsers\" routerLinkActive=\"selected\">\n              Browser\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/lines-of-service\" routerLinkActive=\"selected\">\n              Line of Service\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/operating-systems\" routerLinkActive=\"selected\">\n              Operating System\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/platforms\" routerLinkActive=\"selected\">\n              Platform\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/results\" routerLinkActive=\"selected\">\n              Result\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/sessions\" routerLinkActive=\"selected\">\n              Session\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/test-cases\" routerLinkActive=\"selected\">\n              Test Case\n            </a>\n            <a mat-list-item routerLink=\"/admin-panel/test-suites\" routerLinkActive=\"selected\">\n              Test Suite\n            </a>\n          </div>\n        </mat-nav-list>\n    </mat-sidenav>\n    <mat-sidenav-content >\n        <!-- Add Content Here -->\n        <router-outlet></router-outlet>\n    </mat-sidenav-content>\n</mat-sidenav-container>\n"
 
 /***/ }),
 
@@ -2801,7 +2859,7 @@ var NavigationComponent = /** @class */ (function () {
         return new Promise(function (resolve, reject) {
             if (_this.authService.isLoggedIn()) {
                 _this.authService.observeUser().subscribe(function (user) {
-                    _this.authService.syncWithServerSession(user.uid);
+                    _this.authService.syncWithServerSession(user);
                 });
             }
         });
@@ -2913,7 +2971,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-progress></ng-progress>\r\n<h2 mat-dialog-title>\r\n    Edit Operating System\r\n</h2>\r\n<form [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n<mat-dialog-content>\r\n    <mat-grid-list cols=\"6\" rowHeight=\"80px\">\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\r\n            <mat-form-field style=\"width: 100%\">\r\n                <input matInput type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\" [formControl]=\"nameCtrl\" autocomplete=\"off\" required>\r\n                <mat-error *ngIf=\"nameCtrl.invalid\">{{getNameErrorMessage()}}</mat-error>\r\n            </mat-form-field>\r\n        </mat-grid-tile>\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\r\n            <mat-form-field style=\"width: 100%\">\r\n                <input matInput type=\"text\" name=\"value\" id=\"value\" placeholder=\"Value\" [formControl]=\"valueCtrl\" autocomplete=\"off\" required>\r\n                <mat-error *ngIf=\"valueCtrl.invalid\">{{getValueErrorMessage()}}</mat-error>\r\n            </mat-form-field>\r\n        </mat-grid-tile>\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\r\n            <mat-form-field style=\"width: 100%\">\r\n                <mat-select placeholder=\"Choose One\" [formControl]=\"platformCtrl\">\r\n                    <mat-option *ngFor=\"let platform of platforms\" [value]=\"platform.id\">\r\n                        {{ platform.name }}\r\n                    </mat-option>\r\n                </mat-select>\r\n                <mat-error *ngIf=\"platformCtrl.invalid\">{{getPlatformErrorMessage()}}</mat-error>\r\n            </mat-form-field>\r\n        </mat-grid-tile>\r\n    </mat-grid-list>\r\n</mat-dialog-content>\r\n<mat-dialog-actions>\r\n    <button mat-button mat-dialog-close>\r\n        Close\r\n    </button>\r\n    <button mat-button (click)=\"reset()\">\r\n        Reset\r\n    </button>\r\n    <button mat-button type=\"submit\" [disabled]=\"!form.valid\">\r\n        Submit\r\n    </button>\r\n</mat-dialog-actions>\r\n</form>"
+module.exports = "<ng-progress></ng-progress>\n<h2 mat-dialog-title>\n    Edit Operating System\n</h2>\n<form [formGroup]=\"form\" (ngSubmit)=\"submit()\">\n<mat-dialog-content>\n    <mat-grid-list cols=\"6\" rowHeight=\"80px\">\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\n            <mat-form-field style=\"width: 100%\">\n                <input matInput type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\" [formControl]=\"nameCtrl\" autocomplete=\"off\" required>\n                <mat-error *ngIf=\"nameCtrl.invalid\">{{getNameErrorMessage()}}</mat-error>\n            </mat-form-field>\n        </mat-grid-tile>\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\n            <mat-form-field style=\"width: 100%\">\n                <input matInput type=\"text\" name=\"value\" id=\"value\" placeholder=\"Value\" [formControl]=\"valueCtrl\" autocomplete=\"off\" required>\n                <mat-error *ngIf=\"valueCtrl.invalid\">{{getValueErrorMessage()}}</mat-error>\n            </mat-form-field>\n        </mat-grid-tile>\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\n            <mat-form-field style=\"width: 100%\">\n                <mat-select placeholder=\"Choose One\" [formControl]=\"platformCtrl\">\n                    <mat-option *ngFor=\"let platform of platforms\" [value]=\"platform.id\">\n                        {{ platform.name }}\n                    </mat-option>\n                </mat-select>\n                <mat-error *ngIf=\"platformCtrl.invalid\">{{getPlatformErrorMessage()}}</mat-error>\n            </mat-form-field>\n        </mat-grid-tile>\n    </mat-grid-list>\n</mat-dialog-content>\n<mat-dialog-actions>\n    <button mat-button mat-dialog-close>\n        Close\n    </button>\n    <button mat-button (click)=\"reset()\">\n        Reset\n    </button>\n    <button mat-button type=\"submit\" [disabled]=\"!form.valid\">\n        Submit\n    </button>\n</mat-dialog-actions>\n</form>"
 
 /***/ }),
 
@@ -3071,7 +3129,7 @@ var OperatingSystemsModal = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"grid-container\">\r\n        <mat-grid-list cols=\"6\" rowHeight=\"100px\">\r\n            <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\r\n                <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\r\n                    <mat-card-header>\r\n                        <mat-card-title>\r\n                            Operating Systems\r\n                        </mat-card-title>\r\n                        <mat-card-subtitle>\r\n                            <button mat-raised-button (click)=\"create()\" color=\"primary\">\r\n                                Create\r\n                            </button>\r\n                        </mat-card-subtitle>\r\n                    </mat-card-header>\r\n                    <mat-card-content>\r\n                        <operating-systems-table [update]=\"table_update\"></operating-systems-table>\r\n                    </mat-card-content>\r\n                </mat-card>\r\n            </mat-grid-tile>\r\n        </mat-grid-list>\r\n    </div>"
+module.exports = "<div class=\"grid-container\">\n        <mat-grid-list cols=\"6\" rowHeight=\"100px\">\n            <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\n                <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\n                    <mat-card-header>\n                        <mat-card-title>\n                            Operating Systems\n                        </mat-card-title>\n                        <mat-card-subtitle>\n                            <button mat-raised-button (click)=\"create()\" color=\"primary\">\n                                Create\n                            </button>\n                        </mat-card-subtitle>\n                    </mat-card-header>\n                    <mat-card-content>\n                        <operating-systems-table [update]=\"table_update\"></operating-systems-table>\n                    </mat-card-content>\n                </mat-card>\n            </mat-grid-tile>\n        </mat-grid-list>\n    </div>"
 
 /***/ }),
 
@@ -3134,7 +3192,7 @@ var OperatingSystemsPage = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mat-table [dataSource]=\"operatingSystems\" matSort>\r\n\r\n    <!-- Name Column -->\r\n    <ng-container matColumnDef=\"name\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\r\n        <td mat-cell *matCellDef=\"let os\"> {{os.name}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Value Column -->\r\n    <ng-container matColumnDef=\"value\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Value </th>\r\n        <td mat-cell *matCellDef=\"let os\"> {{os.value}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Platform Column -->\r\n    <ng-container matColumnDef=\"platform\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Platform </th>\r\n        <td mat-cell *matCellDef=\"let os\"> {{os.platform.name}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Actions Column -->\r\n    <ng-container matColumnDef=\"actions\" stickyEnd>\r\n        <th mat-header-cell *matHeaderCellDef>\r\n            <span class=\"action-span\">\r\n                Run\r\n            </span> \r\n            <span class=\"action-span\">\r\n                Edit\r\n            </span> \r\n            <span class=\"action-span\">\r\n                Delete\r\n            </span>\r\n        </th>\r\n        <td mat-cell *matCellDef=\"let element\">\r\n            <button mat-icon-button (click)=\"run(element.id)\" color=\"primary\">\r\n                <mat-icon>launch</mat-icon>\r\n            </button>\r\n            <button mat-icon-button (click)=\"edit(element.id)\" color=\"accent\">\r\n                <mat-icon>edit</mat-icon>\r\n            </button>\r\n            <button mat-icon-button (click)=\"delete(element.id)\" color=\"warn\">\r\n                <mat-icon>delete</mat-icon>\r\n            </button>\r\n        </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay\"></tr>\r\n</table>"
+module.exports = "<table mat-table [dataSource]=\"operatingSystems\" matSort>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n        <td mat-cell *matCellDef=\"let os\"> {{os.name}} </td>\n    </ng-container>\n\n    <!-- Value Column -->\n    <ng-container matColumnDef=\"value\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Value </th>\n        <td mat-cell *matCellDef=\"let os\"> {{os.value}} </td>\n    </ng-container>\n\n    <!-- Platform Column -->\n    <ng-container matColumnDef=\"platform\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Platform </th>\n        <td mat-cell *matCellDef=\"let os\"> {{os.platform.name}} </td>\n    </ng-container>\n\n    <!-- Actions Column -->\n    <ng-container matColumnDef=\"actions\" stickyEnd>\n        <th mat-header-cell *matHeaderCellDef>\n            <span class=\"action-span\">\n                Run\n            </span> \n            <span class=\"action-span\">\n                Edit\n            </span> \n            <span class=\"action-span\">\n                Delete\n            </span>\n        </th>\n        <td mat-cell *matCellDef=\"let element\">\n            <button mat-icon-button (click)=\"run(element.id)\" color=\"primary\">\n                <mat-icon>launch</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"edit(element.id)\" color=\"accent\">\n                <mat-icon>edit</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"delete(element.id)\" color=\"warn\">\n                <mat-icon>delete</mat-icon>\n            </button>\n        </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay\"></tr>\n</table>"
 
 /***/ }),
 
@@ -3261,7 +3319,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-progress></ng-progress>\r\n<h2 mat-dialog-title>\r\n    Edit Platform\r\n</h2>\r\n<form [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n<mat-dialog-content>\r\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\r\n            <mat-form-field style=\"width: 100%\">\r\n                <input matInput type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\" [formControl]=\"nameCtrl\" autocomplete=\"off\" required>\r\n                <mat-error *ngIf=\"nameCtrl.invalid\">{{getNameErrorMessage()}}</mat-error>\r\n            </mat-form-field>\r\n        </mat-grid-tile>\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\r\n            <mat-form-field style=\"width: 100%\">\r\n                <input matInput type=\"text\" name=\"value\" id=\"value\" placeholder=\"Value\" [formControl]=\"valueCtrl\" autocomplete=\"off\" required>\r\n                <mat-error *ngIf=\"valueCtrl.invalid\">{{getValueErrorMessage()}}</mat-error>\r\n            </mat-form-field>\r\n        </mat-grid-tile>\r\n    </mat-grid-list>\r\n</mat-dialog-content>\r\n<mat-dialog-actions>\r\n    <button mat-button mat-dialog-close>\r\n        Close\r\n    </button>\r\n    <button mat-button (click)=\"reset()\">\r\n        Reset\r\n    </button>\r\n    <button mat-button type=\"submit\" [disabled]=\"!form.valid\">\r\n        Submit\r\n    </button>\r\n</mat-dialog-actions>\r\n</form>"
+module.exports = "<ng-progress></ng-progress>\n<h2 mat-dialog-title>\n    Edit Platform\n</h2>\n<form [formGroup]=\"form\" (ngSubmit)=\"submit()\">\n<mat-dialog-content>\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\n            <mat-form-field style=\"width: 100%\">\n                <input matInput type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\" [formControl]=\"nameCtrl\" autocomplete=\"off\" required>\n                <mat-error *ngIf=\"nameCtrl.invalid\">{{getNameErrorMessage()}}</mat-error>\n            </mat-form-field>\n        </mat-grid-tile>\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\n            <mat-form-field style=\"width: 100%\">\n                <input matInput type=\"text\" name=\"value\" id=\"value\" placeholder=\"Value\" [formControl]=\"valueCtrl\" autocomplete=\"off\" required>\n                <mat-error *ngIf=\"valueCtrl.invalid\">{{getValueErrorMessage()}}</mat-error>\n            </mat-form-field>\n        </mat-grid-tile>\n    </mat-grid-list>\n</mat-dialog-content>\n<mat-dialog-actions>\n    <button mat-button mat-dialog-close>\n        Close\n    </button>\n    <button mat-button (click)=\"reset()\">\n        Reset\n    </button>\n    <button mat-button type=\"submit\" [disabled]=\"!form.valid\">\n        Submit\n    </button>\n</mat-dialog-actions>\n</form>"
 
 /***/ }),
 
@@ -3407,7 +3465,7 @@ var PlatformsModal = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"grid-container\">\r\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\r\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\r\n                <mat-card-header>\r\n                    <mat-card-title>\r\n                        Platforms\r\n                    </mat-card-title>\r\n                    <mat-card-subtitle>\r\n                        <button mat-raised-button (click)=\"create()\" color=\"primary\">\r\n                            Create\r\n                        </button>\r\n                    </mat-card-subtitle>\r\n                </mat-card-header>\r\n                <mat-card-content>\r\n                    <platforms-table [update]=\"table_update\"></platforms-table>\r\n                </mat-card-content>\r\n            </mat-card>\r\n        </mat-grid-tile>\r\n    </mat-grid-list>\r\n</div>\r\n"
+module.exports = "<div class=\"grid-container\">\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\n                <mat-card-header>\n                    <mat-card-title>\n                        Platforms\n                    </mat-card-title>\n                    <mat-card-subtitle>\n                        <button mat-raised-button (click)=\"create()\" color=\"primary\">\n                            Create\n                        </button>\n                    </mat-card-subtitle>\n                </mat-card-header>\n                <mat-card-content>\n                    <platforms-table [update]=\"table_update\"></platforms-table>\n                </mat-card-content>\n            </mat-card>\n        </mat-grid-tile>\n    </mat-grid-list>\n</div>\n"
 
 /***/ }),
 
@@ -3470,7 +3528,7 @@ var PlatformsPage = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mat-table [dataSource]=\"platforms\" matSort>\r\n\r\n    <!-- Name Column -->\r\n    <ng-container matColumnDef=\"name\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\r\n        <td mat-cell *matCellDef=\"let platform\"> {{platform.name}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Value Column -->\r\n    <ng-container matColumnDef=\"value\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Value </th>\r\n        <td mat-cell *matCellDef=\"let platform\"> {{platform.value}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Actions Column -->\r\n    <ng-container matColumnDef=\"actions\" stickyEnd>\r\n        <th mat-header-cell *matHeaderCellDef>\r\n            <span class=\"action-span\">\r\n                    Run\r\n            </span> \r\n            <span class=\"action-span\">\r\n                    Edit\r\n            </span> \r\n            <span class=\"action-span\">\r\n                    Delete\r\n            </span>\r\n        </th>\r\n        <td mat-cell *matCellDef=\"let element\">\r\n            <button mat-icon-button (click)=\"run(element.id)\" color=\"primary\">\r\n                <mat-icon>launch</mat-icon>\r\n            </button>\r\n            <button mat-icon-button (click)=\"edit(element.id)\" color=\"accent\">\r\n                <mat-icon>edit</mat-icon>\r\n            </button>\r\n            <button mat-icon-button (click)=\"delete(element.id)\" color=\"warn\">\r\n                <mat-icon>delete</mat-icon>\r\n            </button>\r\n        </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay\"></tr>\r\n</table>"
+module.exports = "<table mat-table [dataSource]=\"platforms\" matSort>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n        <td mat-cell *matCellDef=\"let platform\"> {{platform.name}} </td>\n    </ng-container>\n\n    <!-- Value Column -->\n    <ng-container matColumnDef=\"value\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Value </th>\n        <td mat-cell *matCellDef=\"let platform\"> {{platform.value}} </td>\n    </ng-container>\n\n    <!-- Actions Column -->\n    <ng-container matColumnDef=\"actions\" stickyEnd>\n        <th mat-header-cell *matHeaderCellDef>\n            <span class=\"action-span\">\n                    Run\n            </span> \n            <span class=\"action-span\">\n                    Edit\n            </span> \n            <span class=\"action-span\">\n                    Delete\n            </span>\n        </th>\n        <td mat-cell *matCellDef=\"let element\">\n            <button mat-icon-button (click)=\"run(element.id)\" color=\"primary\">\n                <mat-icon>launch</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"edit(element.id)\" color=\"accent\">\n                <mat-icon>edit</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"delete(element.id)\" color=\"warn\">\n                <mat-icon>delete</mat-icon>\n            </button>\n        </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay\"></tr>\n</table>"
 
 /***/ }),
 
@@ -3572,7 +3630,7 @@ var PlatformsTable = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".dashboard-card {\r\n    position: absolute;\r\n}"
+module.exports = ".dashboard-card {\n    position: absolute;\n}"
 
 /***/ }),
 
@@ -3583,7 +3641,7 @@ module.exports = ".dashboard-card {\r\n    position: absolute;\r\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"grid-container\">\r\n        <mat-grid-list cols=\"3\" rowHeight=\"100px\">\r\n            <mat-grid-tile [colspan]=\"1\"></mat-grid-tile>\r\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"4\">\r\n                <mat-card class=\"dashboard-card\">\r\n                    <mat-card-header>\r\n                        <mat-card-title>\r\n                            Profile\r\n                        </mat-card-title>\r\n                    </mat-card-header>\r\n                    <mat-card-content>\r\n                        <mat-grid-list cols=\"3\" rowHeight=\"50px\">\r\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                                Email:\r\n                            </mat-grid-tile>\r\n                            <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\r\n                                {{ profile.email }}\r\n                            </mat-grid-tile>\r\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                                Verified Email:\r\n                            </mat-grid-tile>\r\n                            <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\r\n                                {{ profile.emailVerified }}\r\n                            </mat-grid-tile>\r\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                                UID:\r\n                            </mat-grid-tile>\r\n                            <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\r\n                                {{ profile.uid }}\r\n                            </mat-grid-tile>\r\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                                Session:\r\n                            </mat-grid-tile>\r\n                            <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\r\n                                {{ session.session }}\r\n                            </mat-grid-tile>\r\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                                Roles:\r\n                            </mat-grid-tile>\r\n                            <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\r\n                                <span *ngFor=\"let role of roles\" style=\"padding-right: 5px;\">\r\n                                    {{ role.name }}\r\n                                </span>\r\n                            </mat-grid-tile>\r\n                        </mat-grid-list>\r\n                        <button mat-raised-button (click)=\"logout()\">\r\n                            Logout\r\n                        </button>\r\n                    </mat-card-content>\r\n                </mat-card>\r\n            </mat-grid-tile>\r\n        </mat-grid-list>\r\n    </div>"
+module.exports = "<div class=\"grid-container\">\n        <mat-grid-list cols=\"3\" rowHeight=\"100px\">\n            <mat-grid-tile [colspan]=\"1\"></mat-grid-tile>\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"4\">\n                <mat-card class=\"dashboard-card\">\n                    <mat-card-header>\n                        <mat-card-title>\n                            Profile\n                        </mat-card-title>\n                    </mat-card-header>\n                    <mat-card-content>\n                        <mat-grid-list cols=\"3\" rowHeight=\"50px\">\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                Email:\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\n                                {{ profile.email }}\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                Verified Email:\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\n                                {{ profile.emailVerified }}\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                UID:\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\n                                {{ profile.uid }}\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                Session:\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\n                                {{ session.session }}\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                Roles:\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"2\" [rowspan]=\"1\">\n                                <span *ngFor=\"let role of roles\" style=\"padding-right: 5px;\">\n                                    {{ role.name }}\n                                </span>\n                            </mat-grid-tile>\n                        </mat-grid-list>\n                        <button mat-raised-button (click)=\"logout()\">\n                            Logout\n                        </button>\n                    </mat-card-content>\n                </mat-card>\n            </mat-grid-tile>\n        </mat-grid-list>\n    </div>"
 
 /***/ }),
 
@@ -3622,7 +3680,10 @@ var ProfilePageComponent = /** @class */ (function () {
         });
         this.sessionService.getCurrent().then(function (session) {
             if (!session.user) {
-                authService.syncWithServerSession(_this.profile.uid).then(function () {
+                authService.syncWithServerSession({
+                    uid: _this.profile.uid,
+                    email: _this.profile.email
+                }).then(function () {
                     _this.sessionService.getCurrent().then(function (session) {
                         _this.session = session;
                         _this.roles = session.user.roles;
@@ -3667,7 +3728,7 @@ var ProfilePageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".dashboard-card {\r\n    position: absolute;\r\n}\r\n\r\nmat-form-field, mat-grid-tile {\r\n  width: 100%;\r\n}\r\n\r\nbutton {\r\n  width: 100%;\r\n}"
+module.exports = ".dashboard-card {\n    position: absolute;\n}\n\nmat-form-field, mat-grid-tile {\n  width: 100%;\n}\n\nbutton {\n  width: 100%;\n}"
 
 /***/ }),
 
@@ -3678,7 +3739,7 @@ module.exports = ".dashboard-card {\r\n    position: absolute;\r\n}\r\n\r\nmat-f
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"grid-container\">\r\n        <mat-grid-list cols=\"3\" rowHeight=\"125px\">\r\n            <mat-grid-tile [colspan]=\"1\"></mat-grid-tile>\r\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"3\">\r\n                <mat-card class=\"dashboard-card\">\r\n                    <ng-progress></ng-progress>\r\n                    <mat-card-header>\r\n                        <mat-card-title>\r\n                            Register\r\n                        </mat-card-title>\r\n                    </mat-card-header>\r\n                    <mat-card-content>\r\n                        <form [formGroup]=\"form\">\r\n                            <mat-grid-list cols=\"1\" rowHeight=\"60px\">\r\n                                <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                                    <mat-form-field>\r\n                                        <input\r\n                                            matInput\r\n                                            placeholder=\"email\"\r\n                                            type=\"text\"\r\n                                            autocomplete=\"off\"\r\n                                            name=\"email\"\r\n                                            id=\"email\"\r\n                                            [formControl]=\"emailCtrl\"\r\n                                            required >\r\n                                        <span matSuffix>@rci.rogers.com</span>\r\n                                        <mat-error *ngIf=\"emailCtrl.invalid\">{{getEmailErrorMessage()}}</mat-error>\r\n                                    </mat-form-field>\r\n                                </mat-grid-tile>\r\n                                <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                                    <mat-form-field>\r\n                                        <input\r\n                                            matInput\r\n                                            placeholder=\"password\"\r\n                                            type=\"password\"\r\n                                            autocomplete=\"off\"\r\n                                            name=\"pass\"\r\n                                            id=\"pass\"\r\n                                            [formControl]=\"passCtrl\"\r\n                                            required >\r\n                                        <mat-error *ngIf=\"passCtrl.invalid\">{{getPassErrorMessage()}}</mat-error>\r\n                                    </mat-form-field>\r\n                                </mat-grid-tile>\r\n                                <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                                    <button mat-flat-button color=\"primary\" (click)=\"submit()\">Register</button>\r\n                                </mat-grid-tile>\r\n                                <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\r\n                                    <button mat-flat-button color=\"accent\" (click)=\"login()\">Login</button>\r\n                                </mat-grid-tile>\r\n                            </mat-grid-list>\r\n                        </form>\r\n                    </mat-card-content>\r\n                </mat-card>\r\n            </mat-grid-tile>\r\n        </mat-grid-list>\r\n    </div>"
+module.exports = "<div class=\"grid-container\">\n        <mat-grid-list cols=\"3\" rowHeight=\"125px\">\n            <mat-grid-tile [colspan]=\"1\"></mat-grid-tile>\n            <mat-grid-tile [colspan]=\"1\" [rowspan]=\"3\">\n                <mat-card class=\"dashboard-card\">\n                    <ng-progress></ng-progress>\n                    <mat-card-header>\n                        <mat-card-title>\n                            Register\n                        </mat-card-title>\n                    </mat-card-header>\n                    <mat-card-content>\n                        <form [formGroup]=\"form\">\n                            <mat-grid-list cols=\"1\" rowHeight=\"60px\">\n                                <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                    <mat-form-field>\n                                        <input\n                                            matInput\n                                            placeholder=\"email\"\n                                            type=\"text\"\n                                            autocomplete=\"off\"\n                                            name=\"email\"\n                                            id=\"email\"\n                                            [formControl]=\"emailCtrl\"\n                                            required >\n                                        <span matSuffix>@rci.rogers.com</span>\n                                        <mat-error *ngIf=\"emailCtrl.invalid\">{{getEmailErrorMessage()}}</mat-error>\n                                    </mat-form-field>\n                                </mat-grid-tile>\n                                <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                    <mat-form-field>\n                                        <input\n                                            matInput\n                                            placeholder=\"password\"\n                                            type=\"password\"\n                                            autocomplete=\"off\"\n                                            name=\"pass\"\n                                            id=\"pass\"\n                                            [formControl]=\"passCtrl\"\n                                            required >\n                                        <mat-error *ngIf=\"passCtrl.invalid\">{{getPassErrorMessage()}}</mat-error>\n                                    </mat-form-field>\n                                </mat-grid-tile>\n                                <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                    <button mat-flat-button color=\"primary\" (click)=\"submit()\">Register</button>\n                                </mat-grid-tile>\n                                <mat-grid-tile [colspan]=\"1\" [rowspan]=\"1\">\n                                    <button mat-flat-button color=\"accent\" (click)=\"login()\">Login</button>\n                                </mat-grid-tile>\n                            </mat-grid-list>\n                        </form>\n                    </mat-card-content>\n                </mat-card>\n            </mat-grid-tile>\n        </mat-grid-list>\n    </div>"
 
 /***/ }),
 
@@ -3808,7 +3869,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n    Results Modal works!\r\n</p>"
+module.exports = "<p>\n    Results Modal works!\n</p>"
 
 /***/ }),
 
@@ -3858,7 +3919,7 @@ var ResultsModal = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h3>\r\n    Sorry, this feature is not implemented yet.\r\n</h3>\r\n<!--\r\n<p>\r\n    Results Page works!\r\n</p>\r\n-->"
+module.exports = "<h3>\n    Sorry, this feature is not implemented yet.\n</h3>\n<!--\n<p>\n    Results Page works!\n</p>\n-->"
 
 /***/ }),
 
@@ -3908,7 +3969,7 @@ var ResultsPage = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n    Results Table works!\r\n</p>"
+module.exports = "<p>\n    Results Table works!\n</p>"
 
 /***/ }),
 
@@ -4009,7 +4070,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n    Sessions Modal works!\r\n</p>"
+module.exports = "<p>\n    Sessions Modal works!\n</p>"
 
 /***/ }),
 
@@ -4059,7 +4120,7 @@ var SessionsModal = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h3>\r\n    Sorry, this feature is not implemented yet.\r\n</h3>\r\n<!--\r\n<div class=\"grid-container\">\r\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\r\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\r\n                <mat-card-header>\r\n                    <mat-card-title>\r\n                        Sessions\r\n                    </mat-card-title>\r\n                </mat-card-header>\r\n                <mat-card-content>\r\n                    <sessions-table [update]=\"table_update\"></sessions-table>\r\n                </mat-card-content>\r\n            </mat-card>\r\n        </mat-grid-tile>\r\n    </mat-grid-list>\r\n</div>\r\n-->"
+module.exports = "<h3>\n    Sorry, this feature is not implemented yet.\n</h3>\n<!--\n<div class=\"grid-container\">\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\n                <mat-card-header>\n                    <mat-card-title>\n                        Sessions\n                    </mat-card-title>\n                </mat-card-header>\n                <mat-card-content>\n                    <sessions-table [update]=\"table_update\"></sessions-table>\n                </mat-card-content>\n            </mat-card>\n        </mat-grid-tile>\n    </mat-grid-list>\n</div>\n-->"
 
 /***/ }),
 
@@ -4109,7 +4170,7 @@ var SessionsPage = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n    Sessions Table works!\r\n</p>"
+module.exports = "<p>\n    Sessions Table works!\n</p>"
 
 /***/ }),
 
@@ -4208,7 +4269,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-progress></ng-progress>\r\n<h2 mat-dialog-title>\r\n    Edit Test Case\r\n</h2>\r\n<form [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n<mat-dialog-content>\r\n    <mat-grid-list cols=\"6\" rowHeight=\"80px\">\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                    <mat-select placeholder=\"Test Suite\" [formControl]=\"testSuitesCtrl\">\r\n                        <mat-option *ngFor=\"let testSuite of testSuites\" [value]=\"testSuite\">\r\n                            {{ testSuite.name }}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                    <!-- <mat-error *ngIf=\"testSuitesCtrl.invalid\">{{getOperatingSystemsErrorMessage()}}</mat-error> -->\r\n                </mat-form-field>\r\n        </mat-grid-tile>\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                    <mat-select placeholder=\"Operating System\" [formControl]=\"operatingSystemsCtrl\">\r\n                        <mat-option *ngFor=\"let os of operatingSystems\" [value]=\"os\">\r\n                            {{ os.name }}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                    <!-- <mat-error *ngIf=\"operatingSystemsCtrl.invalid\">{{getOperatingSystemsErrorMessage()}}</mat-error> -->\r\n                </mat-form-field>\r\n        </mat-grid-tile>\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\r\n            <mat-form-field style=\"width: 100%\">\r\n                <mat-select placeholder=\"Browser\" [formControl]=\"browsersCtrl\">\r\n                    <mat-option *ngFor=\"let browser of browsers\" [value]=\"browser\">\r\n                        {{ browser.name }}\r\n                    </mat-option>\r\n                </mat-select>\r\n                <!-- <mat-error *ngIf=\"browsersCtrl.invalid\">{{getOperatingSystemsErrorMessage()}}</mat-error> -->\r\n            </mat-form-field>\r\n        </mat-grid-tile>\r\n    </mat-grid-list>\r\n</mat-dialog-content>\r\n<mat-dialog-actions>\r\n    <button mat-button mat-dialog-close>\r\n        Close\r\n    </button>\r\n    <button mat-button (click)=\"reset()\">\r\n        Reset\r\n    </button>\r\n    <button mat-button type=\"submit\" [disabled]=\"!form.valid\">\r\n        Submit\r\n    </button>\r\n</mat-dialog-actions>\r\n</form>"
+module.exports = "<ng-progress></ng-progress>\n<h2 mat-dialog-title>\n    Edit Test Case\n</h2>\n<form [formGroup]=\"form\" (ngSubmit)=\"submit()\">\n<mat-dialog-content>\n    <mat-grid-list cols=\"6\" rowHeight=\"80px\">\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\n                <mat-form-field style=\"width: 100%\">\n                    <mat-select placeholder=\"Test Suite\" [formControl]=\"testSuitesCtrl\">\n                        <mat-option *ngFor=\"let testSuite of testSuites\" [value]=\"testSuite\">\n                            {{ testSuite.name }}\n                        </mat-option>\n                    </mat-select>\n                    <!-- <mat-error *ngIf=\"testSuitesCtrl.invalid\">{{getOperatingSystemsErrorMessage()}}</mat-error> -->\n                </mat-form-field>\n        </mat-grid-tile>\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\n                <mat-form-field style=\"width: 100%\">\n                    <mat-select placeholder=\"Operating System\" [formControl]=\"operatingSystemsCtrl\">\n                        <mat-option *ngFor=\"let os of operatingSystems\" [value]=\"os\">\n                            {{ os.name }}\n                        </mat-option>\n                    </mat-select>\n                    <!-- <mat-error *ngIf=\"operatingSystemsCtrl.invalid\">{{getOperatingSystemsErrorMessage()}}</mat-error> -->\n                </mat-form-field>\n        </mat-grid-tile>\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\n            <mat-form-field style=\"width: 100%\">\n                <mat-select placeholder=\"Browser\" [formControl]=\"browsersCtrl\">\n                    <mat-option *ngFor=\"let browser of browsers\" [value]=\"browser\">\n                        {{ browser.name }}\n                    </mat-option>\n                </mat-select>\n                <!-- <mat-error *ngIf=\"browsersCtrl.invalid\">{{getOperatingSystemsErrorMessage()}}</mat-error> -->\n            </mat-form-field>\n        </mat-grid-tile>\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"1\">\n            <mat-checkbox [(ngModel)]=\"notify\" [ngModelOptions]=\"{standalone: true}\">Notify on completion</mat-checkbox>\n        </mat-grid-tile>\n    </mat-grid-list>\n</mat-dialog-content>\n<mat-dialog-actions>\n    <button mat-button type=\"button\" mat-dialog-close>\n        Close\n    </button>\n    <button mat-button type=\"button\" (click)=\"reset()\">\n        Reset\n    </button>\n    <button mat-button type=\"submit\" [disabled]=\"!form.valid\">\n        Submit\n    </button>\n</mat-dialog-actions>\n</form>"
 
 /***/ }),
 
@@ -4245,18 +4306,21 @@ var __param = (undefined && undefined.__param) || function (paramIndex, decorato
 
 
 var TestCasesModal = /** @class */ (function () {
-    function TestCasesModal(formBuilder, testSuitesService, browserService, operatingSystemService, testCasesService, dialogRef, ngProgress, data) {
+    function TestCasesModal(formBuilder, testSuitesService, browserService, operatingSystemService, testCasesService, sessionsService, notificationsService, dialogRef, ngProgress, data) {
         this.formBuilder = formBuilder;
         this.testSuitesService = testSuitesService;
         this.browserService = browserService;
         this.operatingSystemService = operatingSystemService;
         this.testCasesService = testCasesService;
+        this.sessionsService = sessionsService;
+        this.notificationsService = notificationsService;
         this.dialogRef = dialogRef;
         this.ngProgress = ngProgress;
         this.data = data;
         this.testSuites = [];
         this.browsers = [];
         this.operatingSystems = [];
+        this.notify = false;
         this.model = {};
     }
     TestCasesModal.prototype.ngOnInit = function () {
@@ -4296,11 +4360,12 @@ var TestCasesModal = /** @class */ (function () {
         });
     };
     TestCasesModal.prototype.reset = function () {
-        if (this.data.id) {
+        if (this.data) {
             this.load();
         }
         else {
             this.form.reset();
+            this.notify = false;
         }
     };
     TestCasesModal.prototype.submit = function () {
@@ -4324,12 +4389,21 @@ var TestCasesModal = /** @class */ (function () {
         }
         else {
             this.testCasesService.insert(this.model).then(function (result) {
-                _this.ngProgress.done();
-                if (result.id > 0) {
-                    _this.dialogRef.close();
+                if (_this.notify) {
+                    _this.sessionsService.getCurrent().then(function (session) {
+                        _this.notificationsService.insert({ test_case: result, user: session.user }).then(function () {
+                            _this.ngProgress.done();
+                            _this.dialogRef.close();
+                        }).catch(function (err) {
+                            console.log(err);
+                        });
+                    }).catch(function (err) {
+                        console.log(err);
+                    });
                 }
                 else {
-                    console.log("Browser issue.");
+                    _this.ngProgress.done();
+                    _this.dialogRef.close();
                 }
             }).catch(function (err) {
                 console.log(err);
@@ -4341,12 +4415,14 @@ var TestCasesModal = /** @class */ (function () {
             selector: 'test-cases-modal',
             template: __webpack_require__(/*! ./test-cases-modal.html */ "./src/app/components/test-cases/modal/test-cases-modal.html")
         }),
-        __param(7, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_node_modules_angular_material__WEBPACK_IMPORTED_MODULE_3__["MAT_DIALOG_DATA"])),
+        __param(9, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_node_modules_angular_material__WEBPACK_IMPORTED_MODULE_3__["MAT_DIALOG_DATA"])),
         __metadata("design:paramtypes", [_node_modules_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
             _services__WEBPACK_IMPORTED_MODULE_2__["TestSuitesService"],
             _services__WEBPACK_IMPORTED_MODULE_2__["BrowsersService"],
             _services__WEBPACK_IMPORTED_MODULE_2__["OperatingSystemsService"],
             _services__WEBPACK_IMPORTED_MODULE_2__["TestCasesService"],
+            _services__WEBPACK_IMPORTED_MODULE_2__["SessionsService"],
+            _services__WEBPACK_IMPORTED_MODULE_2__["NotificationsService"],
             _node_modules_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialogRef"],
             _node_modules_ngx_progressbar__WEBPACK_IMPORTED_MODULE_4__["NgProgress"], Object])
     ], TestCasesModal);
@@ -4364,7 +4440,7 @@ var TestCasesModal = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"grid-container\">\r\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\r\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\r\n                <mat-card-header>\r\n                    <mat-card-title>\r\n                        Test Cases\r\n                    </mat-card-title>\r\n                    <mat-card-subtitle>\r\n                        <button mat-raised-button (click)=\"create()\" color=\"primary\">\r\n                            Create\r\n                        </button>\r\n                    </mat-card-subtitle>\r\n                </mat-card-header>\r\n                <mat-card-content>\r\n                    <test-cases-table [update]=\"table_update\"></test-cases-table>\r\n                </mat-card-content>\r\n            </mat-card>\r\n        </mat-grid-tile>\r\n    </mat-grid-list>\r\n</div>"
+module.exports = "<div class=\"grid-container\">\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\n                <mat-card-header>\n                    <mat-card-title>\n                        Test Cases\n                    </mat-card-title>\n                    <mat-card-subtitle>\n                        <button mat-raised-button (click)=\"create()\" color=\"primary\">\n                            Create\n                        </button>\n                    </mat-card-subtitle>\n                </mat-card-header>\n                <mat-card-content>\n                    <test-cases-table [update]=\"table_update\"></test-cases-table>\n                </mat-card-content>\n            </mat-card>\n        </mat-grid-tile>\n    </mat-grid-list>\n</div>"
 
 /***/ }),
 
@@ -4427,7 +4503,7 @@ var TestCasesPage = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--\r\n<mat-form-field>\r\n    <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n</mat-form-field>\r\n-->\r\n<table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n    <!-- Date Column -->\r\n    <ng-container matColumnDef=\"date\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>\r\n        <td mat-cell *matCellDef=\"let test_case\">\r\n            {{test_case.date}}\r\n        </td>\r\n    </ng-container>\r\n\r\n    <!-- Test Suite Column -->\r\n    <ng-container matColumnDef=\"testSuite\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Test Suite </th>\r\n        <td mat-cell *matCellDef=\"let test_case\"> {{test_case.test_suite.name}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Platform Column -->\r\n    <ng-container matColumnDef=\"platform\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Platform </th>\r\n        <td mat-cell *matCellDef=\"let test_case\">\r\n            <span *ngIf=\"test_case.operating_system\">\r\n                {{test_case.operating_system.name}} - {{test_case.browser.name}}\r\n            </span>\r\n        </td>\r\n    </ng-container>\r\n\r\n    <!-- Passed Column -->\r\n    <ng-container matColumnDef=\"passed\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Passed </th>\r\n        <td mat-cell *matCellDef=\"let test_case\"> {{test_case.passed}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Failed Column -->\r\n    <ng-container matColumnDef=\"failed\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Failed </th>\r\n        <td mat-cell *matCellDef=\"let test_case\"> {{test_case.failed}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Error Column -->\r\n    <ng-container matColumnDef=\"error\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Error </th>\r\n        <td mat-cell *matCellDef=\"let test_case\"> {{test_case.error}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Actions Column -->\r\n    <ng-container matColumnDef=\"actions\" stickyEnd>\r\n        <th mat-header-cell *matHeaderCellDef>\r\n            <span class=\"action-span\">\r\n                Run\r\n            </span>\r\n            <span class=\"action-span\">\r\n                Delete\r\n            </span>\r\n        </th>\r\n        <td mat-cell *matCellDef=\"let element\">\r\n            <button mat-icon-button (click)=\"run(element.id)\" color=\"primary\">\r\n                <mat-icon>launch</mat-icon>\r\n            </button>\r\n            <button mat-icon-button (click)=\"delete(element.id)\" color=\"warn\">\r\n                <mat-icon>delete</mat-icon>\r\n            </button>\r\n        </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay\" (click)=\"select(row)\"></tr>\r\n</table>\r\n<mat-paginator [pageSize]=\"5\"></mat-paginator>"
+module.exports = "<!--\n<mat-form-field>\n    <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n</mat-form-field>\n-->\n<table mat-table [dataSource]=\"dataSource\" matSort>\n\n    <!-- Date Column -->\n    <ng-container matColumnDef=\"date\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>\n        <td mat-cell *matCellDef=\"let test_case\">\n            {{test_case.date}}\n        </td>\n    </ng-container>\n\n    <!-- Test Suite Column -->\n    <ng-container matColumnDef=\"testSuite\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Test Suite </th>\n        <td mat-cell *matCellDef=\"let test_case\"> {{test_case.test_suite.name}} </td>\n    </ng-container>\n\n    <!-- Platform Column -->\n    <ng-container matColumnDef=\"platform\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Platform </th>\n        <td mat-cell *matCellDef=\"let test_case\">\n            <span *ngIf=\"test_case.operating_system\">\n                {{test_case.operating_system.name}} - {{test_case.browser.name}}\n            </span>\n        </td>\n    </ng-container>\n\n    <!-- Passed Column -->\n    <ng-container matColumnDef=\"passed\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Passed </th>\n        <td mat-cell *matCellDef=\"let test_case\"> {{test_case.passed}} </td>\n    </ng-container>\n\n    <!-- Failed Column -->\n    <ng-container matColumnDef=\"failed\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Failed </th>\n        <td mat-cell *matCellDef=\"let test_case\"> {{test_case.failed}} </td>\n    </ng-container>\n\n    <!-- Error Column -->\n    <ng-container matColumnDef=\"error\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Error </th>\n        <td mat-cell *matCellDef=\"let test_case\"> {{test_case.error}} </td>\n    </ng-container>\n\n    <!-- Actions Column -->\n    <ng-container matColumnDef=\"actions\" stickyEnd>\n        <th mat-header-cell *matHeaderCellDef>\n            <span class=\"action-span\">\n                Run\n            </span>\n            <span class=\"action-span\">\n                Delete\n            </span>\n        </th>\n        <td mat-cell *matCellDef=\"let element\">\n            <button mat-icon-button (click)=\"run(element.id)\" color=\"primary\">\n                <mat-icon>launch</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"delete(element.id)\" color=\"warn\">\n                <mat-icon>delete</mat-icon>\n            </button>\n        </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay\" (click)=\"select(row)\"></tr>\n</table>\n<mat-paginator [pageSize]=\"5\"></mat-paginator>"
 
 /***/ }),
 
@@ -4593,7 +4669,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-progress></ng-progress>\r\n<mat-horizontal-stepper #stepper>\r\n    <mat-step [stepControl]=\"urlFormGroup\" *ngIf=\"insert\">\r\n        <form [formGroup]=\"urlFormGroup\"  (ngSubmit)=\"urlComplete()\">\r\n            <ng-template matStepLabel>Api URL</ng-template>\r\n            <mat-form-field style=\"width: 100%\">\r\n                <input matInput placeholder=\"https://endtest.io\" formControlName=\"urlCtrl\" autocomplete=\"off\"  required>\r\n            </mat-form-field>\r\n            <div>\r\n                <button mat-button matStepperNext type=\"submit\">Next</button>\r\n            </div>\r\n        </form>\r\n    </mat-step>\r\n    <mat-step [stepControl]=\"infoFormGroup\">\r\n        <form [formGroup]=\"infoFormGroup\" (ngSubmit)=\"infoComplete()\">\r\n            <ng-template matStepLabel>Test Suite</ng-template>\r\n            <mat-form-field style=\"width: 100%\">\r\n                <input matInput placeholder=\"Name\" formControlName=\"nameCtrl\" autocomplete=\"off\" required>\r\n            </mat-form-field>\r\n            <mat-form-field>\r\n                <mat-select placeholder=\"Choose One\" formControlName=\"lineOfServiceCtrl\">\r\n                    <mat-option *ngFor=\"let service of linesOfService\" [value]=\"service\">\r\n                        {{ service.name }}\r\n                    </mat-option>\r\n                </mat-select>\r\n            </mat-form-field>\r\n            <div>\r\n                <button mat-button matStepperPrevious *ngIf=\"insert\">Back</button>\r\n                <button mat-button matStepperNext type=\"submit\">Next</button>\r\n            </div>\r\n        </form>\r\n    </mat-step>\r\n    <mat-step>\r\n        <form [formGroup]=\"confirmFormGroup\">\r\n            <ng-template matStepLabel>Confirm</ng-template>\r\n            <mat-form-field style=\"width: 100%\">\r\n                <input matInput placeholder=\"Name\" formControlName=\"nameCtrl\" required>\r\n            </mat-form-field>\r\n            <mat-form-field style=\"width: 100%\">\r\n                <input matInput placeholder=\"Line of Service\" formControlName=\"serviceCtrl\" required>\r\n            </mat-form-field>\r\n            <mat-form-field style=\"width: 100%\">\r\n                <input matInput placeholder=\"App Id\" formControlName=\"appIdCtrl\" required>\r\n            </mat-form-field>\r\n            <mat-form-field style=\"width: 100%\">\r\n                <input matInput placeholder=\"App Code\" formControlName=\"appCodeCtrl\" required>\r\n            </mat-form-field>\r\n            <mat-form-field style=\"width: 100%\">\r\n                <input matInput placeholder=\"Test Suite\" formControlName=\"testSuiteCtrl\" required>\r\n            </mat-form-field>\r\n            <div>\r\n                <button mat-button matStepperPrevious>Back</button>\r\n                <button mat-button (click)=\"stepper.reset()\">Reset</button>\r\n                <button mat-button (click)=\"submit()\">Submit</button>\r\n            </div>\r\n        </form>\r\n    </mat-step>\r\n</mat-horizontal-stepper>"
+module.exports = "<ng-progress></ng-progress>\n<mat-horizontal-stepper #stepper>\n    <mat-step [stepControl]=\"urlFormGroup\" *ngIf=\"insert\">\n        <form [formGroup]=\"urlFormGroup\"  (ngSubmit)=\"urlComplete()\">\n            <ng-template matStepLabel>Api URL</ng-template>\n            <mat-form-field style=\"width: 100%\">\n                <input matInput placeholder=\"https://endtest.io\" formControlName=\"urlCtrl\" autocomplete=\"off\"  required>\n            </mat-form-field>\n            <div>\n                <button mat-button matStepperNext type=\"submit\">Next</button>\n            </div>\n        </form>\n    </mat-step>\n    <mat-step [stepControl]=\"infoFormGroup\">\n        <form [formGroup]=\"infoFormGroup\" (ngSubmit)=\"infoComplete()\">\n            <ng-template matStepLabel>Test Suite</ng-template>\n            <mat-form-field style=\"width: 100%\">\n                <input matInput placeholder=\"Name\" formControlName=\"nameCtrl\" autocomplete=\"off\" required>\n            </mat-form-field>\n            <mat-form-field>\n                <mat-select placeholder=\"Choose One\" formControlName=\"lineOfServiceCtrl\">\n                    <mat-option *ngFor=\"let service of linesOfService\" [value]=\"service\">\n                        {{ service.name }}\n                    </mat-option>\n                </mat-select>\n            </mat-form-field>\n            <div>\n                <button mat-button matStepperPrevious *ngIf=\"insert\">Back</button>\n                <button mat-button matStepperNext type=\"submit\">Next</button>\n            </div>\n        </form>\n    </mat-step>\n    <mat-step>\n        <form [formGroup]=\"confirmFormGroup\">\n            <ng-template matStepLabel>Confirm</ng-template>\n            <mat-form-field style=\"width: 100%\">\n                <input matInput placeholder=\"Name\" formControlName=\"nameCtrl\" required>\n            </mat-form-field>\n            <mat-form-field style=\"width: 100%\">\n                <input matInput placeholder=\"Line of Service\" formControlName=\"serviceCtrl\" required>\n            </mat-form-field>\n            <mat-form-field style=\"width: 100%\">\n                <input matInput placeholder=\"App Id\" formControlName=\"appIdCtrl\" required>\n            </mat-form-field>\n            <mat-form-field style=\"width: 100%\">\n                <input matInput placeholder=\"App Code\" formControlName=\"appCodeCtrl\" required>\n            </mat-form-field>\n            <mat-form-field style=\"width: 100%\">\n                <input matInput placeholder=\"Test Suite\" formControlName=\"testSuiteCtrl\" required>\n            </mat-form-field>\n            <div>\n                <button mat-button matStepperPrevious>Back</button>\n                <button mat-button (click)=\"stepper.reset()\">Reset</button>\n                <button mat-button (click)=\"submit()\">Submit</button>\n            </div>\n        </form>\n    </mat-step>\n</mat-horizontal-stepper>"
 
 /***/ }),
 
@@ -4742,7 +4818,7 @@ var TestSuitesModal = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"grid-container\">\r\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\r\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\r\n                <mat-card-header>\r\n                    <mat-card-title>\r\n                        Test Suites\r\n                    </mat-card-title>\r\n                    <mat-card-subtitle>\r\n                        <button mat-raised-button (click)=\"create()\" color=\"primary\">\r\n                            Create\r\n                        </button>\r\n                    </mat-card-subtitle>\r\n                </mat-card-header>\r\n                <mat-card-content>\r\n                    <test-suites-table [update]=\"table_update\"></test-suites-table>\r\n                </mat-card-content>\r\n            </mat-card>\r\n        </mat-grid-tile>\r\n    </mat-grid-list>\r\n</div>"
+module.exports = "<div class=\"grid-container\">\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\n                <mat-card-header>\n                    <mat-card-title>\n                        Test Suites\n                    </mat-card-title>\n                    <mat-card-subtitle>\n                        <button mat-raised-button (click)=\"create()\" color=\"primary\">\n                            Create\n                        </button>\n                    </mat-card-subtitle>\n                </mat-card-header>\n                <mat-card-content>\n                    <test-suites-table [update]=\"table_update\"></test-suites-table>\n                </mat-card-content>\n            </mat-card>\n        </mat-grid-tile>\n    </mat-grid-list>\n</div>"
 
 /***/ }),
 
@@ -4805,7 +4881,7 @@ var TestSuitesPage = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n    <!-- Name Column -->\r\n    <ng-container matColumnDef=\"name\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\r\n        <td mat-cell *matCellDef=\"let test_suite\"> {{test_suite.name}} </td>\r\n    </ng-container>\r\n\r\n    <!-- App Id Column -->\r\n    <ng-container matColumnDef=\"app_id\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> App ID </th>\r\n        <td mat-cell *matCellDef=\"let test_suite\"> {{test_suite.app_id}} </td>\r\n    </ng-container>\r\n\r\n    <!-- App Code Column -->\r\n    <ng-container matColumnDef=\"app_code\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> App Code </th>\r\n        <td mat-cell *matCellDef=\"let test_suite\"> {{test_suite.app_code}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Test Suite Column -->\r\n    <ng-container matColumnDef=\"test_suite\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Test Suite </th>\r\n        <td mat-cell *matCellDef=\"let test_suite\"> {{test_suite.test_suite}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Operating Systems Column -->\r\n    <ng-container matColumnDef=\"line_of_service\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Line of Service </th>\r\n        <td mat-cell *matCellDef=\"let test_suite\"> \r\n            {{ test_suite.line_of_service.name }}\r\n        </td>\r\n    </ng-container>\r\n\r\n    <!-- Actions Column -->\r\n    <ng-container matColumnDef=\"actions\" stickyEnd>\r\n        <th mat-header-cell *matHeaderCellDef>\r\n            <span class=\"action-span\">\r\n                Run\r\n            </span> \r\n            <span class=\"action-span\">\r\n                Edit\r\n            </span> \r\n            <span class=\"action-span\">\r\n                Delete\r\n            </span>\r\n        </th>\r\n        <td mat-cell *matCellDef=\"let element\">\r\n            <button mat-icon-button (click)=\"run(element.id)\" color=\"primary\">\r\n                <mat-icon>launch</mat-icon>\r\n            </button>\r\n            <button mat-icon-button (click)=\"edit(element.id)\" color=\"accent\">\r\n                <mat-icon>edit</mat-icon>\r\n            </button>\r\n            <button mat-icon-button (click)=\"delete(element.id)\" color=\"warn\">\r\n                <mat-icon>delete</mat-icon>\r\n            </button>\r\n        </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay\"></tr>\r\n</table>\r\n<mat-paginator [pageSize]=\"5\"></mat-paginator>"
+module.exports = "<table mat-table [dataSource]=\"dataSource\" matSort>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n        <td mat-cell *matCellDef=\"let test_suite\"> {{test_suite.name}} </td>\n    </ng-container>\n\n    <!-- App Id Column -->\n    <ng-container matColumnDef=\"app_id\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> App ID </th>\n        <td mat-cell *matCellDef=\"let test_suite\"> {{test_suite.app_id}} </td>\n    </ng-container>\n\n    <!-- App Code Column -->\n    <ng-container matColumnDef=\"app_code\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> App Code </th>\n        <td mat-cell *matCellDef=\"let test_suite\"> {{test_suite.app_code}} </td>\n    </ng-container>\n\n    <!-- Test Suite Column -->\n    <ng-container matColumnDef=\"test_suite\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Test Suite </th>\n        <td mat-cell *matCellDef=\"let test_suite\"> {{test_suite.test_suite}} </td>\n    </ng-container>\n\n    <!-- Operating Systems Column -->\n    <ng-container matColumnDef=\"line_of_service\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Line of Service </th>\n        <td mat-cell *matCellDef=\"let test_suite\"> \n            {{ test_suite.line_of_service.name }}\n        </td>\n    </ng-container>\n\n    <!-- Actions Column -->\n    <ng-container matColumnDef=\"actions\" stickyEnd>\n        <th mat-header-cell *matHeaderCellDef>\n            <span class=\"action-span\">\n                Run\n            </span> \n            <span class=\"action-span\">\n                Edit\n            </span> \n            <span class=\"action-span\">\n                Delete\n            </span>\n        </th>\n        <td mat-cell *matCellDef=\"let element\">\n            <button mat-icon-button (click)=\"run(element.id)\" color=\"primary\">\n                <mat-icon>launch</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"edit(element.id)\" color=\"accent\">\n                <mat-icon>edit</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"delete(element.id)\" color=\"warn\">\n                <mat-icon>delete</mat-icon>\n            </button>\n        </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay\"></tr>\n</table>\n<mat-paginator [pageSize]=\"5\"></mat-paginator>"
 
 /***/ }),
 
@@ -5106,7 +5182,7 @@ var UsersModal = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"grid-container\">\r\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\r\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\r\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\r\n                <mat-card-header>\r\n                    <mat-card-title>\r\n                        Users\r\n                    </mat-card-title>\r\n                    <mat-card-subtitle>\r\n                        <button mat-raised-button (click)=\"create()\" color=\"primary\">\r\n                            Create\r\n                        </button>\r\n                    </mat-card-subtitle>\r\n                </mat-card-header>\r\n                <mat-card-content>\r\n                    <users-table [update]=\"table_update\"></users-table>\r\n                </mat-card-content>\r\n            </mat-card>\r\n        </mat-grid-tile>\r\n    </mat-grid-list>\r\n</div>"
+module.exports = "<div class=\"grid-container\">\n    <mat-grid-list cols=\"6\" rowHeight=\"100px\">\n        <mat-grid-tile [colspan]=\"6\" [rowspan]=\"6\">\n            <mat-card class=\"dashboard-card\" style=\"position: absolute;\">\n                <mat-card-header>\n                    <mat-card-title>\n                        Users\n                    </mat-card-title>\n                    <mat-card-subtitle>\n                        <button mat-raised-button (click)=\"create()\" color=\"primary\">\n                            Create\n                        </button>\n                    </mat-card-subtitle>\n                </mat-card-header>\n                <mat-card-content>\n                    <users-table [update]=\"table_update\"></users-table>\n                </mat-card-content>\n            </mat-card>\n        </mat-grid-tile>\n    </mat-grid-list>\n</div>"
 
 /***/ }),
 
@@ -5422,12 +5498,11 @@ var ActiveTestCasesService = /** @class */ (function () {
 /*!***************************************!*\
   !*** ./src/app/services/auth/auth.ts ***!
   \***************************************/
-/*! exports provided: User, AuthService */
+/*! exports provided: AuthService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return AuthService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
@@ -5451,14 +5526,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-var User = /** @class */ (function () {
-    function User(authData) {
-        this.email = authData.email;
-        this.roles = { user: true };
-    }
-    return User;
-}());
-
 var AuthService = /** @class */ (function () {
     function AuthService(afAuth, router, http, sessionsService) {
         var _this = this;
@@ -5473,7 +5540,10 @@ var AuthService = /** @class */ (function () {
                 _this.userDetails = user;
                 _this.sessionsService.getCurrent().then(function (session) {
                     if (!session.user) {
-                        _this.syncWithServerSession(_this.userDetails.uid).then(function () {
+                        _this.syncWithServerSession({
+                            uid: _this.userDetails.uid,
+                            email: _this.userDetails.email
+                        }).then(function () {
                             _this.sessionsService.getCurrent().then(function (session) {
                                 _this.session = session;
                             });
@@ -5496,7 +5566,10 @@ var AuthService = /** @class */ (function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
             _this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password).then(function (userAuth) {
-                _this.syncWithServerSession(userAuth.user.uid).then(function () {
+                _this.syncWithServerSession({
+                    uid: userAuth.user.uid,
+                    email: userAuth.user.email
+                }).then(function () {
                     resolve(true);
                 }).catch(function (err) {
                     reject(err);
@@ -5510,7 +5583,10 @@ var AuthService = /** @class */ (function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
             _this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password).then(function (userAuth) {
-                _this.syncWithServerSession(userAuth.user.uid).then(function () {
+                _this.syncWithServerSession({
+                    uid: userAuth.user.uid,
+                    email: userAuth.user.email
+                }).then(function () {
                     resolve(userAuth.user.sendEmailVerification());
                 });
             }).catch(function (err) {
@@ -5518,10 +5594,10 @@ var AuthService = /** @class */ (function () {
             });
         });
     };
-    AuthService.prototype.syncWithServerSession = function (uid) {
+    AuthService.prototype.syncWithServerSession = function (user) {
         var _this = this;
         return new Promise(function (resolve, reject) {
-            _this.http.post('/api/auth/login', { uid: uid }).subscribe(function (data) {
+            _this.http.post('/api/auth/login', user).subscribe(function (data) {
                 resolve();
             });
         });
@@ -5699,7 +5775,7 @@ var BrowsersService = /** @class */ (function () {
 /*!***********************************!*\
   !*** ./src/app/services/index.ts ***!
   \***********************************/
-/*! exports provided: ActiveTestCasesService, User, AuthService, BrowsersService, LinesOfServiceService, OperatingSystemsService, PlatformsService, ResultsService, SessionsService, TestCasesService, TestSuitesService, UsersService */
+/*! exports provided: ActiveTestCasesService, AuthService, BrowsersService, LinesOfServiceService, NotificationsService, OperatingSystemsService, PlatformsService, ResultsService, SessionsService, TestCasesService, TestSuitesService, UsersService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5708,8 +5784,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ActiveTestCasesService", function() { return _active_test_cases_active_test_cases__WEBPACK_IMPORTED_MODULE_0__["ActiveTestCasesService"]; });
 
 /* harmony import */ var _auth_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth/auth */ "./src/app/services/auth/auth.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "User", function() { return _auth_auth__WEBPACK_IMPORTED_MODULE_1__["User"]; });
-
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return _auth_auth__WEBPACK_IMPORTED_MODULE_1__["AuthService"]; });
 
 /* harmony import */ var _browsers_browsers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./browsers/browsers */ "./src/app/services/browsers/browsers.ts");
@@ -5718,26 +5792,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lines_of_service_lines_of_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lines-of-service/lines-of-service */ "./src/app/services/lines-of-service/lines-of-service.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "LinesOfServiceService", function() { return _lines_of_service_lines_of_service__WEBPACK_IMPORTED_MODULE_3__["LinesOfServiceService"]; });
 
-/* harmony import */ var _operating_systems_operating_systems__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./operating-systems/operating-systems */ "./src/app/services/operating-systems/operating-systems.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "OperatingSystemsService", function() { return _operating_systems_operating_systems__WEBPACK_IMPORTED_MODULE_4__["OperatingSystemsService"]; });
+/* harmony import */ var _notifications_notifications__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./notifications/notifications */ "./src/app/services/notifications/notifications.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NotificationsService", function() { return _notifications_notifications__WEBPACK_IMPORTED_MODULE_4__["NotificationsService"]; });
 
-/* harmony import */ var _platforms_platforms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./platforms/platforms */ "./src/app/services/platforms/platforms.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PlatformsService", function() { return _platforms_platforms__WEBPACK_IMPORTED_MODULE_5__["PlatformsService"]; });
+/* harmony import */ var _operating_systems_operating_systems__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./operating-systems/operating-systems */ "./src/app/services/operating-systems/operating-systems.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "OperatingSystemsService", function() { return _operating_systems_operating_systems__WEBPACK_IMPORTED_MODULE_5__["OperatingSystemsService"]; });
 
-/* harmony import */ var _results_results__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./results/results */ "./src/app/services/results/results.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ResultsService", function() { return _results_results__WEBPACK_IMPORTED_MODULE_6__["ResultsService"]; });
+/* harmony import */ var _platforms_platforms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./platforms/platforms */ "./src/app/services/platforms/platforms.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PlatformsService", function() { return _platforms_platforms__WEBPACK_IMPORTED_MODULE_6__["PlatformsService"]; });
 
-/* harmony import */ var _sessions_sessions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sessions/sessions */ "./src/app/services/sessions/sessions.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SessionsService", function() { return _sessions_sessions__WEBPACK_IMPORTED_MODULE_7__["SessionsService"]; });
+/* harmony import */ var _results_results__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./results/results */ "./src/app/services/results/results.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ResultsService", function() { return _results_results__WEBPACK_IMPORTED_MODULE_7__["ResultsService"]; });
 
-/* harmony import */ var _test_cases_test_cases__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./test-cases/test-cases */ "./src/app/services/test-cases/test-cases.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestCasesService", function() { return _test_cases_test_cases__WEBPACK_IMPORTED_MODULE_8__["TestCasesService"]; });
+/* harmony import */ var _sessions_sessions__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sessions/sessions */ "./src/app/services/sessions/sessions.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SessionsService", function() { return _sessions_sessions__WEBPACK_IMPORTED_MODULE_8__["SessionsService"]; });
 
-/* harmony import */ var _test_suites_test_suites__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./test-suites/test-suites */ "./src/app/services/test-suites/test-suites.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestSuitesService", function() { return _test_suites_test_suites__WEBPACK_IMPORTED_MODULE_9__["TestSuitesService"]; });
+/* harmony import */ var _test_cases_test_cases__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./test-cases/test-cases */ "./src/app/services/test-cases/test-cases.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestCasesService", function() { return _test_cases_test_cases__WEBPACK_IMPORTED_MODULE_9__["TestCasesService"]; });
 
-/* harmony import */ var _users_users__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./users/users */ "./src/app/services/users/users.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UsersService", function() { return _users_users__WEBPACK_IMPORTED_MODULE_10__["UsersService"]; });
+/* harmony import */ var _test_suites_test_suites__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./test-suites/test-suites */ "./src/app/services/test-suites/test-suites.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TestSuitesService", function() { return _test_suites_test_suites__WEBPACK_IMPORTED_MODULE_10__["TestSuitesService"]; });
+
+/* harmony import */ var _users_users__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./users/users */ "./src/app/services/users/users.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UsersService", function() { return _users_users__WEBPACK_IMPORTED_MODULE_11__["UsersService"]; });
+
 
 
 
@@ -5856,6 +5934,114 @@ var LinesOfServiceService = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"]])
     ], LinesOfServiceService);
     return LinesOfServiceService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/notifications/notifications.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/services/notifications/notifications.ts ***!
+  \*********************************************************/
+/*! exports provided: NotificationsService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationsService", function() { return NotificationsService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var NotificationsService = /** @class */ (function () {
+    function NotificationsService(http) {
+        this.http = http;
+    }
+    NotificationsService.prototype.getAll = function () {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            try {
+                _this.http.get('/api/notifications').subscribe(function (data) {
+                    resolve(data.json());
+                });
+            }
+            catch (err) {
+                console.log(err);
+                reject(err);
+            }
+        });
+    };
+    NotificationsService.prototype.getById = function (id) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            try {
+                _this.http.get('/api/notifications/' + id).subscribe(function (data) {
+                    resolve(data.json());
+                });
+            }
+            catch (err) {
+                console.log(err);
+                reject(err);
+            }
+        });
+    };
+    NotificationsService.prototype.insert = function (notification) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            try {
+                _this.http.post('/api/notifications/insert', notification).subscribe(function (data) {
+                    resolve(data.json());
+                });
+            }
+            catch (err) {
+                console.log(err);
+                reject(err);
+            }
+        });
+    };
+    NotificationsService.prototype.update = function (notification) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            try {
+                _this.http.post('/api/notifications/update', notification).subscribe(function (data) {
+                    resolve(data.json());
+                });
+            }
+            catch (err) {
+                console.log(err);
+                reject(err);
+            }
+        });
+    };
+    NotificationsService.prototype.delete = function (notification) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            try {
+                _this.http.post('/api/notifications/delete', notification).subscribe(function (data) {
+                    resolve(data.json());
+                });
+            }
+            catch (err) {
+                console.log(err);
+                reject(err);
+            }
+        });
+    };
+    NotificationsService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"]])
+    ], NotificationsService);
+    return NotificationsService;
 }());
 
 
@@ -6760,7 +6946,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\kirby\Desktop\tmp\qa-rdm\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/rdmtest/Desktop/project/qa-rdm/src/main.ts */"./src/main.ts");
 
 
 /***/ })

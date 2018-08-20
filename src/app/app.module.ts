@@ -11,7 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ToastrModule } from 'ngx-toastr';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatSelectModule, MatStepperModule, MatSnackBarModule, MatDialogModule, MatButtonModule, MatInputModule, MatSidenavModule, MatIconModule, MatFormFieldModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { MatToolbarModule, MatSelectModule, MatStepperModule, MatCheckboxModule, MatSnackBarModule, MatDialogModule, MatButtonModule, MatInputModule, MatSidenavModule, MatIconModule, MatFormFieldModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChartsModule } from 'ng2-charts';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
@@ -61,6 +61,7 @@ import {
   PlatformsService,
   TestCasesService,
   SessionsService,
+  NotificationsService,
   ResultsService,
   ActiveTestCasesService,
   LinesOfServiceService,
@@ -126,6 +127,7 @@ import {
     MatButtonModule,
     MatSidenavModule,
     MatSelectModule,
+    MatCheckboxModule,
     MatSnackBarModule,
     MatInputModule,
     MatFormFieldModule,
@@ -150,6 +152,7 @@ import {
     LinesOfServiceService,
     TestCasesService,
     SessionsService,
+    NotificationsService,
     ActiveTestCasesService,
     TestSuitesService,
     AuthService,

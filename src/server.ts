@@ -13,6 +13,7 @@ import {
     TestCasesRouter,
     BrowsersRouter,
     LinesOfServiceRouter,
+    NotificationsRouter,
     OperatingSystemsRouter,
     PlatformsRouter,
     ResultsRouter,
@@ -70,6 +71,8 @@ createConnection().then(async connection => {
     app.use('/api/platforms', PlatformsRouter);
     // Mount the LineOfServicesController at the /api/line-of-services route
     app.use('/api/lines-of-service/', LinesOfServiceRouter);
+    // Mount the NotificationsController at the /api/notifications route
+    app.use('/api/notifications', NotificationsRouter);
     // Mount the BrowserController at the /api/browsers route
     app.use('/api/results', ResultsRouter);
     // Mount the BrowserController at the /api/browsers route

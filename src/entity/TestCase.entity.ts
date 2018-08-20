@@ -1,5 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinTable, ManyToMany } from "typeorm";
-import { TestSuite, Browser, OperatingSystem, Result } from '.';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinTable, ManyToMany, OneToMany } from "typeorm";
+import { TestSuite, Browser, OperatingSystem, Result, Notification } from '.';
 
 @Entity()
 export class TestCase {
@@ -26,6 +26,9 @@ export class TestCase {
 
     @ManyToOne(type => OperatingSystem, operating_system => operating_system.test_cases)
     operating_system?: OperatingSystem;
+
+    @OneToMany(type => Notification, notification => notification.test_case )
+    notifications?: Notification[];
 
     @ManyToMany(type => Result, result => result.test_cases)
     @JoinTable()

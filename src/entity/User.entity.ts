@@ -9,6 +9,9 @@ export class User {
     @Column({ type: "varchar", length: 100 })
     uid?: string;
 
+    @Column({ type: "varchar", length: 150 })
+    email?: string;
+
     @ManyToMany(type => Role, role => role.users)
     @JoinTable() // Is the owner
     roles?: Role[];

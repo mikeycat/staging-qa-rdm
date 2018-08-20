@@ -5,7 +5,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from "rxjs/Observable";
 import { SessionsService } from "../sessions/sessions";
-import { Session } from "../../../entity";
+import { Session, User } from "../../../entity";
 
 export interface IUser {
     email?: string;
@@ -15,16 +15,6 @@ export interface IUser {
 export interface IRoles {
     user: boolean;
     admin?: boolean;
-}
-
-export class User {
-    email: string;
-    roles: IRoles;
-
-    constructor(authData) {
-        this.email = authData.email;
-        this.roles = { user: true }
-    }
 }
 
 
@@ -48,7 +38,10 @@ export class AuthService {
                 this.userDetails = user;
                 this.sessionsService.getCurrent().then(session => {
                     if (!session.user) {
-                        this.syncWithServerSession(this.userDetails.uid).then(() => {
+                        this.syncWithServerSession({
+                            uid: this.userDetails.uid,
+                            email: this.userDetails.email
+                        }).then(() => {
                             this.sessionsService.getCurrent().then(session => {
                                 this.session = session;
                             });
@@ -72,7 +65,10 @@ export class AuthService {
     login(user: IUser):Promise<any> {
         return new Promise((resolve, reject) => {
             this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password).then(userAuth => {
-                this.syncWithServerSession(userAuth.user.uid).then(() => {
+                this.syncWithServerSession({
+                    uid: userAuth.user.uid,
+                    email: userAuth.user.email
+                }).then(() => {
                     resolve(true);
                 }).catch(err=> {
                     reject(err);
@@ -86,7 +82,10 @@ export class AuthService {
     register(user: IUser): Promise<any> {
         return new Promise((resolve, reject) => {
             this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password).then((userAuth) => {
-                this.syncWithServerSession(userAuth.user.uid).then(() => {
+                this.syncWithServerSession({
+                    uid: userAuth.user.uid,
+                    email: userAuth.user.email
+                }).then(() => {
                     resolve(userAuth.user.sendEmailVerification())
                 });
             }).catch(err => {
@@ -95,9 +94,9 @@ export class AuthService {
         });
     }
 
-    syncWithServerSession(uid: string): Promise<any> {
+    syncWithServerSession(user: User): Promise<any> {
         return new Promise((resolve, reject) => {
-            this.http.post('/api/auth/login', {uid: uid}).subscribe(data => {
+            this.http.post('/api/auth/login', user).subscribe(data => {
                 resolve();
             });
         });

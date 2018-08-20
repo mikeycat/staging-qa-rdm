@@ -8,14 +8,15 @@ export class ActiveTestsController {
     static getAll():Promise<ActiveTest[]> {
         return new Promise((resolve, reject) => {
             const repository = getManager().getRepository(ActiveTest);
-            repository.find({ 
+            repository.find({
                 relations: [
-                    "test_case", 
-                    "test_case.test_suite", 
-                    "test_case.browser", 
+                    "test_case",
+                    "test_case.test_suite",
+                    "test_case.browser",
                     "test_case.operating_system",
-                    "test_case.operating_system.platform"
-                ] 
+                    "test_case.operating_system.platform",
+                    "test_case.notifications"
+                ]
             }).then(activeTests => {
                 resolve(activeTests);
             }).catch(err => {
@@ -30,12 +31,13 @@ export class ActiveTestsController {
             repository.find({
                 take: limit,
                 relations: [
-                    "test_case", 
-                    "test_case.test_suite", 
-                    "test_case.browser", 
+                    "test_case",
+                    "test_case.test_suite",
+                    "test_case.browser",
                     "test_case.operating_system",
-                    "test_case.operating_system.platform"
-                ] 
+                    "test_case.operating_system.platform",
+                    "test_case.notifications"
+                ]
             }).then(activeTests => {
                 resolve(activeTests);
             }).catch(err => {
@@ -52,12 +54,13 @@ export class ActiveTestsController {
                     hash: Not(IsNull())
                 },
                 relations: [
-                    "test_case", 
-                    "test_case.test_suite", 
-                    "test_case.browser", 
+                    "test_case",
+                    "test_case.test_suite",
+                    "test_case.browser",
                     "test_case.operating_system",
-                    "test_case.operating_system.platform"
-                ] 
+                    "test_case.operating_system.platform",
+                    "test_case.notifications"
+                ]
             }).then(activeTests => {
                 resolve(activeTests);
             }).catch(err => {
@@ -75,12 +78,13 @@ export class ActiveTestsController {
                 },
                 take: limit,
                 relations: [
-                    "test_case", 
-                    "test_case.test_suite", 
-                    "test_case.browser", 
+                    "test_case",
+                    "test_case.test_suite",
+                    "test_case.browser",
                     "test_case.operating_system",
-                    "test_case.operating_system.platform"
-                ] 
+                    "test_case.operating_system.platform",
+                    "test_case.notifications"
+                ]
             }).then(activeTests => {
                 resolve(activeTests);
             }).catch(err => {
@@ -98,12 +102,13 @@ export class ActiveTestsController {
                 },
                 take: limit,
                 relations: [
-                    "test_case", 
-                    "test_case.test_suite", 
-                    "test_case.browser", 
+                    "test_case",
+                    "test_case.test_suite",
+                    "test_case.browser",
                     "test_case.operating_system",
-                    "test_case.operating_system.platform"
-                ] 
+                    "test_case.operating_system.platform",
+                    "test_case.notifications"
+                ]
             }).then(activeTests => {
                 resolve(activeTests);
             }).catch(err => {
@@ -115,13 +120,14 @@ export class ActiveTestsController {
     static getById(id: number):Promise<ActiveTest> {
         return new Promise((resolve, reject) => {
             const repository = getManager().getRepository(ActiveTest);
-            repository.findOne(id, { 
+            repository.findOne(id, {
                 relations: [
-                    "test_case", 
-                    "test_case.test_suite", 
-                    "test_case.browser", 
+                    "test_case",
+                    "test_case.test_suite",
+                    "test_case.browser",
                     "test_case.operating_system",
-                    "test_case.operating_system.platform"
+                    "test_case.operating_system.platform",
+                    "test_case.notifications"
                 ]
             }).then(activeTest => {
                 resolve(activeTest);

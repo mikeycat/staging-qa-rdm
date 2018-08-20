@@ -5,6 +5,7 @@ export * from './cron-jobs.controller';
 export * from './operating-systems.controller';
 export * from './platforms.controller';
 export * from './line-of-services.controller';
+export * from './notifications.controller';
 export * from './results.controller';
 export * from './roles.controller';
 export * from './sessions.controller';

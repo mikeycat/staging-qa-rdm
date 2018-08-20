@@ -38,25 +38,19 @@ export class DashboardLine implements OnInit {
     }
 
     load(testSuite) {
-      this.testCasesService.getTotalsByTestSuiteGroupByDate({id: testSuite.test_suite_id}).then((testCases:any) => {
-        testCases.forEach((element, index) => {
-          let i = new Date(
-            Date.parse(element.date)
-          ).getUTCDay();
-          this.passedWeek[i] = parseInt(element.passed);
-          this.failedWeek[i] = parseInt(element.failed);
-          this.errorWeek[i] = parseInt(element.error);
+      testSuite.week.forEach((testCase, index) => {
+        let tmpDate = new Date(testCase.date);
+        this.passedWeek[tmpDate.getUTCDay()] = testCase.passed;
+        this.failedWeek[tmpDate.getUTCDay()] = testCase.failed;
+        this.errorWeek[tmpDate.getUTCDay()] = testCase.error;
 
-          if (index == (testCases.length - 1)) {
-            this.weekData = [
-              {data: this.passedWeek, label: 'Passed'},
-              {data: this.failedWeek, label: 'Failed'},
-              {data: this.errorWeek, label: 'Error'}
-            ];
-          }
-        });
-      }).catch(err => {
-        console.log(err);
+        if (index == (testSuite.week.length-1)) {
+          this.weekData = [
+            {data: this.passedWeek, label: 'Passed'},
+            {data: this.failedWeek, label: 'Failed'},
+            {data: this.errorWeek, label: 'Error'}
+          ];
+        }
       });
     }
 

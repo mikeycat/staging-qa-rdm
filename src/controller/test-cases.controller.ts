@@ -24,7 +24,8 @@ export class TestCasesController {
                     "test_suite",
                     "browser",
                     "operating_system",
-                    "results"
+                    "results",
+                    "notifications"
                 ]
             }).then(testCase => {
                 resolve(testCase);
@@ -81,7 +82,7 @@ export class TestCasesController {
         });
     }
     /**
-     * Get All Test Cases. Group by Date.
+     * Get All Test Cases. Group by Test Suite and Date.
      *
      * @returns Array of Test Cases
      */
@@ -119,7 +120,8 @@ export class TestCasesController {
                 relations: [
                     "test_suite",
                     "browser",
-                    "operating_system"
+                    "operating_system",
+                    "notifications"
                 ]
             }).then(testCases => {
                 resolve(testCases);
@@ -245,7 +247,8 @@ export class TestCasesController {
                 relations: [
                     "test_suite",
                     "browser",
-                    "operating_system"
+                    "operating_system",
+                    "notifications"
                 ]
             }).then(testCase => {
                 resolve(testCase);
@@ -284,7 +287,7 @@ export class TestCasesController {
      * @param session Test Case values to update
      * @return boolean of successful update of a test case
      */
-    static update(testCase: TestCase):Promise<boolean> {
+    static update(testCase: any):Promise<boolean> {
         return new Promise((resolve, reject) => {
             const testCasesRepository = getManager().getRepository(TestCase);
 

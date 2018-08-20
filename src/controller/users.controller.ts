@@ -33,20 +33,19 @@ export class UsersController {
             let params: User = {};
             if (user.id) { params.id = user.id; }
             if (user.uid) { params.uid = user.uid; }
+            if (user.email) { params.email = user.email; }
             if (user.roles) { params.roles = user.roles; }
 
             const repository = getManager().getRepository(User);
             repository.findOne(params, { relations: ["roles"] }).then(user => {
                 if (typeof user == "undefined") {
-                    this.insert(user).then(newUser => {
-                        console.log("1", newUser);
+                    this.insert(params).then(newUser => {
                         resolve(newUser);
                     }).catch(err => {
                         logger.error(err);
                         reject(err);
                     });
                 }
-                console.log("2", user);
                 resolve(user);
             }).catch(err => {
                 logger.error(err);
@@ -58,6 +57,12 @@ export class UsersController {
         return new Promise((resolve, reject) => {
             const repository = getManager().getRepository(User);
             const newUser = repository.create(user);
+
+            if (!newUser.uid || !newUser.email) {
+                reject();
+                return;
+            }
+
             repository.save(newUser).then(user => {
                 resolve(user);
             }).catch(err => {
@@ -75,6 +80,9 @@ export class UsersController {
                 }
                 if (user.roles != null) {
                     selectedUser.roles = user.roles;
+                }
+                if (user.email != null) {
+                    selectedUser.email = user.email;
                 }
                 repository.save(selectedUser).then(() => {
                     resolve(true);

@@ -68,7 +68,7 @@ export class NavigationComponent implements OnInit {
     return new Promise((resolve, reject) => {
       if (this.authService.isLoggedIn()) {
         this.authService.observeUser().subscribe(user => {
-          this.authService.syncWithServerSession(user.uid);
+          this.authService.syncWithServerSession(user);
         });
       }
     });

@@ -11,7 +11,14 @@ export class DoughnutChart implements OnInit {
     public labels:string[] = ['Passed', 'Failed', 'Error'];
     public doughnutChartType:string = 'doughnut';
     public chartOptions = {
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        title: {
+            display: true,
+            text: '',
+            fontSize: 18,
+            fontColor: "#FFF",
+            fontStyle: "normal"
+        }
     }
     public chartColors = [{
         backgroundColor: [
@@ -38,6 +45,12 @@ export class DoughnutChart implements OnInit {
     }
     get data() {
         return this._data;
+    }
+
+    @Input() set title(value: string) {
+        if (typeof value != "undefined") {
+            this.chartOptions.title.text = value;
+        }
     }
 
     constructor() { }

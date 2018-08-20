@@ -41,6 +41,17 @@ module.exports = "/* based on angular-toastr css https://github.com/Foxandxss/an
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./node_modules/sass-loader/lib/loader.js??ref--14-3!./src/app-loading.scss":
+/*!********************************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./node_modules/postcss-loader/lib??embedded!./node_modules/sass-loader/lib/loader.js??ref--14-3!./src/app-loading.scss ***!
+  \********************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".app-loading {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  margin-top: 200px; }\n\n.app-loading .spinner {\n  height: 200px;\n  width: 200px;\n  -webkit-animation: rotate 2s linear infinite;\n          animation: rotate 2s linear infinite;\n  -webkit-transform-origin: center center;\n          transform-origin: center center;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  margin: auto; }\n\n.app-loading .spinner .path {\n  stroke-dasharray: 1, 200;\n  stroke-dashoffset: 0;\n  -webkit-animation: dash 1.5s ease-in-out infinite;\n          animation: dash 1.5s ease-in-out infinite;\n  stroke-linecap: round;\n  stroke: #ddd; }\n\n@-webkit-keyframes rotate {\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n@keyframes rotate {\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n@-webkit-keyframes dash {\n  0% {\n    stroke-dasharray: 1, 200;\n    stroke-dashoffset: 0; }\n  50% {\n    stroke-dasharray: 89, 200;\n    stroke-dashoffset: -35px; }\n  100% {\n    stroke-dasharray: 89, 200;\n    stroke-dashoffset: -124px; } }\n\n@keyframes dash {\n  0% {\n    stroke-dasharray: 1, 200;\n    stroke-dashoffset: 0; }\n  50% {\n    stroke-dasharray: 89, 200;\n    stroke-dashoffset: -35px; }\n  100% {\n    stroke-dasharray: 89, 200;\n    stroke-dashoffset: -124px; } }\n\n.app-loading .logo {\n  width: 125px;\n  height: 125px;\n  background: url(data:image/x-icon;base64,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) center center no-repeat; }\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./node_modules/sass-loader/lib/loader.js??ref--14-3!./src/theme.scss":
 /*!**************************************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./node_modules/postcss-loader/lib??embedded!./node_modules/sass-loader/lib/loader.js??ref--14-3!./src/theme.scss ***!
@@ -59,7 +70,7 @@ module.exports = "@import url(\"https://fonts.googleapis.com/css?family=Roboto:3
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\r\nbody {\r\n    background-color: rgb(48, 48, 48);\r\n}\r\nmat-sidenav-content {\r\n    margin-left: 300px;\r\n}\r\n.mat-icon {\r\n    font-family: 'Material Icons';\r\n    font-weight: normal;\r\n    font-style: normal;\r\n    font-size: 24px;  /* Preferred icon size */\r\n    display: inline-block;\r\n    line-height: 1;\r\n    text-transform: none;\r\n    letter-spacing: normal;\r\n    word-wrap: normal;\r\n    white-space: nowrap;\r\n    direction: ltr;\r\n  \r\n    /* Support for all WebKit browsers. */\r\n    -webkit-font-smoothing: antialiased;\r\n    /* Support for Safari and Chrome. */\r\n    text-rendering: optimizeLegibility;\r\n  \r\n    /* Support for Firefox. */\r\n    -moz-osx-font-smoothing: grayscale;\r\n  \r\n    /* Support for IE. */\r\n    -webkit-font-feature-settings: 'liga';\r\n            font-feature-settings: 'liga';\r\n}\r\n.dashboard-card {\r\n    position: absolute;\r\n    top: 15px;\r\n    left: 15px;\r\n    right: 15px;\r\n    bottom: 15px;\r\n}\r\n.mat-table{\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n.action-span {\r\n    padding: 0 7px;\r\n}\r\n"
+module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n    background-color: rgb(48, 48, 48);\n}\nmat-sidenav-content {\n    margin-left: 300px;\n}\n.mat-icon {\n    font-family: 'Material Icons';\n    font-weight: normal;\n    font-style: normal;\n    font-size: 24px;  /* Preferred icon size */\n    display: inline-block;\n    line-height: 1;\n    text-transform: none;\n    letter-spacing: normal;\n    word-wrap: normal;\n    white-space: nowrap;\n    direction: ltr;\n  \n    /* Support for all WebKit browsers. */\n    -webkit-font-smoothing: antialiased;\n    /* Support for Safari and Chrome. */\n    text-rendering: optimizeLegibility;\n  \n    /* Support for Firefox. */\n    -moz-osx-font-smoothing: grayscale;\n  \n    /* Support for IE. */\n    -webkit-font-feature-settings: 'liga';\n            font-feature-settings: 'liga';\n}\n.dashboard-card {\n    position: absolute;\n    top: 15px;\n    left: 15px;\n    right: 15px;\n    bottom: 15px;\n}\n.mat-table{\n    width: 100%;\n    height: 100%;\n}\n.action-span {\n    padding: 0 7px;\n}\n"
 
 /***/ }),
 
@@ -554,6 +565,36 @@ module.exports = function (css) {
 
 /***/ }),
 
+/***/ "./src/app-loading.scss":
+/*!******************************!*\
+  !*** ./src/app-loading.scss ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../node_modules/raw-loader!../node_modules/postcss-loader/lib??embedded!../node_modules/sass-loader/lib/loader.js??ref--14-3!./app-loading.scss */ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./node_modules/sass-loader/lib/loader.js??ref--14-3!./src/app-loading.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./src/styles.css":
 /*!************************!*\
   !*** ./src/styles.css ***!
@@ -615,15 +656,16 @@ if(false) {}
 /***/ }),
 
 /***/ 2:
-/*!************************************************************************************!*\
-  !*** multi ./src/theme.scss ./node_modules/ngx-toastr/toastr.css ./src/styles.css ***!
-  \************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** multi ./src/app-loading.scss ./src/theme.scss ./node_modules/ngx-toastr/toastr.css ./src/styles.css ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\kirby\Desktop\tmp\qa-rdm\src\theme.scss */"./src/theme.scss");
-__webpack_require__(/*! C:\Users\kirby\Desktop\tmp\qa-rdm\node_modules\ngx-toastr\toastr.css */"./node_modules/ngx-toastr/toastr.css");
-module.exports = __webpack_require__(/*! C:\Users\kirby\Desktop\tmp\qa-rdm\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! /Users/rdmtest/Desktop/project/qa-rdm/src/app-loading.scss */"./src/app-loading.scss");
+__webpack_require__(/*! /Users/rdmtest/Desktop/project/qa-rdm/src/theme.scss */"./src/theme.scss");
+__webpack_require__(/*! /Users/rdmtest/Desktop/project/qa-rdm/node_modules/ngx-toastr/toastr.css */"./node_modules/ngx-toastr/toastr.css");
+module.exports = __webpack_require__(/*! /Users/rdmtest/Desktop/project/qa-rdm/src/styles.css */"./src/styles.css");
 
 
 /***/ })

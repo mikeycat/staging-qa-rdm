@@ -23,7 +23,10 @@ export class ProfilePageComponent implements OnInit {
 
         this.sessionService.getCurrent().then(session => {
             if (!session.user) {
-                authService.syncWithServerSession(this.profile.uid).then(() => {
+                authService.syncWithServerSession({
+                    uid: this.profile.uid,
+                    email: this.profile.email
+                }).then(() => {
                     this.sessionService.getCurrent().then(session => {
                         this.session = session;
                         this.roles = session.user.roles;

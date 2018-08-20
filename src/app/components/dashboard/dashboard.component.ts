@@ -9,10 +9,11 @@ import { interval, Subscription } from '../../../../node_modules/rxjs';
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
 
-  testCases: any;
+  testCases: any[] = [];
   selectedTestSuite: any;
   private _index: number = 0;
   subscribe: Subscription;
+  weekData: any;
 
   set index(value: number) {
     this._index = (value >= this.testCases.length) ? 0 :
@@ -31,17 +32,28 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.testCasesService.getAllTotals().then(testCases => {
-      testCases.forEach(element => {
+      testCases.forEach((element, index) => {
         element.passed = parseInt(element.passed);
         element.failed = parseInt(element.failed);
         element.error = parseInt(element.error);
-      });
-      this.testCases = testCases;
-      this.index = 0;
 
-      const source = interval(5000);
-      this.subscribe = source.subscribe(() => {
-        this.index = this.index + 1;
+        this.testCasesService.getTotalsByTestSuiteGroupByDate({
+          id: element.test_suite_id
+        }).then(data => {
+          element.week = data;
+
+          if (index == (testCases.length-1)) {
+            this.testCases = testCases;
+            this.index = 0;
+
+            const source = interval(5000);
+            this.subscribe = source.subscribe(() => {
+              this.index = this.index + 1;
+            });
+          }
+        }).catch(err => {
+          console.log(err);
+        });
       });
     });
   }

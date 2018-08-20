@@ -35,13 +35,16 @@
                 <!-- <mat-error *ngIf="browsersCtrl.invalid">{{getOperatingSystemsErrorMessage()}}</mat-error> -->
             </mat-form-field>
         </mat-grid-tile>
+        <mat-grid-tile [colspan]="6" [rowspan]="1">
+            <mat-checkbox [(ngModel)]="notify" [ngModelOptions]="{standalone: true}">Notify on completion</mat-checkbox>
+        </mat-grid-tile>
     </mat-grid-list>
 </mat-dialog-content>
 <mat-dialog-actions>
-    <button mat-button mat-dialog-close>
+    <button mat-button type="button" mat-dialog-close>
         Close
     </button>
-    <button mat-button (click)="reset()">
+    <button mat-button type="button" (click)="reset()">
         Reset
     </button>
     <button mat-button type="submit" [disabled]="!form.valid">

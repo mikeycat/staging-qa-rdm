@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from "@angular/core";
 import { FormGroup, FormControl, FormBuilder, Validators } from "../../../../../node_modules/@angular/forms";
 import { TestCase, OperatingSystem, TestSuite, Browser } from "../../../../entity";
-import { TestSuitesService, TestCasesService, OperatingSystemsService, BrowsersService } from "../../../services";
+import { TestSuitesService, TestCasesService, OperatingSystemsService, BrowsersService, SessionsService, NotificationsService } from "../../../services";
 import { BrowsersModal } from "../..";
 import { MatDialogRef, MAT_DIALOG_DATA } from "../../../../../node_modules/@angular/material";
 import { NgProgress } from "../../../../../node_modules/ngx-progressbar";
@@ -21,6 +21,8 @@ export class TestCasesModal implements OnInit {
     browsers: Browser[] = [];
     operatingSystems: OperatingSystem[] = [];
 
+    notify: boolean = false;
+
     model: TestCase = {};
 
     constructor(
@@ -29,6 +31,8 @@ export class TestCasesModal implements OnInit {
         private browserService: BrowsersService,
         private operatingSystemService: OperatingSystemsService,
         private testCasesService: TestCasesService,
+        private sessionsService: SessionsService,
+        private notificationsService: NotificationsService,
         public dialogRef: MatDialogRef<BrowsersModal>,
         public ngProgress: NgProgress,
         @Inject(MAT_DIALOG_DATA) public data: any
@@ -76,10 +80,11 @@ export class TestCasesModal implements OnInit {
     }
 
     reset() {
-        if (this.data.id) {
+        if (this.data) {
             this.load();
         } else {
             this.form.reset();
+            this.notify = false;
         }
     }
 
@@ -88,6 +93,7 @@ export class TestCasesModal implements OnInit {
         this.model.test_suite = this.form.get('test_suite').value;
         this.model.browser = this.form.get('browser').value;
         this.model.operating_system = this.form.get('operating_system').value;
+
         if (this.model.id) {
             this.testCasesService.update(this.model).then(result => {
                 this.ngProgress.done();
@@ -101,11 +107,20 @@ export class TestCasesModal implements OnInit {
             });
         } else {
             this.testCasesService.insert(this.model).then(result => {
-                this.ngProgress.done();
-                if (result.id > 0) {
-                    this.dialogRef.close();
+                if (this.notify) {
+                    this.sessionsService.getCurrent().then(session => {
+                        this.notificationsService.insert({test_case: result, user: session.user}).then(() => {
+                            this.ngProgress.done();
+                            this.dialogRef.close();
+                        }).catch(err => {
+                            console.log(err);
+                        });
+                    }).catch(err => {
+                        console.log(err);
+                    });
                 } else {
-                    console.log("Browser issue.");
+                    this.ngProgress.done();
+                    this.dialogRef.close();
                 }
             }).catch(err => {
                 console.log(err);

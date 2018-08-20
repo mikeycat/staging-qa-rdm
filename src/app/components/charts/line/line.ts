@@ -17,7 +17,14 @@ export class LineChart implements OnInit {
     public lineChartType:string = 'line';
     public chartOptions = {
         maintainAspectRatio: false,
-        responsive: true
+        responsive: true,
+        title: {
+            display: true,
+            text: '',
+            fontSize: 18,
+            fontColor: "#FFF",
+            fontStyle: "normal"
+        }
     }
     public chartColors = [
         { // passed
@@ -48,6 +55,12 @@ export class LineChart implements OnInit {
     @Input() set data(value: any) {
         if (typeof value != "undefined") {
             this.chartData = value;
+        }
+    }
+
+    @Input() set title(value: string) {
+        if (typeof value != "undefined") {
+            this.chartOptions.title.text = value;
         }
     }
 

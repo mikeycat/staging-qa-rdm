@@ -11,11 +11,20 @@ export class DashboardDoughnuts implements OnInit {
     @Input()
     set testSuite(value: any) {
       if (typeof value != "undefined") {
-        this.dayData = [
-          value.passed,
-          value.failed,
-          value.error,
-        ];
+        this.dayData = [0,0,0];
+
+        let today = new Date(Date.now());
+        value.week.forEach(testCase => {
+          let tmpDate = new Date(testCase.date);
+          if (today.getDay() == tmpDate.getUTCDay()) {
+            this.dayData = [
+             testCase.passed,
+             testCase.failed,
+             testCase.error
+            ];
+          }
+        });
+
         this.weekData = [
           value.passed,
           value.failed,

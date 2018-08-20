@@ -26,7 +26,7 @@ router.get('/', (req: any, res: Response) => {
 router.post('/login', (req: any, res: Response) => {
     SessionsController.getOrGenerateSession(req.session).then(session => {
         req.session.session = session.session;
-        UsersController.getOrInsert({uid: req.body.uid}).then(user => {
+        UsersController.getOrInsert(req.body).then(user => {
             session.user = user;
             SessionsController.update(session).then(result => {
                 res.send(result);
