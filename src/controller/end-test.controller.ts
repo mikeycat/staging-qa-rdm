@@ -4,6 +4,7 @@ import { logger } from '../logger';
 import { TestCase, ActiveTest, Result } from '../entity';
 import { ActiveTestsController, CronJobsController } from './';
 import { ResultsController } from '.';
+import { TestCasesController } from './test-cases.controller';
 const request = require('request');
 
 export interface IEndTestResult {
@@ -22,27 +23,27 @@ export interface IEndTestResult {
 export class EndTestController {
     /**
      * Get End Test Execution Api Url
-     * 
+     *
      * @returns String of Api Url
      */
     static getExecutionUrl(testCase: TestCase):string {
-        return "https://endtest.io/api.php?action=runTestSuite&appId=" + testCase.test_suite.app_id + 
+        return "https://endtest.io/api.php?action=runTestSuite&appId=" + testCase.test_suite.app_id +
         "&appCode=" + testCase.test_suite.app_code + "&testSuite=" + testCase.test_suite.test_suite + "&selectedPlatform=" + testCase.operating_system.platform.value +
         "&selectedOs=" + testCase.operating_system.value + "&selectedBrowser=" + testCase.browser.value +
         "&selectedResolution=d&selectedLocation=sanfrancisco&selectedQuitOnError=q0&selectedCases=all&writtenAdditionalNotes=";
     }
     /**
      * Get EndTest Fetch Results Api Url
-     * 
+     *
      * @returns String of Api Url
      */
     static getFetchUrl(activeTest: ActiveTest):string {
-        return "https://endtest.io/api.php?action=getResults&appId=" + activeTest.test_case.test_suite.app_id + 
+        return "https://endtest.io/api.php?action=getResults&appId=" + activeTest.test_case.test_suite.app_id +
         "&appCode=" + activeTest.test_case.test_suite.app_code + "&&hash=" + activeTest.hash + "&format=json";
     }
     /**
      * Execute Test Case
-     * 
+     *
      * @returns String of hash value from endtest
      */
     static executeTestCase(testCase: TestCase):Promise<string> {
@@ -63,7 +64,7 @@ export class EndTestController {
     }
     /**
      * Execute Active Test
-     * 
+     *
      * @returns Boolean of successful execution
      */
     static executeActiveTest(activeTest: ActiveTest):Promise<boolean> {
@@ -82,7 +83,7 @@ export class EndTestController {
                         logger.error(err);
                         resolve();
                     });
-                } else { 
+                } else {
                     resolve();
                 }
             });
@@ -90,7 +91,7 @@ export class EndTestController {
     }
     /**
      * Fetch Results from Test Case
-     * 
+     *
      * @returns TestCase of results from endtest
      */
     static getResultsTestCase(activeTest: ActiveTest):Promise<TestCase> {
@@ -105,6 +106,21 @@ export class EndTestController {
                     return;
                 }
 
+                if (body == "Erred.") {
+                    ActiveTestsController.delete(activeTest).then(() => {
+                        TestCasesController.delete(activeTest.test_case).then(() => {
+                            resolve();
+                            return;
+                        }).catch(err => {
+                            logger.error(err);
+                            reject(err);
+                        });
+                    }).catch(err => {
+                        logger.error(err);
+                        reject(err);
+                    });
+                }
+
                 try {
                     var result = JSON.parse(body);
                 } catch (e) {
@@ -117,7 +133,7 @@ export class EndTestController {
                 activeTest.test_case.passed = body.passed;
                 activeTest.test_case.failed = body.failed;
                 activeTest.test_case.error = body.errors;
-                
+
                 this.parseDetailedLogs(body.detailed_logs).then(results => {
                     if (results.length == 0) {
                         activeTest.test_case.results = [];
@@ -147,7 +163,7 @@ export class EndTestController {
     }
     /**
      * Parse Results from EndTest Api
-     * 
+     *
      * @returns Result[] from endtest api
      */
     static parseDetailedLogs(detailed_logs: string[]): Promise<Result[]>  {
@@ -174,7 +190,7 @@ export class EndTestController {
     }
     /**
      * Fetch Results from EndTest
-     * 
+     *
      * @returns TestCase completed with results
      */
     static fetchResults(activeTest: ActiveTest):Promise<TestCase> {
