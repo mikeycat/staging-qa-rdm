@@ -2,6 +2,14 @@
 
 Rogers Digital Media Automation Framework is a web application designed to make test automation easier. This is achieved by a nightly scheduler, dashboard, and other features.
 
+## Documentation
+
+- [Authentication](./AUTH.md)
+- [Database](./DATABASE.md)
+- [Data Models](./MODELS.md)
+- [API](./API.md)
+- [Future Progression](./IDEAS.md)
+
 ## Getting Started
 
 #### Git
@@ -33,8 +41,13 @@ $ node -v
 v8.11.3
 ```
 
-Those two commands will print the version of npm and node that you are using locally.
+Once npm and Node.js are installed you will need to configure the database. Reference [DATABASE.md](./DATABASE.md). Now you will need to install all npm dependencies with `npm i -f`. When this completes you are able to run the server for this application by running `npm run server`.
 
 #### Heroku
 
 To deploy to the Heroku instance follow this [documentation](https://devcenter.heroku.com/articles/heroku-cli) provided by Heroku.
+
+
+## Authors
+
+* **Austin Kirby** - *Initial work* - [kirby.is.austin9@gmail.com](mailto:kirby.is.austin9@gmail.com)
