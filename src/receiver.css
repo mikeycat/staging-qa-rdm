@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* This is the primary container element that displays the dashboard graphs */
+
+#container {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  z-index: 1;
+  display: none;
+}
+
+/* Hide the sidebar from the loaded dashboard page */
+
+#container mat-sidenav {
+  visibility: hidden !important;
+}
+
+/* Hide the sidebar placeholder from the loaded dashboard page */
+
+#container mat-sidenav-content {
+  display: unset !important;
+}
+
+/* Animation for when the dashboard becomes visible */
+
+.animate-bottom {
+  position: relative;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0
+  }
+  to {
+    bottom: 0;
+    opacity: 1
+  }
+}

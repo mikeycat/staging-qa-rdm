@@ -21,7 +21,9 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/cast/*"
+              "src/receiver.html",
+              "src/receiver.css",
+              "src/receiver.js"
             ],
             "styles": [
               "src/app-loading.scss",
