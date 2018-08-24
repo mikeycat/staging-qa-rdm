@@ -52,6 +52,9 @@ createConnection().then(async connection => {
 
     app.use(session(sess));
 
+    // Serve the static Cast receiver components
+    app.use(express.static('cast'));
+
     // Parsers for POST data
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
