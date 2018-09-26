@@ -1279,16 +1279,25 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+var session = null;
+/**
+ * The following variables are used by this Cast sender app to discover the
+ * appropriate Cast receiver app to connect to. Currently, the associated Cast
+ * SDK app is associated with my (Rafi Rahman) personal Google account.
+ *
+ * In the future, it will be necessary to modify the applicationID and the namespace so they are
+ * linked to a Google Cast SDK Developer Console profile that is properly associated with RDM QA.
+ */
 var applicationID = '308A55B9';
 var namespace = 'urn:x-cast:com.rafirahman.cast.rdmqa';
-var session = null;
 var CastSenderComponent = /** @class */ (function () {
     function CastSenderComponent() {
+        /**
+         * Check if the current browser supports the Google Cast API (i.e., Chrome),
+         * and initialize a CastContext with the appropriate variables set.
+         */
         window.__onGCastApiAvailable = function (isAvailable) {
             if (isAvailable) {
-                /**
-                 * Configure and initialize the Cast API if it's available
-                 */
                 cast.framework.CastContext.getInstance().setOptions({
                     receiverApplicationId: applicationID,
                     autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
@@ -1297,9 +1306,10 @@ var CastSenderComponent = /** @class */ (function () {
         };
     }
     /**
-     * Listen for any Cast API sessions
+     * Listen for any Cast API sessions and keep listening
+     * for messages and/or updates from the session(s).
      *
-     * @param {Event} e
+     * @param {Event} e   A Cast API session event
      */
     CastSenderComponent.prototype.sessionListener = function (e) {
         console.log('New session ID:' + e.sessionId);
@@ -1308,7 +1318,7 @@ var CastSenderComponent = /** @class */ (function () {
         session.addMessageListener(namespace, this.receiverMessage);
     };
     /**
-     * Listen for updates regarding the current Cast API session
+     * Log session updates, and remove expired sessions.
      *
      * @param {Boolean} isAlive
      */
@@ -1321,7 +1331,13 @@ var CastSenderComponent = /** @class */ (function () {
         }
     };
     /**
-     * Listen for any discoverable Cast receivers
+     * Log any receivers that are discovered that support the associated Cast app.
+     *
+     * NOTE: as of 2018-08-23, the associated Cast app is unpublished, and the only
+     * receiver that supports the dashboard app is the Chromecast connected to Goldeneye TV.
+     * It is likely that publishing this app will be the optimal path to take going forward,
+     * in which case, it is necessary to modify the namespace and applicationID – as declared
+     * above – so they are associated with some sort of Rogers controller account.
      *
      * @param {Event} e
      */
@@ -1330,7 +1346,7 @@ var CastSenderComponent = /** @class */ (function () {
             console.log('[LOG]: Receiver found');
         }
         else {
-            console.log('[LOG]: Receiver list empty');
+            console.log('[LOG]: No receivers found');
         }
     };
     /**
@@ -1343,7 +1359,7 @@ var CastSenderComponent = /** @class */ (function () {
         console.log('[LOG] receiverMessage: ' + namespace + ', ' + message);
     };
     /**
-     * Stop the Cast sender app
+     * Stop the Cast sender app.
      */
     CastSenderComponent.prototype.stopApp = function () {
         console.log('[LOG]: Stopping sender app');
@@ -1357,7 +1373,13 @@ var CastSenderComponent = /** @class */ (function () {
     };
     /**
      * Send anything to the receiver to invoke its CastMessageBus handler.
-     * @param {Object} message The message to send
+     *
+     * NOTE: Currently, this simply serves rudimentary debugging purposes,
+     * but this function can be expanded considerably to add interactivity
+     * between a sender and the receiver app (which would need to be modified
+     * apporpriately to handle interactivity related messages).
+     *
+     * @param {Object} message  The data to send to the receiver
      */
     CastSenderComponent.prototype.sendMessage = function (message) {
         if (session != null) {
@@ -1379,13 +1401,20 @@ var CastSenderComponent = /** @class */ (function () {
     CastSenderComponent.prototype.onError = function (message) {
         console.log('[ERROR]: ' + message);
     };
-    CastSenderComponent.prototype.ngOnInit = function () { };
+    CastSenderComponent.prototype.ngOnInit = function () {
+    };
     CastSenderComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'cast-sender',
             template: __webpack_require__(/*! ./cast-sender.component.html */ "./src/app/components/cast-sender/cast-sender.component.html"),
             styles: [__webpack_require__(/*! ./cast-sender.component.css */ "./src/app/components/cast-sender/cast-sender.component.css")],
-        }),
+        })
+        /**
+         * An Angular component that prepares a Cast Application Framework sender app and produces
+         * a reusable Cast button that is attached to the Dashboard Cast app. For more information,
+         * please read the official API documentation: https://developers.google.com/cast/docs/reference/chrome.
+         * */
+        ,
         __metadata("design:paramtypes", [])
     ], CastSenderComponent);
     return CastSenderComponent;
@@ -6946,7 +6975,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/rdmtest/Desktop/project/qa-rdm/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/michael.catalano/Desktop/qa-rdm/src/main.ts */"./src/main.ts");
 
 
 /***/ })

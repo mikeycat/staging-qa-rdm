@@ -38,3 +38,997 @@
     at step (/Users/rdmtest/Desktop/project/qa-rdm/node_modules/typeorm/persistence/EntityPersistExecutor.js:32:23)
     at Object.next (/Users/rdmtest/Desktop/project/qa-rdm/node_modules/typeorm/persistence/EntityPersistExecutor.js:13:53)
     at fulfilled (/Users/rdmtest/Desktop/project/qa-rdm/node_modules/typeorm/persistence/EntityPersistExecutor.js:4:58)
+[2018-09-25T10:10:54.661] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:215:45
+    at new Promise (<anonymous>)
+    at Function.TestCasesController.getAllTotals (/Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:214:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/test-cases.router.ts:55:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:10:56.239] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:10:56.244] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:11:32.333] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:11:32.334] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:11:40.967] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "OperatingSystem" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/operating-systems.controller.ts:16:61
+    at new Promise (<anonymous>)
+    at Function.OperatingSystemsController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/operating-systems.controller.ts:15:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/operating-systems.router.ts:16:32
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "OperatingSystem" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:11:44.767] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:11:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:10:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:16:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:12:00.983] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:33:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:32:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:41:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:12:12.687] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:33:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:32:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:41:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:12:14.792] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:33:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:32:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:41:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:12:22.211] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:11:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:10:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:16:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:12:29.727] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:215:45
+    at new Promise (<anonymous>)
+    at Function.TestCasesController.getAllTotals (/Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:214:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/test-cases.router.ts:55:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:12:30.053] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:12:30.054] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:12:31.522] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:12:31.525] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:13:24.065] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:215:45
+    at new Promise (<anonymous>)
+    at Function.TestCasesController.getAllTotals (/Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:214:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/test-cases.router.ts:55:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:13:26.562] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:13:26.564] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:13:28.640] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:215:45
+    at new Promise (<anonymous>)
+    at Function.TestCasesController.getAllTotals (/Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:214:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/test-cases.router.ts:55:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:15:00.719] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "ActiveTest" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/active-tests.controller.ts:239:45
+    at new Promise (<anonymous>)
+    at Function.ActiveTestsController.countHash (/Users/michael.catalano/Desktop/qa-rdm/src/controller/active-tests.controller.ts:238:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/cron-jobs.controller.ts:16:35
+    at new Promise (<anonymous>)
+    at Function.CronJobsController.handleQueue (/Users/michael.catalano/Desktop/qa-rdm/src/controller/cron-jobs.controller.ts:15:16)
+    at CronJob.onTick (/Users/michael.catalano/Desktop/qa-rdm/src/cronjobs/queue.ts:7:28)
+    at CronJob.fireOnTick (/Users/michael.catalano/Desktop/qa-rdm/node_modules/cron/lib/cron.js:422:22)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "ActiveTest" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:15:05.722] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:215:45
+    at new Promise (<anonymous>)
+    at Function.TestCasesController.getAllTotals (/Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:214:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/test-cases.router.ts:55:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:15:05.872] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:215:45
+    at new Promise (<anonymous>)
+    at Function.TestCasesController.getAllTotals (/Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:214:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/test-cases.router.ts:55:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:15:52.144] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:27:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:15:52.149] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:27:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:15:52.152] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:15:52.153] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:17:04.629] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:17:04.630] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:17:16.867] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Browser" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/browsers.controller.ts:11:52
+    at new Promise (<anonymous>)
+    at Function.BrowsersController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/browsers.controller.ts:10:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/browsers.router.ts:16:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Browser" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:17:17.971] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "OperatingSystem" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/operating-systems.controller.ts:16:61
+    at new Promise (<anonymous>)
+    at Function.OperatingSystemsController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/operating-systems.controller.ts:15:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/operating-systems.router.ts:16:32
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "OperatingSystem" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:17:21.506] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Browser" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/browsers.controller.ts:11:52
+    at new Promise (<anonymous>)
+    at Function.BrowsersController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/browsers.controller.ts:10:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/browsers.router.ts:16:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Browser" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:17:23.758] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:17:23.760] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:17:27.256] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:11:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:10:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:16:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:17:36.020] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:33:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:32:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:41:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:20:41.460] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:20:41.463] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:27:22.541] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:11:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:10:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:16:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:27:26.241] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:215:45
+    at new Promise (<anonymous>)
+    at Function.TestCasesController.getAllTotals (/Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:214:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/test-cases.router.ts:55:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:27:35.118] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "OperatingSystem" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/operating-systems.controller.ts:16:61
+    at new Promise (<anonymous>)
+    at Function.OperatingSystemsController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/operating-systems.controller.ts:15:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/operating-systems.router.ts:16:32
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "OperatingSystem" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:27:36.411] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:11:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:10:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:16:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:27:44.981] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "OperatingSystem" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/operating-systems.controller.ts:16:61
+    at new Promise (<anonymous>)
+    at Function.OperatingSystemsController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/operating-systems.controller.ts:15:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/operating-systems.router.ts:16:32
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "OperatingSystem" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T10:27:48.201] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Browser" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/browsers.controller.ts:11:52
+    at new Promise (<anonymous>)
+    at Function.BrowsersController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/browsers.controller.ts:10:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/browsers.router.ts:16:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Browser" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:08:09.503] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:215:45
+    at new Promise (<anonymous>)
+    at Function.TestCasesController.getAllTotals (/Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:214:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/test-cases.router.ts:55:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:08:10.205] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:08:10.207] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:08:16.420] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:11:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:10:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:16:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:08:22.428] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:33:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:32:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:41:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:08:27.095] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:33:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:32:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:41:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:10:16.711] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:215:45
+    at new Promise (<anonymous>)
+    at Function.TestCasesController.getAllTotals (/Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:214:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/test-cases.router.ts:55:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:10:17.339] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:10:17.342] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:10:19.532] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:45:45
+    at new Promise (<anonymous>)
+    at Function.TestCasesController.getAllGroupByTestSuite (/Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:44:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/test-cases.router.ts:29:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:10:21.930] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "TestSuite" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/test-suites.controller.ts:16:55
+    at new Promise (<anonymous>)
+    at Function.TestSuitesController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/test-suites.controller.ts:15:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/test-suites.router.ts:16:26
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "TestSuite" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:10:27.346] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:45:45
+    at new Promise (<anonymous>)
+    at Function.TestCasesController.getAllGroupByTestSuite (/Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:44:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/test-cases.router.ts:29:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:10:27.935] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:10:27.936] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:10:38.242] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:11:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:10:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:16:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:10:46.510] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:33:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:32:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:41:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:13:40.423] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:215:45
+    at new Promise (<anonymous>)
+    at Function.TestCasesController.getAllTotals (/Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:214:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/test-cases.router.ts:55:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:14:10.697] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:14:10.698] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:14:18.439] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:11:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:10:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:16:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:14:18.440] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:11:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:10:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:16:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:14:26.287] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:33:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:32:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:41:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:15:58.939] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:215:45
+    at new Promise (<anonymous>)
+    at Function.TestCasesController.getAllTotals (/Users/michael.catalano/Desktop/qa-rdm/src/controller/test-cases.controller.ts:214:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/test-cases.router.ts:55:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "TestCase" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:15:59.978] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:15:59.985] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:69:53
+    at new Promise (<anonymous>)
+    at Function.SessionsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:68:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:142:22
+    at new Promise (<anonymous>)
+    at Function.SessionsController.getOrGenerateSession (/Users/michael.catalano/Desktop/qa-rdm/src/controller/sessions.controller.ts:140:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/auth.router.ts:15:24
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Session" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:16:03.171] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:11:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.getAll (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:10:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:16:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
+[2018-09-25T11:16:12.012] [ERROR] [logger] - { RepositoryNotFoundError: No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?
+    at new RepositoryNotFoundError (/Users/michael.catalano/Desktop/qa-rdm/src/error/RepositoryNotFoundError.ts:10:9)
+    at EntityManager.getRepository (/Users/michael.catalano/Desktop/qa-rdm/src/entity-manager/EntityManager.ts:702:19)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:33:45
+    at new Promise (<anonymous>)
+    at Function.PlatformsController.insert (/Users/michael.catalano/Desktop/qa-rdm/src/controller/platforms.controller.ts:32:16)
+    at /Users/michael.catalano/Desktop/qa-rdm/src/routes/platforms.router.ts:41:25
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/michael.catalano/Desktop/qa-rdm/node_modules/express/lib/router/layer.js:95:5)
+  name: 'RepositoryNotFoundError',
+  message:
+   'No repository for "Platform" was found. Looks like this entity is not registered in current "default" connection?' }
